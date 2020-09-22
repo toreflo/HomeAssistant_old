@@ -1,0 +1,63 @@
+- alias: 'Horizontal Vane Set - Sala'
+  trigger:
+    - platform: state
+      entity_id: input_select.sala_hvane
+  action:
+    - service: melcloud.set_vane_horizontal
+      data:
+        entity_id: climate.sala
+        position: '{{ states("input_select.sala_hvane") }}'
+
+- alias: 'Horizontal Vane Set - Camera'
+  trigger:
+    - platform: state
+      entity_id: input_select.camera_hvane
+  action:
+    - service: melcloud.set_vane_horizontal
+      data:
+        entity_id: climate.camera
+        position: '{{ states("input_select.camera_hvane") }}'
+
+- alias: 'Horizontal Vane Set - Camera Tommaso'
+  trigger:
+    - platform: state
+      entity_id: input_select.camera_tommaso_hvane
+  action:
+    - service: melcloud.set_vane_horizontal
+      data:
+        entity_id: climate.camera_tommaso
+        position: '{{ states("input_select.camera_tommaso_hvane") }}'
+
+- alias: 'Horizontal Vane Get - Sala'
+  trigger:
+    - platform: state
+      entity_id: climate.sala
+      attribute: vane_horizontal
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.sala_hvane
+        option: '{{state_attr("climate.sala", "vane_horizontal") }}'
+
+- alias: 'Horizontal Vane Get - Camera'
+  trigger:
+    - platform: state
+      entity_id: climate.camera
+      attribute: vane_horizontal
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.camera_hvane
+        option: '{{state_attr("climate.camera", "vane_horizontal") }}'
+
+- alias: 'Horizontal Vane Get - Camera Tommaso'
+  trigger:
+    - platform: state
+      entity_id: climate.camera_tommaso
+      attribute: vane_horizontal
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.camera_tommaso_hvane
+        option: '{{state_attr("climate.camera_tommaso", "vane_horizontal") }}'
+

@@ -1,0 +1,38 @@
+sala_hvane:
+    name: 'Horizontal vane control - Sala'
+    options:
+      - 'auto'
+      - '1_left'
+      - '2'
+      - '3'
+      - '4'
+      - '5_right'
+      - 'split'
+      - 'swing'
+    initial: auto
+
+camera_hvane:
+    name: 'Horizontal vane control - Camera'
+    options:
+      - 'auto'
+      - '1_left'
+      - '2'
+      - '3'
+      - '4'
+      - '5_right'
+      - 'split'
+      - 'swing'
+    initial: auto
+
+camera_tommaso_hvane:
+    name: 'Horizontal vane control - Camera Tommaso'
+    options:
+      - 'auto'
+      - '1_left'
+      - '2'
+      - '3'
+      - '4'
+      - '5_right'
+      - 'split'
+      - 'swing'
+    initial: auto

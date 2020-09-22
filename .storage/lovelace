@@ -1,0 +1,168 @@
+{
+    "version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "icon": "mdi:home",
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.updater"
+                        },
+                        {
+                            "entity": "person.salvatore"
+                        },
+                        {
+                            "entity": "sensor.camera_tommaso_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.camera_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.sala_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.camera_tommaso_energy"
+                        },
+                        {
+                            "entity": "sensor.camera_energy"
+                        },
+                        {
+                            "entity": "sensor.sala_energy"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.home"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.sala"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.camera"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.camera_tommaso"
+                        }
+                    ]
+                },
+                {
+                    "title": "Condizionamento",
+                    "path": "condizionamento",
+                    "icon": "mdi:thermometer",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.sala"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.sala_hvane"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.sala_room_temperature",
+                                            "name": "Temperatura"
+                                        },
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.sala_energy",
+                                            "name": "Energia"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.camera"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_select.camera_hvane"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.camera_room_temperature",
+                                            "name": "Temperatura"
+                                        },
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.camera_energy",
+                                            "name": "Energia"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.camera_tommaso"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        "input_select.camera_tommaso_hvane"
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.camera_tommaso_room_temperature",
+                                            "name": "Temperatura"
+                                        },
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.camera_tommaso_energy",
+                                            "name": "Energia"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

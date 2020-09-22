@@ -18,6 +18,8 @@ configurator.py
 .cloud
 .google.token
 tts
+www
+custom_components
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
