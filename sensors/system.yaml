@@ -4,6 +4,10 @@
   unit_of_measurement: "M"
   value_template: '{{ ((value | int) / 1024 / 1024) | int }}'
 
+- platform: command_line
+  name: Git alarm
+  command: "[ $(git status -s | wc -l) -gt 0 ] && echo 1 || echo 0"
+
 - platform: systemmonitor
   resources:
     - type: load_1m

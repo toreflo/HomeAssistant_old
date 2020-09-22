@@ -152,7 +152,11 @@
                 },
                 {
                     "icon": "mdi:server",
-                    "badges": [],
+                    "badges": [
+                        {
+                            "entity": "sensor.git_alarm"
+                        }
+                    ],
                     "cards": [
                         {
                             "type": "entities",
