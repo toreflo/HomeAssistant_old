@@ -42,18 +42,6 @@
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.sala"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.camera"
-                        },
-                        {
-                            "type": "thermostat",
-                            "entity": "climate.camera_tommaso"
                         }
                     ]
                 },
@@ -155,6 +143,109 @@
                                             "type": "entity",
                                             "entity": "sensor.camera_tommaso_energy",
                                             "name": "Energia"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:server",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "sensor.last_boot"
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.processor_use"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.processor_temperature"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.load_1m",
+                                            "min": 0,
+                                            "max": 1
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 1,
+                                            "entity": "sensor.load_5m"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 1,
+                                            "entity": "sensor.load_15m"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.memory_use_percent"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.memory_free"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.disk_use_percent"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.db_size"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.network_in_eth0"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.network_out_eth0"
                                         }
                                     ]
                                 }

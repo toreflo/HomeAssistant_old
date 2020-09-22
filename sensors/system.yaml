@@ -1,0 +1,29 @@
+- platform: command_line
+  name: DB size
+  command: "ls -l /config/home-assistant_v2.db |  tr -s ' ' | cut -d' ' -f5"
+  unit_of_measurement: "M"
+  value_template: '{{ ((value | int) / 1024 / 1024) | int }}'
+
+- platform: systemmonitor
+  resources:
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: disk_use_percent
+    - type: memory_use_percent
+    - type: memory_free
+    - type: processor_use
+    - type: processor_temperature
+    - type: network_in
+      arg: eth0
+    - type: network_out
+      arg: eth0
+    - type: last_boot
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'
