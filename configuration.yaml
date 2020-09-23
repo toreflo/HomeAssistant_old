@@ -15,3 +15,8 @@ sensor: !include_dir_merge_list sensors/
 
 logger:
   default: info
+
+http:
+  base_url: !secret domain
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
