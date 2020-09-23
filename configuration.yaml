@@ -12,6 +12,7 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 input_select: !include input_selects.yaml
 sensor: !include_dir_merge_list sensors/
+recorder: !include recorder.yaml
 
 logger:
   default: info
@@ -20,3 +21,4 @@ http:
   base_url: !secret domain
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
+
