@@ -1,0 +1,21 @@
+- alias: 'Git warning'
+  trigger:
+    - platform: state
+      entity_id: sensor.git_alarm
+      to: 'on'
+  action:
+    - service: persistent_notification.create
+      data:
+        title: Git warning
+        message: Check git status
+        notification_id: git_status
+
+- alias: 'Git ok'
+  trigger:
+    - platform: state
+      entity_id: sensor.git_alarm
+      to: 'off'
+  action:
+    - service: persistent_notification.dismiss
+      data:
+        notification_id: git_status

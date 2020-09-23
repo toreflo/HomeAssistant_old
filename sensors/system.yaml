@@ -6,7 +6,7 @@
 
 - platform: command_line
   name: Git alarm
-  command: "[ $(git status -s | wc -l) -gt 0 ] && echo 1 || echo 0"
+  command: "[ $(git status -s | wc -l) -gt 0 ] && echo on || echo off"
 
 - platform: systemmonitor
   resources:
