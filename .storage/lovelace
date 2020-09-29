@@ -46,8 +46,130 @@
                     ]
                 },
                 {
-                    "icon": "mdi:map",
+                    "title": "Piantina",
+                    "path": "piantina",
                     "panel": true,
+                    "icon": "mdi:map",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {
+                                    "type": "icon",
+                                    "icon": "mdi:fullscreen",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/sala"
+                                    },
+                                    "style": {
+                                        "top": "77%",
+                                        "left": "56%",
+                                        "transform": "scale(2,2)",
+                                        "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.sala_room_temperature",
+                                    "style": {
+                                        "top": "62%",
+                                        "left": "44%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "icon",
+                                    "icon": "mdi:fullscreen",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/cucina"
+                                    },
+                                    "style": {
+                                        "top": "53%",
+                                        "left": "63%",
+                                        "transform": "scale(2,2)",
+                                        "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "icon",
+                                    "icon": "mdi:fullscreen",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/camera"
+                                    },
+                                    "style": {
+                                        "top": "40%",
+                                        "left": "53%",
+                                        "transform": "scale(2,2)",
+                                        "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.camera_room_temperature",
+                                    "style": {
+                                        "top": "52%",
+                                        "left": "48%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "icon",
+                                    "icon": "mdi:fullscreen",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/studio"
+                                    },
+                                    "style": {
+                                        "top": "29%",
+                                        "left": "44%",
+                                        "transform": "scale(2,2)",
+                                        "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.studio_room_temperature",
+                                    "style": {
+                                        "top": "19%",
+                                        "left": "46%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "icon",
+                                    "icon": "mdi:fullscreen",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/tommaso"
+                                    },
+                                    "style": {
+                                        "top": "19%",
+                                        "left": "34%",
+                                        "transform": "scale(2,2)",
+                                        "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.camera_tommaso_room_temperature",
+                                    "style": {
+                                        "top": "18%",
+                                        "left": "42%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                }
+                            ],
+                            "image": "local/plan.png"
+                        }
+                    ]
+                },
+                {
+                    "title": "Sala",
+                    "path": "sala",
+                    "panel": false,
                     "badges": [],
                     "cards": [
                         {
@@ -61,11 +183,61 @@
                                         "navigation_path": "/lovelace/sala"
                                     },
                                     "style": {
-                                        "top": "58%",
-                                        "left": "50%",
+                                        "top": "24%",
+                                        "left": "7%",
                                         "color": "rgba(0,0,0,0)"
                                     }
+                                }
+                            ],
+                            "image": "local/living.png"
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.sala_room_temperature",
+                            "graph": "line",
+                            "name": "Temperatura"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.sala",
+                                    "name": "Climatizzatore"
                                 },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.sala_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Cucina",
+                    "path": "cucina",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {}
+                            ],
+                            "image": "local/kitchen.png"
+                        }
+                    ]
+                },
+                {
+                    "title": "Camera",
+                    "path": "camera",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
                                 {
                                     "type": "state-badge",
                                     "entity": "sensor.camera_room_temperature",
@@ -74,32 +246,141 @@
                                         "navigation_path": "/lovelace/camera"
                                     },
                                     "style": {
-                                        "top": "49%",
-                                        "left": "44%",
+                                        "top": "86%",
+                                        "left": "7%",
                                         "color": "rgba(0,0,0,0)"
                                     }
+                                }
+                            ],
+                            "image": "local/bedroom.png"
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.camera_room_temperature",
+                            "graph": "line",
+                            "name": "Temperatura"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.camera",
+                                    "name": "Climatizzatore"
                                 },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.camera_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Studio",
+                    "path": "studio",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.studio_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/studio"
+                                    },
+                                    "style": {
+                                        "top": "20%",
+                                        "left": "47%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                }
+                            ],
+                            "image": "local/study.png"
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.studio_room_temperature",
+                            "graph": "line",
+                            "name": "Temperatura"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.studio",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.studio_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Tommaso",
+                    "path": "tommaso",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
                                 {
                                     "type": "state-badge",
                                     "entity": "sensor.camera_tommaso_room_temperature",
                                     "tap_action": {
                                         "action": "navigate",
-                                        "navigation_path": "/lovelace/tommaso"
+                                        "navigation_path": "/lovelace/camera_tommaso"
                                     },
                                     "style": {
-                                        "top": "65%",
-                                        "left": "23%",
+                                        "top": "40%",
+                                        "left": "87%",
                                         "color": "rgba(0,0,0,0)"
                                     }
                                 }
                             ],
-                            "image": "local/plan_wide.png"
+                            "image": "local/childroom.png"
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.camera_tommaso_room_temperature",
+                            "graph": "line",
+                            "name": "Temperatura"
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.camera_tommaso",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.camera_tommaso_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "title": "Condizionamento",
-                    "path": "condizionamento",
+                    "title": "Condizionamento3",
+                    "path": "condizionamento3",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        }
+                    ],
                     "icon": "mdi:thermometer",
                     "badges": [],
                     "cards": [
@@ -107,192 +388,123 @@
                             "type": "vertical-stack",
                             "cards": [
                                 {
-                                    "type": "thermostat",
-                                    "entity": "climate.sala"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "input_select.sala_hvane"
-                                        }
-                                    ]
-                                },
-                                {
                                     "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.sala_room_temperature",
-                                            "name": "Temperatura"
-                                        },
-                                        {
-                                            "type": "entity",
-                                            "entity": "sensor.sala_energy",
-                                            "name": "Energia"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.camera"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "input_select.camera_hvane"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.camera_room_temperature",
-                                            "name": "Temperatura"
-                                        },
-                                        {
-                                            "type": "entity",
-                                            "entity": "sensor.camera_energy",
-                                            "name": "Energia"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.camera_tommaso"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        "input_select.camera_tommaso_hvane"
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.camera_tommaso_room_temperature",
-                                            "name": "Temperatura"
-                                        },
-                                        {
-                                            "type": "entity",
-                                            "entity": "sensor.camera_tommaso_energy",
-                                            "name": "Energia"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Condizionamento2",
-                    "path": "condizionamento2",
-                    "visible": [],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "vertical-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "thermostat",
-                                                    "entity": "climate.sala"
-                                                },
-                                                {
-                                                    "type": "entities",
-                                                    "entities": [
-                                                        {
-                                                            "entity": "input_select.sala_hvane"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "horizontal-stack",
-                                                    "cards": [
-                                                        {
-                                                            "type": "sensor",
-                                                            "graph": "line",
-                                                            "entity": "sensor.sala_room_temperature",
-                                                            "name": "Temperatura"
-                                                        },
-                                                        {
-                                                            "type": "entity",
-                                                            "entity": "sensor.sala_energy",
-                                                            "name": "Energia"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "vertical-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "thermostat",
-                                                    "entity": "climate.camera"
-                                                },
-                                                {
-                                                    "type": "entities",
-                                                    "entities": [
-                                                        {
-                                                            "entity": "input_select.camera_hvane"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "horizontal-stack",
-                                                    "cards": [
-                                                        {
-                                                            "type": "sensor",
-                                                            "graph": "line",
-                                                            "entity": "sensor.camera_room_temperature",
-                                                            "name": "Temperatura"
-                                                        },
-                                                        {
-                                                            "type": "entity",
-                                                            "entity": "sensor.camera_energy",
-                                                            "name": "Energia"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "vertical-stack",
                                     "cards": [
                                         {
                                             "type": "thermostat",
-                                            "entity": "climate.camera_tommaso"
+                                            "entity": "climate.sala"
+                                        },
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.camera"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.sala_hvane"
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "entities",
                                             "entities": [
-                                                "input_select.camera_tommaso_hvane"
+                                                {
+                                                    "entity": "input_select.camera_hvane"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "sensor",
+                                                    "graph": "line",
+                                                    "entity": "sensor.sala_room_temperature",
+                                                    "name": "Temperatura"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "sensor",
+                                                    "graph": "line",
+                                                    "entity": "sensor.camera_room_temperature",
+                                                    "name": "Temperatura"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "sensor",
+                                    "graph": "line",
+                                    "entity": "sensor.sala_energy",
+                                    "name": "Energia"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.studio"
+                                        },
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.camera_tommaso"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.studio_hvane"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.camera_tommaso_hvane"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "sensor",
+                                                    "graph": "line",
+                                                    "entity": "sensor.studio_room_temperature",
+                                                    "name": "Temperatura"
+                                                }
                                             ]
                                         },
                                         {
@@ -303,15 +515,16 @@
                                                     "graph": "line",
                                                     "entity": "sensor.camera_tommaso_room_temperature",
                                                     "name": "Temperatura"
-                                                },
-                                                {
-                                                    "type": "entity",
-                                                    "entity": "sensor.camera_tommaso_energy",
-                                                    "name": "Energia"
                                                 }
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "sensor",
+                                    "graph": "line",
+                                    "entity": "sensor.camera_tommaso_energy",
+                                    "name": "Energia"
                                 }
                             ]
                         }
@@ -425,8 +638,78 @@
                     ]
                 },
                 {
-                    "title": "Sala",
-                    "path": "sala",
+                    "icon": "",
+                    "panel": true,
+                    "title": "Piantina_old",
+                    "visible": [],
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.sala_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/sala"
+                                    },
+                                    "style": {
+                                        "top": "58%",
+                                        "left": "50%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.camera_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/camera"
+                                    },
+                                    "style": {
+                                        "top": "49%",
+                                        "left": "44%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.studio_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/studio"
+                                    },
+                                    "style": {
+                                        "top": "55%",
+                                        "left": "23%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.camera_tommaso_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/tommaso"
+                                    },
+                                    "style": {
+                                        "top": "65%",
+                                        "left": "23%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                }
+                            ],
+                            "image": "local/plan_old.png"
+                        }
+                    ]
+                },
+                {
+                    "title": "Condizionamento_old",
+                    "path": "condizionamento_old",
+                    "icon": "",
+                    "panel": false,
+                    "visible": [],
                     "badges": [],
                     "cards": [
                         {
@@ -461,14 +744,7 @@
                                     ]
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Camera",
-                    "path": "camera",
-                    "badges": [],
-                    "cards": [
+                        },
                         {
                             "type": "vertical-stack",
                             "cards": [
@@ -501,14 +777,38 @@
                                     ]
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Tommaso",
-                    "path": "tommaso",
-                    "badges": [],
-                    "cards": [
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.studio"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        "input_select.studio_hvane"
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.studio_room_temperature",
+                                            "name": "Temperatura"
+                                        },
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.studio_energy",
+                                            "name": "Energia"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
                         {
                             "type": "vertical-stack",
                             "cards": [
@@ -519,9 +819,7 @@
                                 {
                                     "type": "entities",
                                     "entities": [
-                                        {
-                                            "entity": "input_select.camera_tommaso_hvane"
-                                        }
+                                        "input_select.camera_tommaso_hvane"
                                     ]
                                 },
                                 {

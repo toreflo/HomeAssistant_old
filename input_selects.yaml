@@ -36,3 +36,16 @@ camera_tommaso_hvane:
       - 'split'
       - 'swing'
     initial: auto
+
+studio_hvane:
+    name: 'Horizontal vane control - Studio'
+    options:
+      - 'auto'
+      - '1_left'
+      - '2'
+      - '3'
+      - '4'
+      - '5_right'
+      - 'split'
+      - 'swing'
+    initial: auto
