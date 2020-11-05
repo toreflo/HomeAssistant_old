@@ -12,6 +12,7 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 input_select: !include input_selects.yaml
 sensor: !include_dir_merge_list sensors/
+light: !include lights.yaml
 recorder: !include recorder.yaml
 
 logger:

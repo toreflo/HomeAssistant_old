@@ -70,6 +70,28 @@
                                     }
                                 },
                                 {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_aim",
+                                    "style": {
+                                        "top": "78.5%",
+                                        "left": "51.5%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_divano",
+                                    "style": {
+                                        "top": "89%",
+                                        "left": "61%"
+                                    }
+                                },
+                                {
                                     "type": "state-badge",
                                     "entity": "sensor.sala_room_temperature",
                                     "style": {
@@ -176,6 +198,28 @@
                             "type": "picture-elements",
                             "elements": [
                                 {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_aim",
+                                    "style": {
+                                        "top": "65%",
+                                        "left": "36%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_divano",
+                                    "style": {
+                                        "top": "90%",
+                                        "left": "74%"
+                                    }
+                                },
+                                {
                                     "type": "state-badge",
                                     "entity": "sensor.sala_room_temperature",
                                     "tap_action": {
@@ -209,6 +253,34 @@
                                     "type": "entity",
                                     "entity": "input_select.sala_hvane",
                                     "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.flos_aim_p"
+                                },
+                                {
+                                    "entity": "sensor.flos_aim_e"
+                                },
+                                {
+                                    "entity": "sensor.led_divano_p"
+                                },
+                                {
+                                    "entity": "sensor.led_divano_e"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.shelly25_luci_sala_t"
+                                },
+                                {
+                                    "entity": "sensor.shelly25_luci_sala_talarm"
                                 }
                             ]
                         }
@@ -379,6 +451,9 @@
                     "visible": [
                         {
                             "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "825a4d9a79994f88a2673f38d6ea509f"
                         }
                     ],
                     "icon": "mdi:thermometer",
@@ -617,6 +692,29 @@
                                             "entity": "sensor.db_size"
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.speedtest_ping"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_download"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_upload"
+                                        }
+                                    ],
+                                    "show_name": true,
+                                    "show_icon": true,
+                                    "show_state": true,
+                                    "state_color": false
                                 },
                                 {
                                     "type": "horizontal-stack",

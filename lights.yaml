@@ -1,0 +1,17 @@
+- platform: mqtt
+  name: "Flos Aim"
+  state_topic: "shellies/shelly25-luci_sala/relay/0"
+  command_topic: "shellies/shelly25-luci_sala/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: false
+- platform: mqtt
+  name: "led divano"
+  state_topic: "shellies/shelly25-luci_sala/relay/1"
+  command_topic: "shellies/shelly25-luci_sala/relay/1/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

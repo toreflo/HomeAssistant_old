@@ -1,0 +1,29 @@
+- platform: mqtt
+  name: "Flos Aim P"
+  state_topic: "shellies/shelly25-luci_sala/relay/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Flos Aim E"
+  state_topic: "shellies/shelly25-luci_sala/relay/0/energy"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Led divano P"
+  state_topic: "shellies/shelly25-luci_sala/relay/1/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Led divano E"
+  state_topic: "shellies/shelly25-luci_sala/relay/1/energy"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "shelly25 luci sala T"
+  state_topic: "shellies/shelly25-luci_sala/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly25 luci sala Talarm"
+  state_topic: "shellies/shelly25-luci_sala/overtemperature"
+  qos: 0
