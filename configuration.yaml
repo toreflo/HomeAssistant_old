@@ -23,3 +23,7 @@ http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
+api:
+
+alexa:
+  smart_home:
