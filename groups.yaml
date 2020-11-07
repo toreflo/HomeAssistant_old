@@ -1,0 +1,5 @@
+luci_sala:
+    name: Luci sala
+    entities:
+      - light.flos_aim
+      - light.led_divano

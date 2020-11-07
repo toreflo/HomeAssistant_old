@@ -17,28 +17,20 @@
                             "entity": "person.salvatore"
                         },
                         {
-                            "entity": "sensor.camera_tommaso_room_temperature"
-                        },
-                        {
-                            "entity": "sensor.camera_room_temperature"
-                        },
-                        {
-                            "entity": "sensor.sala_room_temperature"
-                        },
-                        {
-                            "entity": "sensor.camera_tommaso_energy"
-                        },
-                        {
-                            "entity": "sensor.camera_energy"
-                        },
-                        {
-                            "entity": "sensor.sala_energy"
-                        },
-                        {
                             "entity": "sun.sun"
                         }
                     ],
                     "cards": [
+                        {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "icon_height": "33px",
+                            "name": "Sala",
+                            "entity": "group.luci_sala",
+                            "icon": "mdi:lightbulb"
+                        },
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
@@ -197,6 +189,19 @@
                         {
                             "type": "picture-elements",
                             "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_sala",
+                                    "icon": "mdi:lightbulb",
+                                    "style": {
+                                        "top": "84%",
+                                        "left": "3%",
+                                        "transform": "scale(1.5,1.5)"
+                                    }
+                                },
                                 {
                                     "type": "state-icon",
                                     "tap_action": {
