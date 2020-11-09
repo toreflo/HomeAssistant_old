@@ -7,7 +7,8 @@
   name: "Flos Aim E"
   state_topic: "shellies/shelly25-luci_sala/relay/0/energy"
   qos: 0
-  unit_of_measurement: "W"
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
   name: "Led divano P"
   state_topic: "shellies/shelly25-luci_sala/relay/1/power"
@@ -17,7 +18,8 @@
   name: "Led divano E"
   state_topic: "shellies/shelly25-luci_sala/relay/1/energy"
   qos: 0
-  unit_of_measurement: "W"
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
   name: "shelly25 luci sala T"
   state_topic: "shellies/shelly25-luci_sala/temperature"

@@ -14,6 +14,7 @@ input_select: !include input_selects.yaml
 sensor: !include_dir_merge_list sensors/
 light: !include lights.yaml
 recorder: !include recorder.yaml
+utility_meter: !include utility_meters.yaml
 
 logger:
   default: info

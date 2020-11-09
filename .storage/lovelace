@@ -181,6 +181,122 @@
                     ]
                 },
                 {
+                    "title": "Condizionamento3",
+                    "path": "condizionamento3",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "825a4d9a79994f88a2673f38d6ea509f"
+                        }
+                    ],
+                    "icon": "mdi:thermometer",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.sala"
+                                        },
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.camera"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.sala_hvane"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.camera_hvane"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.mel_big_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.mel_big_monthly_energy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.studio"
+                                        },
+                                        {
+                                            "type": "thermostat",
+                                            "entity": "climate.camera_tommaso"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.studio_hvane"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_select.camera_tommaso_hvane"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.mel_small_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.mel_small_monthly_energy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "title": "Sala",
                     "path": "sala",
                     "panel": false,
@@ -268,13 +384,24 @@
                                     "entity": "sensor.flos_aim_p"
                                 },
                                 {
-                                    "entity": "sensor.flos_aim_e"
+                                    "entity": "sensor.flos_aim_daily_energy"
                                 },
+                                {
+                                    "entity": "sensor.flos_aim_monthly_energy"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
                                 {
                                     "entity": "sensor.led_divano_p"
                                 },
                                 {
-                                    "entity": "sensor.led_divano_e"
+                                    "entity": "sensor.led_divano_daily_energy"
+                                },
+                                {
+                                    "entity": "sensor.led_divano_monthly_energy"
                                 }
                             ]
                         },
@@ -445,166 +572,6 @@
                                     "type": "entity",
                                     "entity": "input_select.camera_tommaso_hvane",
                                     "name": "Deflettori orizzontali"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Condizionamento3",
-                    "path": "condizionamento3",
-                    "visible": [
-                        {
-                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
-                        },
-                        {
-                            "user": "825a4d9a79994f88a2673f38d6ea509f"
-                        }
-                    ],
-                    "icon": "mdi:thermometer",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "thermostat",
-                                            "entity": "climate.sala"
-                                        },
-                                        {
-                                            "type": "thermostat",
-                                            "entity": "climate.camera"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "input_select.sala_hvane"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "input_select.camera_hvane"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "horizontal-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "sensor",
-                                                    "graph": "line",
-                                                    "entity": "sensor.sala_room_temperature",
-                                                    "name": "Temperatura"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "horizontal-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "sensor",
-                                                    "graph": "line",
-                                                    "entity": "sensor.camera_room_temperature",
-                                                    "name": "Temperatura"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "sensor",
-                                    "graph": "line",
-                                    "entity": "sensor.sala_energy",
-                                    "name": "Energia"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "thermostat",
-                                            "entity": "climate.studio"
-                                        },
-                                        {
-                                            "type": "thermostat",
-                                            "entity": "climate.camera_tommaso"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "input_select.studio_hvane"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "entities",
-                                            "entities": [
-                                                {
-                                                    "entity": "input_select.camera_tommaso_hvane"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "horizontal-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "sensor",
-                                                    "graph": "line",
-                                                    "entity": "sensor.studio_room_temperature",
-                                                    "name": "Temperatura"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "horizontal-stack",
-                                            "cards": [
-                                                {
-                                                    "type": "sensor",
-                                                    "graph": "line",
-                                                    "entity": "sensor.camera_tommaso_room_temperature",
-                                                    "name": "Temperatura"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "sensor",
-                                    "graph": "line",
-                                    "entity": "sensor.camera_tommaso_energy",
-                                    "name": "Energia"
                                 }
                             ]
                         }

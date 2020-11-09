@@ -1,0 +1,26 @@
+mel_big_daily_energy:
+  source: sensor.sala_energy
+  cycle: daily
+mel_big_monthly_energy:
+  source: sensor.sala_energy
+  cycle: monthly
+mel_small_daily_energy:
+  source: sensor.camera_tommaso_energy
+  cycle: daily
+mel_small_monthly_energy:
+  source: sensor.camera_tommaso_energy
+  cycle: monthly
+
+flos_aim_daily_energy:
+  source: sensor.flos_aim_e
+  cycle: daily
+flos_aim_monthly_energy:
+  source: sensor.flos_aim_e
+  cycle: monthly
+led_divano_daily_energy:
+  source: sensor.led_divano_e
+  cycle: daily
+led_divano_monthly_energy:
+  source: sensor.led_divano_e
+  cycle: monthly
+
