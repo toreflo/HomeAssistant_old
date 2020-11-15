@@ -1,0 +1,12 @@
+goodmorning:
+  alias: Buongiorno
+  sequence:
+  #- device_id: 9ec1aef5fcb511eab1c9557a8834b6b8
+  #  domain: climate
+  #  entity_id: climate.sala
+  #  type: set_hvac_mode
+  #  hvac_mode: heat
+  - service: light.turn_on
+    data: {}
+    entity_id: light.flos_aim
+  mode: single

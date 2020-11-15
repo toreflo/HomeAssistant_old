@@ -1,0 +1,16 @@
+- alias: Buongiorno
+  trigger:
+    platform: event
+    event_type: goodmorning
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: 'device_tracker.iphone_di_salvatore'
+        state: 'home'
+      - condition: time
+        after: '06:00:00'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.goodmorning

@@ -18,6 +18,18 @@
                         },
                         {
                             "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "sensor.sala_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.camera_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.studio_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.camera_tommaso_room_temperature"
                         }
                     ],
                     "cards": [
