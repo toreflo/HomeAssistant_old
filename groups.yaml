@@ -3,3 +3,4 @@ luci_sala:
     entities:
       - light.flos_aim
       - light.led_divano
+      - light.flos_ic_t2

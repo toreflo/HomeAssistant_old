@@ -15,3 +15,16 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+- platform: mqtt
+  name: "Flos IC T2"
+  state_topic: "shellies/shelly1-ic_t2/relay/0"
+  command_topic: "shellies/shelly1-ic_t2/relay/0/command"
+#  availability_topic: "shellies/shelly1-ic_t2/online"
+  qos: 0
+#  value_template: "{% if value == 'on' %} on {% else %} off {% endif %}" 
+  payload_on: "on"
+  payload_off: "off"
+#  payload_available: "true"
+#  payload_not_available: "false"
+#  optimistic: false
+  retain: false

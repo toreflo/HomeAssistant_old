@@ -96,6 +96,17 @@
                                     }
                                 },
                                 {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_ic_t2",
+                                    "style": {
+                                        "top": "67.5%",
+                                        "left": "63.75%"
+                                    }
+                                },
+                                {
                                     "type": "state-badge",
                                     "entity": "sensor.sala_room_temperature",
                                     "style": {
@@ -350,6 +361,17 @@
                                     "style": {
                                         "top": "90%",
                                         "left": "74%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_ic_t2",
+                                    "style": {
+                                        "top": "39%",
+                                        "left": "86%"
                                     }
                                 },
                                 {

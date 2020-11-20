@@ -3,6 +3,7 @@ include:
   domains:
     - sensor
     - switch
+    - ligth.flos_ic_t2
 exclude:
   entities:
     - sensor.last_boot
@@ -14,6 +15,10 @@ exclude:
     - sensor.git_alarm
     - sensor.flos_aim_e
     - sensor.led_divano_e
+    - sensor.sala_energy
+    - sensor.camera_energy
+    - sensor.studio_energy
+    - sensor.camera_tommaso_energy
   entity_globs:
     - sensor.weather_*
     - sensor.iphone*
