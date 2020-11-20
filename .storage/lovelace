@@ -130,6 +130,17 @@
                                     }
                                 },
                                 {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.luce_penisola",
+                                    "style": {
+                                        "top": "50%",
+                                        "left": "67.25%"
+                                    }
+                                },
+                                {
                                     "type": "icon",
                                     "icon": "mdi:fullscreen",
                                     "tap_action": {
@@ -461,9 +472,44 @@
                         {
                             "type": "picture-elements",
                             "elements": [
-                                {}
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.luce_penisola",
+                                    "style": {
+                                        "top": "30%",
+                                        "left": "74%"
+                                    }
+                                }
                             ],
                             "image": "local/kitchen.png"
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.luce_penisola_p"
+                                },
+                                {
+                                    "entity": "sensor.luce_penisola_daily_energy"
+                                },
+                                {
+                                    "entity": "sensor.luce_penisola_monthly_energy"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "glance",
+                            "entities": [
+                                {
+                                    "entity": "sensor.shelly25_luci_cucina_t"
+                                },
+                                {
+                                    "entity": "sensor.shelly25_luci_cucina_talarm"
+                                }
+                            ]
                         }
                     ]
                 },

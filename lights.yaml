@@ -19,12 +19,26 @@
   name: "Flos IC T2"
   state_topic: "shellies/shelly1-ic_t2/relay/0"
   command_topic: "shellies/shelly1-ic_t2/relay/0/command"
-#  availability_topic: "shellies/shelly1-ic_t2/online"
   qos: 0
-#  value_template: "{% if value == 'on' %} on {% else %} off {% endif %}" 
   payload_on: "on"
   payload_off: "off"
-#  payload_available: "true"
-#  payload_not_available: "false"
-#  optimistic: false
   retain: false
+
+- platform: mqtt
+  name: "Led cucina"
+  state_topic: "shellies/shelly25-luci_cucina/relay/0"
+  command_topic: "shellies/shelly25-luci_cucina/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: false
+- platform: mqtt
+  name: "Luce penisola"
+  state_topic: "shellies/shelly25-luci_cucina/relay/1"
+  command_topic: "shellies/shelly25-luci_cucina/relay/1/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+
