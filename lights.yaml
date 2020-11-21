@@ -1,3 +1,4 @@
+# Shelly 2.5 luci sala
 - platform: mqtt
   name: "Flos Aim"
   state_topic: "shellies/shelly25-luci_sala/relay/0"
@@ -24,15 +25,17 @@
   payload_off: "off"
   retain: false
 
-- platform: mqtt
-  name: "Led cucina"
-  state_topic: "shellies/shelly25-luci_cucina/relay/0"
-  command_topic: "shellies/shelly25-luci_cucina/relay/0/command"
-  qos: 0
-  payload_on: "on"
-  payload_off: "off"
-  optimistic: false
-  retain: false
+# Shelly 2.5 luci cucina
+# Il relay 0 è trattato come uno switch, non come una luce
+#- platform: mqtt
+#  name: "Led cucina"
+#  state_topic: "shellies/shelly25-luci_cucina/relay/0"
+#  command_topic: "shellies/shelly25-luci_cucina/relay/0/command"
+#  qos: 0
+#  payload_on: "on"
+#  payload_off: "off"
+#  optimistic: false
+#  retain: false
 - platform: mqtt
   name: "Luce penisola"
   state_topic: "shellies/shelly25-luci_cucina/relay/1"

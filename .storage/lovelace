@@ -46,6 +46,18 @@
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "switch.pulsante_led_cucina"
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "script.toggle_led_cucina"
+                            ]
                         }
                     ]
                 },

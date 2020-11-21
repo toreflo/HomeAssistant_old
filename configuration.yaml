@@ -13,6 +13,7 @@ scene: !include scenes.yaml
 input_select: !include input_selects.yaml
 sensor: !include_dir_merge_list sensors/
 light: !include lights.yaml
+switch: !include switches.yaml
 recorder: !include recorder.yaml
 utility_meter: !include utility_meters.yaml
 
