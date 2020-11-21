@@ -4,6 +4,8 @@ include:
     - sensor
     - switch
     - ligth.flos_ic_t2
+    - input_number
+    - input_boolean
 exclude:
   entities:
     - sensor.last_boot

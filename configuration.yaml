@@ -29,3 +29,13 @@ api:
 
 alexa:
   smart_home:
+
+input_number:
+  dummy_power:
+    name: Dummy power
+    initial: 0
+    min: 0
+    max: 50
+    step: 1
+input_boolean:
+  dummy_switch:

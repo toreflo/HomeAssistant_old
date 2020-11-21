@@ -45,3 +45,12 @@
   payload_off: "off"
   retain: false
 
+- platform: template
+  lights:
+    led_cucina_virtual:
+      friendly_name: "Led cucina"
+      value_template: "{{ states('input_number.dummy_power') | float >= 10 }}"
+      turn_on:
+        service: script.turn_on_led_cucina
+      turn_off:
+        service: script.turn_off_led_cucina

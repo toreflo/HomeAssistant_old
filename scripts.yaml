@@ -21,4 +21,37 @@ toggle_led_cucina:
   - service: switch.turn_off
     data: {}
     entity_id: switch.pulsante_led_cucina
+  - service: logbook.log
+    data:
+      name: script toggle_led_cucina
+      message: invocazione
 
+toggle_dummy_switch:
+  sequence:
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.dummy_switch
+  - delay:
+      milliseconds: 500
+  - service: input_boolean.turn_off
+    data: {}
+    entity_id: input_boolean.dummy_switch
+  - service: logbook.log
+    data:
+      name: script toggle_dummy_switch
+      message: invocazione
+
+turn_off_led_cucina:
+  sequence:
+  - condition: template
+    value_template: "{{ states('input_number.dummy_power') | float >= 10 }}"
+  - service: script.turn_on
+    data:
+      entity_id: script.toggle_dummy_switch
+turn_on_led_cucina:
+  sequence:
+  - condition: template
+    value_template: "{{ states('input_number.dummy_power') | float < 10 }}"
+  - service: script.turn_on
+    data:
+      entity_id: script.toggle_dummy_switch
