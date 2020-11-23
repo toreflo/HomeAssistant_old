@@ -1,14 +1,18 @@
 goodmorning:
   alias: Buongiorno
   sequence:
-  #- device_id: 9ec1aef5fcb511eab1c9557a8834b6b8
-  #  domain: climate
-  #  entity_id: climate.sala
-  #  type: set_hvac_mode
-  #  hvac_mode: heat
-  - service: light.turn_on
-    data: {}
-    entity_id: light.flos_aim
+#  - service: light.turn_on
+#    data: {}
+#    entity_id: light.flos_aim
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.echo_dot_cucina
+      volume_level: 0.2
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.echo_dot_cucina
+      media_content_type: AMAZON_MUSIC
+      media_content_id: "{{ states('input_text.goodmorning_music') }}"
   mode: single
 
 toggle_led_cucina:

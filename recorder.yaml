@@ -6,6 +6,8 @@ include:
     - ligth.flos_ic_t2
     - input_number
     - input_boolean
+  entities:
+    - device_tracker.iphone_di_salvatore
 exclude:
   entities:
     - sensor.last_boot

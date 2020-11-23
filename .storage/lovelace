@@ -68,6 +68,19 @@
                             "name": "Sala",
                             "entity": "group.luci_sala",
                             "icon": "mdi:lightbulb"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.echo_dot_cucina"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_text.goodmorning_music",
+                                    "type": "custom:text-input-row"
+                                }
+                            ]
                         }
                     ]
                 },
