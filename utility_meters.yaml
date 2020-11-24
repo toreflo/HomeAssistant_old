@@ -24,16 +24,29 @@ led_divano_monthly_energy:
   source: sensor.led_divano_e
   cycle: monthly
 
-led_cucina_daily_energy:
-  source: sensor.led_cucina_e
-  cycle: daily
-led_cucina_monthly_energy:
-  source: sensor.led_cucina_e
-  cycle: monthly
+#led_cucina_daily_energy:
+#  source: sensor.led_cucina_e
+#  cycle: daily
+#led_cucina_monthly_energy:
+#  source: sensor.led_cucina_e
+#  cycle: monthly
 luce_penisola_daily_energy:
   source: sensor.luce_penisola_e
   cycle: daily
 luce_penisola_monthly_energy:
   source: sensor.luce_penisola_e
+  cycle: monthly
+
+network_in_daily:
+  source: sensor.network_in_eth0
+  cycle: daily
+network_in_monthly:
+  source: sensor.network_in_eth0
+  cycle: monthly
+network_out_daily:
+  source: sensor.network_out_eth0
+  cycle: daily
+network_out_monthly:
+  source: sensor.network_out_eth0
   cycle: monthly
 

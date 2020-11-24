@@ -810,13 +810,45 @@
                                     "cards": [
                                         {
                                             "type": "sensor",
+                                            "entity": "sensor.network_throughput_in_eth0",
                                             "graph": "line",
-                                            "entity": "sensor.network_in_eth0"
+                                            "name": "Throughput IN"
                                         },
                                         {
                                             "type": "sensor",
                                             "graph": "line",
-                                            "entity": "sensor.network_out_eth0"
+                                            "entity": "sensor.network_throughput_out_eth0",
+                                            "name": "Throughput OUT"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_in_daily",
+                                            "name": "IN giornaliero"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_out_daily",
+                                            "name": "OUT giornaliero"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_in_monthly",
+                                            "name": "IN mensile"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_out_monthly",
+                                            "name": "OUT mensile"
                                         }
                                     ]
                                 }
