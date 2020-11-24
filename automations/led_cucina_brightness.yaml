@@ -1,0 +1,8 @@
+- alias: Luminosità led cucina
+  trigger:
+    platform: state
+    entity_id: input_number.led_cucina_brightness
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.change_brightness_led_cucina

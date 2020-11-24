@@ -4,8 +4,6 @@ include:
     - sensor
     - switch
     - ligth.flos_ic_t2
-    - input_number
-    - input_boolean
   entities:
     - device_tracker.iphone_di_salvatore
 exclude:
@@ -24,6 +22,7 @@ exclude:
     - sensor.camera_energy
     - sensor.studio_energy
     - sensor.camera_tommaso_energy
+    - sensor.led_cucina_target_power
   entity_globs:
     - sensor.weather_*
     - sensor.iphone*

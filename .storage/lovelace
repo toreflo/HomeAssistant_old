@@ -52,12 +52,14 @@
                             ]
                         },
                         {
-                            "type": "light",
-                            "entity": "light.led_cucina_virtual"
+                            "type": "entities",
+                            "entities": [
+                                "input_number.led_cucina_brightness"
+                            ]
                         },
                         {
-                            "type": "weather-forecast",
-                            "entity": "weather.home"
+                            "type": "light",
+                            "entity": "light.led_cucina_virtual"
                         },
                         {
                             "type": "button",
@@ -70,6 +72,10 @@
                             "icon": "mdi:lightbulb"
                         },
                         {
+                            "type": "weather-forecast",
+                            "entity": "weather.home"
+                        },
+                        {
                             "type": "media-control",
                             "entity": "media_player.echo_dot_cucina"
                         },
@@ -80,6 +86,18 @@
                                     "entity": "input_text.goodmorning_music",
                                     "type": "custom:text-input-row"
                                 }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "sensor.led_cucina_target_power"
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "binary_sensor.led_cucina_brightness_ok"
                             ]
                         }
                     ]

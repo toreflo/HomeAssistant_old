@@ -1,0 +1,24 @@
+dummy_power:
+  name: Dummy power
+  initial: 0
+  min: 0
+  max: 50
+  step: 1
+led_cucina_brightness:
+  name: Luminosita led cucina
+  initial: 0
+  min: 0
+  max: 100
+  step: 1
+led_cucina_min_power:
+  initial: 10
+  min: 9
+  max: 10
+led_cucina_max_power:
+  initial: 50
+  min: 49
+  max: 50
+epsilon:
+  initial: 1
+  min: 0
+  max: 1

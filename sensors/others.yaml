@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    led_cucina_target_power:
+      entity_id: input_number.led_cucina_brightness
+      value_template: "{{ states('input_number.led_cucina_min_power')|float + states('input_number.led_cucina_brightness')|float * (states('input_number.led_cucina_max_power')|float - states('input_number.led_cucina_min_power')|float) / 100 }}"

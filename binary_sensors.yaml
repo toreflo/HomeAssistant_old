@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    led_cucina_brightness_ok:
+      entity_id: sensor.led_cucina_target_power, input_number.dummy_power
+      value_template: "{{ (states('input_number.dummy_power')|float >= states('sensor.led_cucina_target_power')|float - states('input_number.epsilon')|float) and (states('input_number.dummy_power')|float <= states('sensor.led_cucina_target_power')|float + states('input_number.epsilon')|float) }}" 
