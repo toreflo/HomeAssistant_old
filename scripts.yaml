@@ -1,9 +1,9 @@
 goodmorning:
   alias: Buongiorno
   sequence:
-#  - service: light.turn_on
-#    data: {}
-#    entity_id: light.flos_aim
+  - condition: state
+    entity_id: 'device_tracker.iphone_di_salvatore'
+    state: 'home'
   - service: media_player.volume_set
     data:
       entity_id: media_player.echo_dot_cucina
