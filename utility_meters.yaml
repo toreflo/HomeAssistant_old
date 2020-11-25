@@ -1,3 +1,4 @@
+# Condizionatori
 mel_big_daily_energy:
   source: sensor.sala_energy
   cycle: daily
@@ -11,6 +12,7 @@ mel_small_monthly_energy:
   source: sensor.camera_tommaso_energy
   cycle: monthly
 
+# Luci sala
 flos_aim_daily_energy:
   source: sensor.flos_aim_e
   cycle: daily
@@ -24,6 +26,7 @@ led_divano_monthly_energy:
   source: sensor.led_divano_e
   cycle: monthly
 
+# Luci cucina
 #led_cucina_daily_energy:
 #  source: sensor.led_cucina_e
 #  cycle: daily
@@ -37,6 +40,15 @@ luce_penisola_monthly_energy:
   source: sensor.luce_penisola_e
   cycle: monthly
 
+# Avvolgibile cucina
+avvolgibile_cucina_daily_energy:
+  source: sensor.avvolgibile_cucina_e
+  cycle: daily
+avvolgibile_cucina_monthly_energy:
+  source: sensor.avvolgibile_cucina_e
+  cycle: monthly
+
+# Rete
 network_in_daily:
   source: sensor.network_in_eth0
   cycle: daily

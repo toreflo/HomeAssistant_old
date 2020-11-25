@@ -61,3 +61,24 @@
   name: "shelly25 luci cucina Talarm"
   state_topic: "shellies/shelly25-luci_cucina/overtemperature"
   qos: 0
+
+- platform: mqtt
+  name: "Avvolgibile cucina P"
+  state_topic: "shellies/shelly25-avv_cucina/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Avvolgibile cucina E"
+  state_topic: "shellies/shelly25-avv_cucina/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "shelly25 avvolgibile cucina T"
+  state_topic: "shellies/shelly25-avv_cucina/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly25 avvolgibile cucina Talarm"
+  state_topic: "shellies/shelly25-avv_cucina/overtemperature"
+  qos: 0

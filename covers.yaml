@@ -1,0 +1,16 @@
+- platform: mqtt
+  name: "cucina"
+  command_topic: "shellies/shelly25-avv_cucina/roller/0/command"
+  position_topic: "shellies/shelly25-avv_cucina/roller/0/pos"
+  set_position_topic: "shellies/shelly25-avv_cucina/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-avv_cucina/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 0

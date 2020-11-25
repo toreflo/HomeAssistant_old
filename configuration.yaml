@@ -15,6 +15,7 @@ input_text: !include input_text.yaml
 sensor: !include_dir_merge_list sensors/
 binary_sensor: !include binary_sensors.yaml
 light: !include lights.yaml
+cover: !include covers.yaml
 switch: !include switches.yaml
 recorder: !include recorder.yaml
 utility_meter: !include utility_meters.yaml
