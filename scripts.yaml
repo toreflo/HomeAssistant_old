@@ -7,7 +7,11 @@ goodmorning:
   - service: media_player.volume_set
     data:
       entity_id: media_player.echo_dot_cucina
-      volume_level: 0.2
+      volume_level: 0.25
+  - service: cover.set_cover_position
+    data:
+      entity_id: cover.cucina
+      position: 50
   - service: media_player.play_media
     data:
       entity_id: media_player.echo_dot_cucina

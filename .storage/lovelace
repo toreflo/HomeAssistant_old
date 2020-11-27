@@ -108,6 +108,13 @@
                         {
                             "type": "media-control",
                             "entity": "media_player.echo_dot_cucina"
+                        },
+                        {
+                            "type": "gauge",
+                            "min": 0,
+                            "max": 100,
+                            "entity": "sensor.avv_cucina_pos",
+                            "name": "Cucina"
                         }
                     ]
                 },
