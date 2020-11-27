@@ -4,9 +4,16 @@ luci_sala:
       - light.flos_aim
       - light.led_divano
       - light.flos_ic_t2
+      - light.ingresso
 
 luci_cucina:
     name: Luci cucina
     entities:
       - light.luce_penisola
+      - light.led_cucina_virtual
 
+luci:
+    name: Tutte le luci
+    entities:
+      - group.luci_sala
+      - group.luci_cucina

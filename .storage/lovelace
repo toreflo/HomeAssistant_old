@@ -34,6 +34,15 @@
                     ],
                     "cards": [
                         {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "group.luci",
+                            "icon": "hass:lightbulb",
+                            "icon_height": "36px"
+                        },
+                        {
                             "type": "entities",
                             "entities": [
                                 "input_number.dummy_power"
@@ -115,6 +124,12 @@
                             "max": 100,
                             "entity": "sensor.avv_cucina_pos",
                             "name": "Cucina"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "script.toggle_led_cucina"
+                            ]
                         }
                     ]
                 },
@@ -140,6 +155,17 @@
                                         "left": "56%",
                                         "transform": "scale(2,2)",
                                         "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.ingresso",
+                                    "style": {
+                                        "top": "59%",
+                                        "left": "49.5%"
                                     }
                                 },
                                 {
@@ -208,6 +234,17 @@
                                     "style": {
                                         "top": "50%",
                                         "left": "67.25%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_cucina_virtual",
+                                    "style": {
+                                        "top": "58%",
+                                        "left": "62.25%"
                                     }
                                 },
                                 {
@@ -407,21 +444,17 @@
                     "badges": [],
                     "cards": [
                         {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "group.luci_sala",
+                            "icon": "hass:lightbulb",
+                            "icon_height": "36px"
+                        },
+                        {
                             "type": "picture-elements",
                             "elements": [
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "group.luci_sala",
-                                    "icon": "mdi:lightbulb",
-                                    "style": {
-                                        "top": "84%",
-                                        "left": "3%",
-                                        "transform": "scale(1.5,1.5)"
-                                    }
-                                },
                                 {
                                     "type": "state-icon",
                                     "tap_action": {
@@ -431,6 +464,17 @@
                                     "style": {
                                         "top": "65%",
                                         "left": "36%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.ingresso",
+                                    "style": {
+                                        "top": "18%",
+                                        "left": "22%"
                                     }
                                 },
                                 {
@@ -494,41 +538,71 @@
                             ]
                         },
                         {
-                            "type": "glance",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "sensor.flos_aim_p"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.flos_aim_p"
+                                        },
+                                        {
+                                            "entity": "sensor.flos_aim_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.flos_aim_monthly_energy"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.flos_aim_daily_energy"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.led_divano_p"
+                                        },
+                                        {
+                                            "entity": "sensor.led_divano_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.led_divano_monthly_energy"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.flos_aim_monthly_energy"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.led_divano_p"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.luce_ingresso_p"
+                                        },
+                                        {
+                                            "entity": "sensor.luce_ingresso_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.luce_ingresso_monthly_energy"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.led_divano_daily_energy"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.shelly25_luci_sala_t"
+                                        },
+                                        {
+                                            "entity": "sensor.shelly25_luci_sala_talarm"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.led_divano_monthly_energy"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.shelly25_luci_sala_t"
-                                },
-                                {
-                                    "entity": "sensor.shelly25_luci_sala_talarm"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.shelly1pm_ingresso_t"
+                                        },
+                                        {
+                                            "entity": "sensor.shelly1pm_ingresso_talarm"
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -541,8 +615,28 @@
                     "badges": [],
                     "cards": [
                         {
+                            "type": "button",
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "entity": "group.luci_cucina",
+                            "icon": "hass:lightbulb",
+                            "icon_height": "36px"
+                        },
+                        {
                             "type": "picture-elements",
                             "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_cucina_virtual",
+                                    "style": {
+                                        "top": "62%",
+                                        "left": "50%"
+                                    }
+                                },
                                 {
                                     "type": "state-icon",
                                     "tap_action": {
@@ -558,58 +652,63 @@
                             "image": "local/kitchen.png"
                         },
                         {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.luce_penisola_p"
-                                },
-                                {
-                                    "entity": "sensor.luce_penisola_daily_energy"
-                                },
-                                {
-                                    "entity": "sensor.luce_penisola_monthly_energy"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.shelly25_luci_cucina_t"
-                                },
-                                {
-                                    "entity": "sensor.shelly25_luci_cucina_talarm"
-                                }
-                            ]
-                        },
-                        {
                             "type": "entities",
                             "entities": [
                                 "cover.cucina"
                             ]
                         },
                         {
-                            "type": "glance",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "sensor.avvolgibile_cucina_p"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.led_cucina_p"
+                                        },
+                                        {
+                                            "entity": "sensor.led_cucina_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.led_cucina_monthly_energy"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.avvolgibile_cucina_daily_energy"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.avvolgibile_cucina_p"
+                                        },
+                                        {
+                                            "entity": "sensor.avvolgibile_cucina_daily_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.avvolgibile_cucina_monthly_energy"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.avvolgibile_cucina_monthly_energy"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "glance",
-                            "entities": [
-                                {
-                                    "entity": "sensor.shelly25_avvolgibile_cucina_t"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.shelly25_led_cucina_t"
+                                        },
+                                        {
+                                            "entity": "sensor.shelly25_led_cucina_talarm"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "sensor.shelly25_avvolgibile_cucina_talarm"
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.shelly25_avvolgibile_cucina_t"
+                                        },
+                                        {
+                                            "entity": "sensor.shelly25_avvolgibile_cucina_talarm"
+                                        }
+                                    ]
                                 }
                             ]
                         }

@@ -1,3 +1,13 @@
+# Shelly 1PM ingresso
+- platform: mqtt
+  name: "Ingresso"
+  state_topic: "shellies/shelly1pm-ingresso/relay/0"
+  command_topic: "shellies/shelly1pm-ingresso/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+
 # Shelly 2.5 luci sala
 - platform: mqtt
   name: "Flos Aim"
@@ -16,6 +26,7 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+# Shelly 1 Flos IC T2
 - platform: mqtt
   name: "Flos IC T2"
   state_topic: "shellies/shelly1-ic_t2/relay/0"
@@ -27,19 +38,20 @@
 
 # Shelly 2.5 luci cucina
 # Il relay 0 è trattato come uno switch, non come una luce
-#- platform: mqtt
-#  name: "Led cucina"
-#  state_topic: "shellies/shelly25-luci_cucina/relay/0"
-#  command_topic: "shellies/shelly25-luci_cucina/relay/0/command"
-#  qos: 0
-#  payload_on: "on"
-#  payload_off: "off"
-#  optimistic: false
-#  retain: false
+# Il relay 1 è in realtà sempre chiuso per fornire potenza all'alimentatore
 - platform: mqtt
-  name: "Luce penisola"
+  name: "Alimentatore luce cucina"
   state_topic: "shellies/shelly25-luci_cucina/relay/1"
   command_topic: "shellies/shelly25-luci_cucina/relay/1/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+# Shelly 1 luce penisola
+- platform: mqtt
+  name: "Luce penisola"
+  state_topic: "shellies/shelly1-penisola/relay/0"
+  command_topic: "shellies/shelly1-penisola/relay/0/command"
   qos: 0
   payload_on: "on"
   payload_off: "off"
@@ -49,7 +61,7 @@
   lights:
     led_cucina_virtual:
       friendly_name: "Led cucina"
-      value_template: "{{ states('input_number.dummy_power') | float >= states('input_number.led_cucina_min_power') | float }}"
+      value_template: "{{ states('sensor.led_cucina_p') | float >= states('input_number.led_cucina_min_power') | float }}"
       turn_on:
         service: script.turn_on_led_cucina
       turn_off:

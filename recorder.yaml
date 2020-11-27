@@ -15,9 +15,9 @@ exclude:
     - sensor.time_date
     - sensor.git_alarm
     - sensor.flos_aim_e
+    - sensor.luce_ingresso_e
     - sensor.led_divano_e
     - sensor.led_cucina_e
-    - sensor.luce_penisola_e
     - sensor.avvolgibile_cucina_e
     - sensor.sala_energy
     - sensor.camera_energy

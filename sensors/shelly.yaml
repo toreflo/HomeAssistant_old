@@ -1,3 +1,26 @@
+# Shelly 1PM ingresso
+- platform: mqtt
+  name: "Luce ingresso P"
+  state_topic: "shellies/shelly1pm-ingresso/relay/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Luce ingresso E"
+  state_topic: "shellies/shelly1pm-ingresso/relay/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "shelly1pm ingresso T"
+  state_topic: "shellies/shelly1pm-ingresso/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly1pm ingresso Talarm"
+  state_topic: "shellies/shelly1pm-ingresso/overtemperature"
+  qos: 0
+
+# Shelly 2.5 luci sala
 - platform: mqtt
   name: "Flos Aim P"
   state_topic: "shellies/shelly25-luci_sala/relay/0/power"
@@ -30,38 +53,30 @@
   state_topic: "shellies/shelly25-luci_sala/overtemperature"
   qos: 0
 
+# Shelly 2.5 led cucina
+# Il relay 0 non viene monitorato perché è usato come un pulsante
 - platform: mqtt
   name: "Led cucina P"
-  state_topic: "shellies/shelly25-luci_cucina/relay/0/power"
-  qos: 0
-  unit_of_measurement: "W"
-- platform: mqtt
-  name: "Led cucina E"
-  state_topic: "shellies/shelly25-luci_cucina/relay/0/energy"
-  qos: 0
-  unit_of_measurement: "Wh"
-  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
-- platform: mqtt
-  name: "Luce penisola P"
   state_topic: "shellies/shelly25-luci_cucina/relay/1/power"
   qos: 0
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "Luce penisola E"
+  name: "Led cucina E"
   state_topic: "shellies/shelly25-luci_cucina/relay/1/energy"
   qos: 0
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 luci cucina T"
+  name: "shelly25 led cucina T"
   state_topic: "shellies/shelly25-luci_cucina/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 luci cucina Talarm"
+  name: "shelly25 led cucina Talarm"
   state_topic: "shellies/shelly25-luci_cucina/overtemperature"
   qos: 0
 
+# Shelly 2.5 avvolgibile cucina
 - platform: mqtt
   name: "Avvolgibile cucina P"
   state_topic: "shellies/shelly25-avv_cucina/roller/0/power"

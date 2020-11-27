@@ -12,6 +12,14 @@ mel_small_monthly_energy:
   source: sensor.camera_tommaso_energy
   cycle: monthly
 
+# Luce ingresso
+luce_ingresso_daily_energy:
+  source: sensor.luce_ingresso_e
+  cycle: daily
+luce_ingresso_monthly_energy:
+  source: sensor.luce_ingresso_e
+  cycle: monthly
+
 # Luci sala
 flos_aim_daily_energy:
   source: sensor.flos_aim_e
@@ -27,17 +35,11 @@ led_divano_monthly_energy:
   cycle: monthly
 
 # Luci cucina
-#led_cucina_daily_energy:
-#  source: sensor.led_cucina_e
-#  cycle: daily
-#led_cucina_monthly_energy:
-#  source: sensor.led_cucina_e
-#  cycle: monthly
-luce_penisola_daily_energy:
-  source: sensor.luce_penisola_e
+led_cucina_daily_energy:
+  source: sensor.led_cucina_e
   cycle: daily
-luce_penisola_monthly_energy:
-  source: sensor.luce_penisola_e
+led_cucina_monthly_energy:
+  source: sensor.led_cucina_e
   cycle: monthly
 
 # Avvolgibile cucina

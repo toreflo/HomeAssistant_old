@@ -25,7 +25,7 @@ toggle_led_cucina:
     data: {}
     entity_id: switch.pulsante_led_cucina
   - delay:
-      milliseconds: 100
+      milliseconds: 250
   - service: switch.turn_off
     data: {}
     entity_id: switch.pulsante_led_cucina
@@ -58,7 +58,7 @@ turn_off_led_cucina:
     state: 'on'
   - service: script.turn_on
     data:
-      entity_id: script.toggle_dummy_switch
+      entity_id: script.toggle_led_cucina
 turn_on_led_cucina:
   sequence:
   - condition: state
@@ -66,7 +66,7 @@ turn_on_led_cucina:
     state: 'off'
   - service: script.turn_on
     data:
-      entity_id: script.toggle_dummy_switch
+      entity_id: script.toggle_led_cucina
   mode: single
 
 change_brightness_led_cucina:
