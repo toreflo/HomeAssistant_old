@@ -34,101 +34,71 @@
                     ],
                     "cards": [
                         {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "group.luci",
-                            "icon": "hass:lightbulb",
-                            "icon_height": "36px"
-                        },
-                        {
                             "type": "entities",
                             "entities": [
-                                "input_number.dummy_power"
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "input_boolean.dummy_switch"
-                            ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "input_number.led_cucina_brightness"
-                            ]
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
                                 {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "icon_height": "33px",
-                                    "name": "Sala",
-                                    "entity": "group.luci_sala",
-                                    "icon": "mdi:lightbulb"
+                                    "entity": "group.luci_sala"
                                 },
                                 {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "icon_height": "33px",
-                                    "name": "Led cucina",
-                                    "entity": "light.led_cucina_virtual",
-                                    "icon": "mdi:lightbulb"
+                                    "entity": "light.ingresso"
+                                },
+                                {
+                                    "entity": "light.flos_aim"
+                                },
+                                {
+                                    "entity": "light.led_divano"
+                                },
+                                {
+                                    "entity": "light.flos_ic_t2"
+                                },
+                                {
+                                    "entity": "group.luci_cucina"
+                                },
+                                {
+                                    "entity": "light.led_cucina_virtual"
+                                },
+                                {
+                                    "entity": "light.luce_penisola"
                                 }
                             ]
                         },
                         {
-                            "type": "glance",
+                            "type": "entities",
                             "entities": [
-                                {
-                                    "entity": "sensor.led_cucina_target_power"
-                                },
-                                {
-                                    "entity": "binary_sensor.led_cucina_brightness_ok"
-                                },
-                                {
-                                    "entity": "script.toggle_dummy_switch"
-                                }
-                            ],
-                            "show_name": true,
-                            "show_state": true
+                                "group.finestre"
+                            ]
                         },
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
                         },
                         {
-                            "type": "entities",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "input_text.goodmorning_music",
-                                    "type": "custom:text-input-row"
+                                    "type": "media-control",
+                                    "entity": "media_player.echo_dot_cucina"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_text.goodmorning_music",
+                                            "type": "custom:text-input-row"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.goodmorning_volume"
+                                        },
+                                        {
+                                            "entity": "script.play_music"
+                                        }
+                                    ]
                                 }
-                            ]
-                        },
-                        {
-                            "type": "media-control",
-                            "entity": "media_player.echo_dot_cucina"
-                        },
-                        {
-                            "type": "gauge",
-                            "min": 0,
-                            "max": 100,
-                            "entity": "sensor.avv_cucina_pos",
-                            "name": "Cucina"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "script.toggle_led_cucina"
                             ]
                         }
                     ]
@@ -245,6 +215,14 @@
                                     "style": {
                                         "top": "58%",
                                         "left": "62.25%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.cucina",
+                                    "style": {
+                                        "top": "51%",
+                                        "left": "71.5%"
                                     }
                                 },
                                 {
@@ -639,6 +617,14 @@
                                 },
                                 {
                                     "type": "state-icon",
+                                    "entity": "cover.cucina",
+                                    "style": {
+                                        "top": "34%",
+                                        "left": "97%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
                                     "tap_action": {
                                         "action": "toggle"
                                     },
@@ -678,13 +664,13 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.avvolgibile_cucina_p"
+                                            "entity": "sensor.tapparella_cucina_p"
                                         },
                                         {
-                                            "entity": "sensor.avvolgibile_cucina_daily_energy"
+                                            "entity": "sensor.tapparella_cucina_daily_energy"
                                         },
                                         {
-                                            "entity": "sensor.avvolgibile_cucina_monthly_energy"
+                                            "entity": "sensor.tapparella_cucina_monthly_energy"
                                         }
                                     ]
                                 },
@@ -703,10 +689,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_avvolgibile_cucina_t"
+                                            "entity": "sensor.shelly25_tapparella_cucina_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_avvolgibile_cucina_talarm"
+                                            "entity": "sensor.shelly25_tapparella_cucina_talarm"
                                         }
                                     ]
                                 }

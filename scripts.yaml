@@ -4,14 +4,25 @@ goodmorning:
   - condition: state
     entity_id: 'device_tracker.iphone_di_salvatore'
     state: 'home'
-  - service: media_player.volume_set
-    data:
-      entity_id: media_player.echo_dot_cucina
-      volume_level: 0.25
   - service: cover.set_cover_position
     data:
       entity_id: cover.cucina
-      position: 50
+      position: 70
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music
+  mode: single
+
+play_music:
+  alias: Riproduci musica
+  sequence:
+  - condition: state
+    entity_id: 'device_tracker.iphone_di_salvatore'
+    state: 'home'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.echo_dot_cucina
+      volume_level: "{{ states('input_number.goodmorning_volume')|float / 100}}"
   - service: media_player.play_media
     data:
       entity_id: media_player.echo_dot_cucina
@@ -85,4 +96,53 @@ change_brightness_led_cucina:
   - service: input_boolean.turn_off
     data: {}
     entity_id: input_boolean.dummy_switch
+  mode: single
+
+###################
+#     Scenari     #
+###################
+sala_scene:
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_cucina
+  - condition: state
+    entity_id: group.luci_sala
+    state: 'off'
+  - service: light.turn_on
+    data:
+      entity_id: light.flos_aim
+  mode: single
+
+tv_scene:
+  sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.flos_ic_t2
+  - delay: "00:00:02"
+  - service: light.turn_off
+    data:
+      entity_id: light.flos_aim
+  - service: light.turn_off
+    data:
+      entity_id: light.led_divano
+  - service: light.turn_off
+    data:
+      entity_id: light.ingresso
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_cucina
+  mode: single
+
+cucina_scene:
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_sala
+  - condition: state
+    entity_id: group.luci_cucina
+    state: 'off'
+  - service: light.turn_on
+    data:
+      entity_id: light.led_cucina_virtual
   mode: single

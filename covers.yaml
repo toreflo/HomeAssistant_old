@@ -1,9 +1,9 @@
 - platform: mqtt
   name: "cucina"
-  command_topic: "shellies/shelly25-avv_cucina/roller/0/command"
-  position_topic: "shellies/shelly25-avv_cucina/roller/0/pos"
-  set_position_topic: "shellies/shelly25-avv_cucina/roller/0/command/pos"
-  # availability_topic: "shellies/shelly25-avv_cucina/online"
+  command_topic: "shellies/shelly25-tapp_cucina/roller/0/command"
+  position_topic: "shellies/shelly25-tapp_cucina/roller/0/pos"
+  set_position_topic: "shellies/shelly25-tapp_cucina/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-tapp_cucina/online"
   # payload_available: "true"
   # payload_not_available: "false"
   retain: false

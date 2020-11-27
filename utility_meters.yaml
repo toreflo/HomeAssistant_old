@@ -42,12 +42,12 @@ led_cucina_monthly_energy:
   source: sensor.led_cucina_e
   cycle: monthly
 
-# Avvolgibile cucina
-avvolgibile_cucina_daily_energy:
-  source: sensor.avvolgibile_cucina_e
+# Tapparella cucina
+tapparella_cucina_daily_energy:
+  source: sensor.tapparella_cucina_e
   cycle: daily
-avvolgibile_cucina_monthly_energy:
-  source: sensor.avvolgibile_cucina_e
+tapparella_cucina_monthly_energy:
+  source: sensor.tapparella_cucina_e
   cycle: monthly
 
 # Rete
