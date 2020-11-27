@@ -146,3 +146,20 @@ cucina_scene:
     data:
       entity_id: light.led_cucina_virtual
   mode: single
+
+exit_scene:
+  sequence:
+  - service: cover.close_cover
+    data:
+      entity_id: cover.tutte
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  - service: light.turn_on
+    data:
+      entity_id: light.ingresso
+  - delay: "00:01:00"
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  mode: single

@@ -30,47 +30,44 @@
                         },
                         {
                             "entity": "sensor.camera_tommaso_room_temperature"
+                        },
+                        {
+                            "entity": "cover.tutte"
                         }
                     ],
                     "cards": [
                         {
-                            "type": "entities",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "group.luci_sala"
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.ingresso"
+                                        },
+                                        {
+                                            "entity": "light.flos_aim"
+                                        },
+                                        {
+                                            "entity": "light.led_divano"
+                                        },
+                                        {
+                                            "entity": "light.flos_ic_t2"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "entity": "light.ingresso"
-                                },
-                                {
-                                    "entity": "light.flos_aim"
-                                },
-                                {
-                                    "entity": "light.led_divano"
-                                },
-                                {
-                                    "entity": "light.flos_ic_t2"
-                                },
-                                {
-                                    "entity": "group.luci_cucina"
-                                },
-                                {
-                                    "entity": "light.led_cucina_virtual"
-                                },
-                                {
-                                    "entity": "light.luce_penisola"
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.led_cucina_virtual"
+                                        },
+                                        {
+                                            "entity": "light.luce_penisola"
+                                        }
+                                    ]
                                 }
                             ]
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "group.finestre"
-                            ]
-                        },
-                        {
-                            "type": "weather-forecast",
-                            "entity": "weather.home"
                         },
                         {
                             "type": "vertical-stack",
@@ -100,6 +97,10 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "weather-forecast",
+                            "entity": "weather.home"
                         }
                     ]
                 },

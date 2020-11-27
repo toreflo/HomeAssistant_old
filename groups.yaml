@@ -17,9 +17,3 @@ luci:
     entities:
       - group.luci_sala
       - group.luci_cucina
-
-
-finestre:
-    name: Tutte le finestre
-    entities:
-      - cover.cucina

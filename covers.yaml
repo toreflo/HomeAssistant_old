@@ -14,3 +14,8 @@
   position_closed: 0
   optimistic: false
   qos: 0
+
+- platform: group
+  name: tutte
+  entities:
+    - cover.cucina
