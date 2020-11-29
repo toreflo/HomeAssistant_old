@@ -7,17 +7,32 @@ goodmorning:
   - service: script.turn_on
     data:
       entity_id: script.play_music
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.zona_giorno
+        light_entity: light.led_cucina_virtual
+  mode: single
+
+light_up_zone:
+  alias: Illumina
+  sequence:
   - service: cover.set_cover_position
     data:
-      entity_id: cover.cucina
+      entity_id: "{{ cover_entity }}"
       position: >
-        {% if (states('weather.home') != 'lightning-rainy') and (states('weather.home') != 'pouring') and (states('weather.home') != 'rainy' and states('weather.home') != 'hail') %}
+        {% if (states('sun.sun') == 'above_horizon' and states('binary_sensory.nice_weather')) %}
           100
         {% else %}
           0
         {% endif %}
-  mode: single
-
+  - condition: template
+    value_template: "{{ (states('sun.sun') == 'below_horizon') or (states('binary_sensory.nice_weather') == 'off') }}"
+  - service: light.turn_on
+    data:
+      entity_id: "{{ light_entity }}"
+  
 play_music:
   alias: Riproduci musica
   sequence:
@@ -168,3 +183,12 @@ exit_scene:
     data:
       entity_id: group.luci
   mode: single
+
+welcome_scene:
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.zona_giorno
+        light_entity: light.ingresso

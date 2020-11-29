@@ -16,6 +16,11 @@
   qos: 0
 
 - platform: group
+  name: zona_giorno
+  entities:
+    - cover.cucina
+
+- platform: group
   name: tutte
   entities:
     - cover.cucina

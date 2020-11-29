@@ -3,3 +3,6 @@
     led_cucina_brightness_ok:
       entity_id: sensor.led_cucina_target_power, sensor.led_cucina_p
       value_template: "{{ (states('sensor.led_cucina_p')|float >= states('sensor.led_cucina_target_power')|float - states('input_number.epsilon')|float) and (states('sensor.led_cucina_p')|float <= states('sensor.led_cucina_target_power')|float + states('input_number.epsilon')|float) }}" 
+    nice_weather:
+      entity_id: wheater.home
+      value_template: "{{ (states('weather.home') != 'lightning-rainy') and (states('weather.home') != 'pouring') and (states('weather.home') != 'rainy' and states('weather.home') != 'hail') }}"
