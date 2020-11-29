@@ -31,7 +31,7 @@ play_music:
   - service: media_player.play_media
     data:
       entity_id: media_player.echo_dot_cucina
-      media_content_type: AMAZON_MUSIC
+      media_content_type: SPOTIFY #AMAZON_MUSIC
       media_content_id: "{{ states('input_text.goodmorning_music') }}"
   mode: single
 
