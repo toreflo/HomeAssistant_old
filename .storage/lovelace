@@ -40,6 +40,15 @@
                             "type": "vertical-stack",
                             "cards": [
                                 {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "46px"
+                                },
+                                {
                                     "type": "entities",
                                     "entities": [
                                         {

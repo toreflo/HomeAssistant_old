@@ -4,13 +4,18 @@ goodmorning:
   - condition: state
     entity_id: 'device_tracker.iphone_di_salvatore'
     state: 'home'
-  - service: cover.set_cover_position
-    data:
-      entity_id: cover.cucina
-      position: 70
   - service: script.turn_on
     data:
       entity_id: script.play_music
+  - service: cover.set_cover_position
+    data:
+      entity_id: cover.cucina
+      position: >
+        {% if (states('weather.home') != 'lightning-rainy') and (states('weather.home') != 'pouring') and (states('weather.home') != 'rainy' and states('weather.home') != 'hail') %}
+          100
+        {% else %}
+          0
+        {% endif %}
   mode: single
 
 play_music:
