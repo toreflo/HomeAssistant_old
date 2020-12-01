@@ -45,7 +45,7 @@
                                         "action": "toggle"
                                     },
                                     "entity": "group.luci",
-                                    "icon": "hass:lightbulb",
+                                    "icon": "hass:lightbulb-group",
                                     "icon_height": "46px"
                                 },
                                 {

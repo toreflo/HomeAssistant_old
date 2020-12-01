@@ -1,5 +1,5 @@
 - platform: mqtt
-  name: "cucina"
+  name: "kitchen"
   command_topic: "shellies/shelly25-tapp_cucina/roller/0/command"
   position_topic: "shellies/shelly25-tapp_cucina/roller/0/pos"
   set_position_topic: "shellies/shelly25-tapp_cucina/roller/0/command/pos"
@@ -18,9 +18,9 @@
 - platform: group
   name: zona_giorno
   entities:
-    - cover.cucina
+    - cover.kitchen
 
 - platform: group
   name: tutte
   entities:
-    - cover.cucina
+    - cover.kitchen

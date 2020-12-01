@@ -66,22 +66,6 @@ toggle_led_cucina:
       message: invocazione
   mode: single
 
-toggle_dummy_switch:
-  sequence:
-  - service: input_boolean.turn_on
-    data: {}
-    entity_id: input_boolean.dummy_switch
-  - delay:
-      milliseconds: 500
-  - service: input_boolean.turn_off
-    data: {}
-    entity_id: input_boolean.dummy_switch
-  - service: logbook.log
-    data:
-      name: script toggle_dummy_switch
-      message: invocazione
-  mode: single
-
 turn_off_led_cucina:
   sequence:
   - condition: state
