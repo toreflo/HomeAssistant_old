@@ -7,6 +7,8 @@ goodmorning:
   - service: script.turn_on
     data:
       entity_id: script.play_music
+      variables:
+        forced: 0
   - service: script.turn_on
     data:
       entity_id: script.light_up_zone
@@ -32,13 +34,21 @@ light_up_zone:
   - service: light.turn_on
     data:
       entity_id: "{{ light_entity }}"
+
+play_music_forced:
+  alias: Riproduci musica
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music
+      variables:
+        forced: 1
   
 play_music:
   alias: Riproduci musica
   sequence:
-  - condition: state
-    entity_id: 'device_tracker.iphone_di_salvatore'
-    state: 'home'
+  - condition: template
+    value_template: "{{ forced == 1 or states('media_player.echo_dot_cucina') != 'playing' }}"
   - service: media_player.volume_set
     data:
       entity_id: media_player.echo_dot_cucina

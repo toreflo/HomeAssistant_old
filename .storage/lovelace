@@ -101,7 +101,7 @@
                                             "entity": "input_number.goodmorning_volume"
                                         },
                                         {
-                                            "entity": "script.play_music"
+                                            "entity": "script.play_music_forced"
                                         }
                                     ]
                                 }
