@@ -229,7 +229,7 @@
                                 },
                                 {
                                     "type": "state-icon",
-                                    "entity": "cover.cucina",
+                                    "entity": "cover.kitchen",
                                     "style": {
                                         "top": "51%",
                                         "left": "71.5%"
@@ -627,7 +627,7 @@
                                 },
                                 {
                                     "type": "state-icon",
-                                    "entity": "cover.cucina",
+                                    "entity": "cover.kitchen",
                                     "style": {
                                         "top": "34%",
                                         "left": "97%"

@@ -36,3 +36,5 @@ alexa:
 
 input_boolean:
   dummy_switch:
+
+homekit:

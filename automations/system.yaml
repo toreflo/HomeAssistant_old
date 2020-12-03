@@ -19,3 +19,20 @@
     - service: persistent_notification.dismiss
       data:
         notification_id: git_status
+
+- alias: 'Start HomeKit'
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - delay: 00:05  # Waits 5 minutes
+    - service: homekit.start
+
+- alias: "Let's Encrypt Renewal"
+  trigger:
+    platform: time
+    at: '01:25:00'
+  action:
+    - service: hassio.addon_restart
+      data:
+        addon: core_letsencrypt
