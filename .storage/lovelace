@@ -117,6 +117,12 @@
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "input_number.i3_cucina_0_event_cnt"
+                            ]
                         }
                     ]
                 },

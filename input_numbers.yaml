@@ -22,3 +22,8 @@ goodmorning_volume:
   min: 0
   max: 100
   step: 1
+
+i3_cucina_0_event_cnt:
+  initial: 0
+  min: 0
+  max: 61439
