@@ -19,6 +19,8 @@ exclude:
     - sensor.led_divano_e
     - sensor.led_cucina_e
     - sensor.tapparella_cucina_e
+    - sensor.tapparella_sala_balcone_e
+    - sensor.tapparella_sala_finestra_e
     - sensor.sala_energy
     - sensor.camera_energy
     - sensor.studio_energy

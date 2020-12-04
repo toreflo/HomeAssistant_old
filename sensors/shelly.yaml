@@ -97,3 +97,47 @@
   name: "shelly25 tapparella cucina Talarm"
   state_topic: "shellies/shelly25-tapp_cucina/overtemperature"
   qos: 0
+
+# Shelly 2.5 tapparella sala balcone
+- platform: mqtt
+  name: "Tapparella sala balcone P"
+  state_topic: "shellies/shelly25-tapp_sala_big/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Tapparella sala balcone E"
+  state_topic: "shellies/shelly25-tapp_sala_big/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "shelly25 tapparella sala balcone T"
+  state_topic: "shellies/shelly25-tapp_sala_big/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly25 tapparella sala balcone Talarm"
+  state_topic: "shellies/shelly25-tapp_sala_big/overtemperature"
+  qos: 0
+
+# Shelly 2.5 tapparella sala finestra
+- platform: mqtt
+  name: "Tapparella sala finestra P"
+  state_topic: "shellies/shelly25-tapp_sala_small/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Tapparella sala finestra E"
+  state_topic: "shellies/shelly25-tapp_sala_small/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "shelly25 tapparella sala finestra T"
+  state_topic: "shellies/shelly25-tapp_sala_small/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly25 tapparella sala finestra Talarm"
+  state_topic: "shellies/shelly25-tapp_sala_small/overtemperature"
+  qos: 0

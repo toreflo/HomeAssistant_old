@@ -50,6 +50,22 @@ tapparella_cucina_monthly_energy:
   source: sensor.tapparella_cucina_e
   cycle: monthly
 
+# Tapparella sala balcone
+tapparella_sala_balcone_daily_energy:
+  source: sensor.tapparella_sala_balcone_e
+  cycle: daily
+tapparella_sala_balcone_monthly_energy:
+  source: sensor.tapparella_sala_balcone_e
+  cycle: monthly
+
+# Tapparella sala finestra
+tapparella_sala_finestra_daily_energy:
+  source: sensor.tapparella_sala_finestra_e
+  cycle: daily
+tapparella_sala_finestra_monthly_energy:
+  source: sensor.tapparella_sala_finestra_e
+  cycle: monthly
+
 # Rete
 network_in_daily:
   source: sensor.network_in_eth0

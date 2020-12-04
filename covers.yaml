@@ -15,12 +15,48 @@
   optimistic: false
   qos: 0
 
+- platform: mqtt
+  name: "living_big"
+  command_topic: "shellies/shelly25-tapp_sala_big/roller/0/command"
+  position_topic: "shellies/shelly25-tapp_sala_big/roller/0/pos"
+  set_position_topic: "shellies/shelly25-tapp_sala_big/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-tapp_sala_big/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 0
+
+- platform: mqtt
+  name: "living_small"
+  command_topic: "shellies/shelly25-tapp_sala_small/roller/0/command"
+  position_topic: "shellies/shelly25-tapp_sala_small/roller/0/pos"
+  set_position_topic: "shellies/shelly25-tapp_sala_small/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-tapp_sala_small/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 0
+
 - platform: group
   name: zona_giorno
   entities:
     - cover.kitchen
+    - cover.living_small
+    - cover.living_big
 
 - platform: group
   name: tutte
   entities:
-    - cover.kitchen
+    - cover.zona_giorno

@@ -17,3 +17,10 @@ luci:
     entities:
       - group.luci_sala
       - group.luci_cucina
+
+tapparelle:
+    name: Tutte le tapparelle
+    entities:
+      - cover.kitchen
+      - cover.living_big
+      - cover.living_small
