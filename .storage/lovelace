@@ -244,6 +244,17 @@
                                     "tap_action": {
                                         "action": "toggle"
                                     },
+                                    "entity": "light.led_pensili",
+                                    "style": {
+                                        "top": "64%",
+                                        "left": "57%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
                                     "entity": "light.led_cucina_virtual",
                                     "style": {
                                         "top": "58%",
@@ -742,6 +753,17 @@
                                     "style": {
                                         "top": "30%",
                                         "left": "74%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_pensili",
+                                    "style": {
+                                        "top": "80%",
+                                        "left": "15%"
                                     }
                                 }
                             ],

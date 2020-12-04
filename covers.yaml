@@ -50,11 +50,16 @@
   qos: 0
 
 - platform: group
+  name: living
+  entities:
+    - cover.living_small
+    - cover.living_big
+
+- platform: group
   name: zona_giorno
   entities:
     - cover.kitchen
-    - cover.living_small
-    - cover.living_big
+    - cover.living
 
 - platform: group
   name: tutte

@@ -11,6 +11,7 @@ luci_cucina:
     entities:
       - light.luce_penisola
       - light.led_cucina_virtual
+      - light.led_pensili
 
 luci:
     name: Tutte le luci

@@ -57,6 +57,7 @@
   payload_off: "off"
   retain: false
 
+# Led cucina (luce virtuale)
 - platform: template
   lights:
     led_cucina_virtual:
@@ -66,3 +67,17 @@
         service: script.turn_on_led_cucina
       turn_off:
         service: script.turn_off_led_cucina
+
+# Sonoff mini led sottopensili
+- platform: mqtt
+  name: "Led pensili"
+  state_topic: "stat/tasmota-led_pensili/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/tasmota-led_pensili/POWER"
+  availability_topic: "tele/tasmota-led_pensili/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
