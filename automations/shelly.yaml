@@ -2,15 +2,23 @@
   trigger:
     platform: mqtt
     topic: "shellies/shellyi3-cucina/input_event/0"
+#  condition:
+#    - condition: template
+#      value_template: "{{ states('input_number.i3_cucina_0_event_cnt')|int != trigger.payload_json.event_cnt }}"
+#  action:
+#  - service: light.toggle
+#    data_template:
+#      entity_id: >
+#        {% if states('input_number.i3_cucina_0_event_cnt')|int != 0 and trigger.payload_json.event == "S" %}
+#          light.led_pensili
+#        {% elif states('input_number.i3_cucina_0_event_cnt')|int != 0 and trigger.payload_json.event == "SS" %}
+#          light.ingresso
+#        {% endif %}
+#  - service: input_number.set_value
+#    data:
+#      entity_id: input_number.i3_cucina_0_event_cnt
+#      value: "{{ trigger.payload_json.event_cnt }}"
   action:
-  condition:
-    - condition: template
-      value_template: "{{ states('input_number.i3_cucina_0_event_cnt')|int != trigger.payload_json.event_cnt }}"
-  action:
-  - service: input_number.set_value
-    data:
-      entity_id: input_number.i3_cucina_0_event_cnt
-      value: "{{ trigger.payload_json.event_cnt }}"
   - service: light.toggle
     data_template:
       entity_id: >
