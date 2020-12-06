@@ -40,13 +40,36 @@
                             "type": "vertical-stack",
                             "cards": [
                                 {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "group.luci",
-                                    "icon": "hass:lightbulb-group",
-                                    "icon_height": "46px"
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "group.luci",
+                                            "icon": "hass:lightbulb-group",
+                                            "icon_height": "46px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "group.luci_zona_giorno",
+                                            "icon": "hass:lightbulb-group",
+                                            "icon_height": "46px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "group.luci_zona_notte",
+                                            "icon": "hass:lightbulb-group",
+                                            "icon_height": "46px"
+                                        }
+                                    ]
                                 },
                                 {
                                     "type": "entities",
@@ -73,6 +96,14 @@
                                         },
                                         {
                                             "entity": "light.luce_penisola"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.flos_ariette"
                                         }
                                     ]
                                 }
@@ -287,6 +318,17 @@
                                         "left": "53%",
                                         "transform": "scale(2,2)",
                                         "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_ariette",
+                                    "style": {
+                                        "top": "41%",
+                                        "left": "56.5%"
                                     }
                                 },
                                 {
@@ -847,6 +889,17 @@
                         {
                             "type": "picture-elements",
                             "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_ariette",
+                                    "style": {
+                                        "top": "55%",
+                                        "left": "70%"
+                                    }
+                                },
                                 {
                                     "type": "state-badge",
                                     "entity": "sensor.camera_room_temperature",

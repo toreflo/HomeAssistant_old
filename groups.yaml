@@ -13,11 +13,22 @@ luci_cucina:
       - light.led_cucina_virtual
       - light.led_pensili
 
-luci:
-    name: Tutte le luci
+luci_zona_giorno:
+    name: Luci zona giorno
     entities:
       - group.luci_sala
       - group.luci_cucina
+
+luci_zona_notte:
+    name: Luci zona notte
+    entities:
+      - light.flos_ariette
+
+luci:
+    name: Tutte le luci
+    entities:
+      - group.luci_zona_giorno
+      - group.luci_zona_notte
 
 tapparelle:
     name: Tutte le tapparelle

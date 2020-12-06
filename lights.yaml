@@ -81,3 +81,17 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   retain: false
+
+# Sonoff mini camera
+- platform: mqtt
+  name: "Flos Ariette"
+  state_topic: "stat/tasmota-camera/RESULT"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "cmnd/tasmota-camera/POWER"
+  availability_topic: "tele/tasmota-camera/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
