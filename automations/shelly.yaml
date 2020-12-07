@@ -2,28 +2,27 @@
   trigger:
     platform: mqtt
     topic: "shellies/shellyi3-cucina/input_event/0"
-#  condition:
-#    - condition: template
-#      value_template: "{{ states('input_number.i3_cucina_0_event_cnt')|int != trigger.payload_json.event_cnt }}"
-#  action:
-#  - service: light.toggle
-#    data_template:
-#      entity_id: >
-#        {% if states('input_number.i3_cucina_0_event_cnt')|int != 0 and trigger.payload_json.event == "S" %}
-#          light.led_pensili
-#        {% elif states('input_number.i3_cucina_0_event_cnt')|int != 0 and trigger.payload_json.event == "SS" %}
-#          light.ingresso
-#        {% endif %}
-#  - service: input_number.set_value
-#    data:
-#      entity_id: input_number.i3_cucina_0_event_cnt
-#      value: "{{ trigger.payload_json.event_cnt }}"
+  condition:
+    - condition: template
+      value_template: "{{ trigger.payload_json.event == 'S' or trigger.payload_json.event == 'SS' or trigger.payload_json.event == 'L' }}"
   action:
-  - service: light.toggle
+  - service_template: >
+      {% if trigger.payload_json.event == "L" %}
+        {% if states('group.luci_cucina') == 'on' %}
+          homeassistant.turn_off
+        {% else %}
+          homeassistant.turn_on
+        {% endif %}
+      {% else %}
+        light.toggle
+      {% endif %}
     data_template:
       entity_id: >
         {% if trigger.payload_json.event == "S" %}
           light.led_pensili
         {% elif trigger.payload_json.event == "SS" %}
           light.ingresso
+        {% else %}
+          group.luci_cucina
         {% endif %}
+

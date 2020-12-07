@@ -96,6 +96,9 @@
                                         },
                                         {
                                             "entity": "light.luce_penisola"
+                                        },
+                                        {
+                                            "entity": "light.led_pensili"
                                         }
                                     ]
                                 },
@@ -112,7 +115,12 @@
                         {
                             "type": "entities",
                             "entities": [
-                                "group.tapparelle"
+                                {
+                                    "entity": "cover.tutte"
+                                },
+                                {
+                                    "entity": "cover.zona_giorno"
+                                }
                             ],
                             "show_header_toggle": false
                         },
@@ -148,12 +156,6 @@
                         {
                             "type": "weather-forecast",
                             "entity": "weather.home"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "input_number.i3_cucina_0_event_cnt"
-                            ]
                         }
                     ]
                 },

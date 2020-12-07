@@ -59,9 +59,12 @@
   name: zona_giorno
   entities:
     - cover.kitchen
-    - cover.living
+    - cover.living_small
+    - cover.living_big
 
 - platform: group
   name: tutte
   entities:
-    - cover.zona_giorno
+    - cover.kitchen
+    - cover.living_small
+    - cover.living_big
