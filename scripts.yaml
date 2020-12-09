@@ -20,17 +20,21 @@ goodmorning:
 light_up_zone:
   alias: Illumina
   sequence:
+  - service: logbook.log
+    data:
+      name: script ligh_up_zone.
+      message: "Sun is {{ states('sun.sun') }}, nice_weather is {{ states('binary_sensor.nice_weather') }} (weather.home = {{ states('weather.home') }})"
   - service: cover.set_cover_position
     data:
       entity_id: "{{ cover_entity }}"
       position: >
-        {% if (states('sun.sun') == 'above_horizon' and states('binary_sensory.nice_weather')) %}
+        {% if (states('sun.sun') == 'above_horizon' and states('binary_sensor.nice_weather')) %}
           100
         {% else %}
           0
         {% endif %}
   - condition: template
-    value_template: "{{ (states('sun.sun') == 'below_horizon') or (states('binary_sensory.nice_weather') == 'off') }}"
+    value_template: "{{ (states('sun.sun') == 'below_horizon') or (states('binary_sensor.nice_weather') == 'off') }}"
   - service: light.turn_on
     data:
       entity_id: "{{ light_entity }}"
