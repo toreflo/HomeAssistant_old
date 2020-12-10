@@ -141,3 +141,25 @@
   name: "shelly25 tapparella sala finestra Talarm"
   state_topic: "shellies/shelly25-tapp_sala_small/overtemperature"
   qos: 0
+
+# Shelly 2.5 tapparella camera
+- platform: mqtt
+  name: "Tapparella camera P"
+  state_topic: "shellies/shelly25-tapp_camera/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Tapparella camera E"
+  state_topic: "shellies/shelly25-tapp_camera/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "shelly25 tapparella camera T"
+  state_topic: "shellies/shelly25-tapp_camera/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "shelly25 tapparella camera Talarm"
+  state_topic: "shellies/shelly25-tapp_camera/overtemperature"
+  qos: 0
