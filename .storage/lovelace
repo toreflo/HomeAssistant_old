@@ -109,6 +109,14 @@
                                             "entity": "light.flos_ariette"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.camera_tommaso"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -384,10 +392,21 @@
                                         "navigation_path": "/lovelace/tommaso"
                                     },
                                     "style": {
-                                        "top": "19%",
-                                        "left": "34%",
+                                        "top": "25%",
+                                        "left": "35%",
                                         "transform": "scale(2,2)",
                                         "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.camera_tommaso",
+                                    "style": {
+                                        "top": "19%",
+                                        "left": "34%"
                                     }
                                 },
                                 {
@@ -1017,6 +1036,17 @@
                         {
                             "type": "picture-elements",
                             "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.camera_tommaso",
+                                    "style": {
+                                        "top": "49%",
+                                        "left": "48%"
+                                    }
+                                },
                                 {
                                     "type": "state-badge",
                                     "entity": "sensor.camera_tommaso_room_temperature",

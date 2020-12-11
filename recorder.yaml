@@ -3,8 +3,8 @@ include:
   domains:
     - sensor
     - switch
-    - ligth.flos_ic_t2
   entities:
+    - ligth.flos_ic_t2
     - device_tracker.iphone_di_salvatore
 exclude:
   entities:
