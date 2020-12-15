@@ -98,7 +98,7 @@
 
 # Sonoff mini Tommy
 - platform: mqtt
-  name: "Camera Tommaso"
+  name: "Tommaso"
   state_topic: "stat/tasmota-tommy/RESULT"
   value_template: "{{ value_json.POWER }}"
   command_topic: "cmnd/tasmota-tommy/POWER"
@@ -108,4 +108,14 @@
   payload_off: "OFF"
   payload_available: "Online"
   payload_not_available: "Offline"
+  retain: false
+
+# Shelly 1 bagno
+- platform: mqtt
+  name: "Bagno"
+  state_topic: "shellies/shelly1-bagno/relay/0"
+  command_topic: "shellies/shelly1-bagno/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
   retain: false

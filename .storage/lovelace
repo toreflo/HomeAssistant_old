@@ -114,7 +114,15 @@
                                     "type": "entities",
                                     "entities": [
                                         {
-                                            "entity": "light.camera_tommaso"
+                                            "entity": "light.tommaso"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "light.bagno"
                                         }
                                     ]
                                 }
@@ -403,7 +411,7 @@
                                     "tap_action": {
                                         "action": "toggle"
                                     },
-                                    "entity": "light.camera_tommaso",
+                                    "entity": "light.tommaso",
                                     "style": {
                                         "top": "19%",
                                         "left": "34%"
@@ -416,6 +424,17 @@
                                         "top": "18%",
                                         "left": "42%",
                                         "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.bagno",
+                                    "style": {
+                                        "top": "36%",
+                                        "left": "31%"
                                     }
                                 }
                             ],
@@ -1041,7 +1060,7 @@
                                     "tap_action": {
                                         "action": "toggle"
                                     },
-                                    "entity": "light.camera_tommaso",
+                                    "entity": "light.tommaso",
                                     "style": {
                                         "top": "49%",
                                         "left": "48%"

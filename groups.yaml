@@ -23,7 +23,8 @@ luci_zona_notte:
     name: Luci zona notte
     entities:
       - light.flos_ariette
-      - light.camera_tommaso
+      - light.tommaso
+      - light.bagno
 
 luci:
     name: Tutte le luci
