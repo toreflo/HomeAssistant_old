@@ -6,6 +6,10 @@
     - condition: template
       value_template: "{{ trigger.payload_json.event == 'S' or trigger.payload_json.event == 'SS' or trigger.payload_json.event == 'L' }}"
   action:
+  - service: logbook.log
+    data:
+      name: automation Sheylly i3 cucina
+      message: "Payload is {{ trigger.payload_json.event }}, count = {{ trigger.payload_json.event_cnt }}"
   - service_template: >
       {% if trigger.payload_json.event == "L" %}
         {% if states('group.luci_cucina') == 'on' %}
