@@ -1,0 +1,11 @@
+- alias: "Censimento stati MQTT"
+  trigger:
+    platform: homeassistant
+    event: start
+  condition: []
+  action:
+    service: mqtt.publish
+    data:
+      topic: "cmnd/tasmotas/POWER"
+      payload: ""
+      retain: false
