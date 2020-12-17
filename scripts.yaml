@@ -9,6 +9,7 @@ goodmorning:
       entity_id: script.play_music
       variables:
         forced: 0
+        shuffle: true
   - service: script.turn_on
     data:
       entity_id: script.light_up_zone
@@ -46,6 +47,7 @@ play_music_forced:
       entity_id: script.play_music
       variables:
         forced: 1
+        shuffle: false
   
 play_music:
   alias: Riproduci musica
@@ -61,6 +63,10 @@ play_music:
       entity_id: media_player.echo_dot_cucina
       media_content_type: SPOTIFY #AMAZON_MUSIC
       media_content_id: "{{ states('input_text.goodmorning_music') }}"
+  - service: media_player.shuffle_set
+    data:
+      entity_id: media_player.echo_dot_cucina
+      shuffle: "{{ shuffle }}"
   mode: single
 
 toggle_led_cucina:
