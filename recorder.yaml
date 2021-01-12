@@ -4,8 +4,8 @@ include:
     - sensor
     - switch
   entities:
-    - ligth.flos_ic_t2
     - device_tracker.iphone_di_salvatore
+    - binary_sensor.rpi_power_status
 exclude:
   entities:
     - sensor.date
