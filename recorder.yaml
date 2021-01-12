@@ -22,18 +22,22 @@ exclude:
     - sensor.tapparella_sala_balcone_e
     - sensor.tapparella_sala_finestra_e
     - sensor.tapparella_camera_e
-    - sensor.sala_energy
-    - sensor.camera_energy
-    - sensor.studio_energy
-    - sensor.camera_tommaso_energy
+    - sensor.hvac_living_energy
+    - sensor.hvac_bedroom_energy
+    - sensor.hvac_study_energy
+    - sensor.hvac_tommy_energy
     - sensor.led_cucina_target_power
   entity_globs:
     - sensor.weather_*
     - sensor.iphone*
     - sensor.salvatore_s_*
     - switch.salvatore_s_*
-    - sensor.echo_dot_*
-    - switch.echo_dot_*
+    - sensor.*echo_dot_*
+    - switch.*echo_dot_*
+    - sensor.multi_room*
+    - switch.multi_room*
+    - sensor.ovunque*
+    - switch.ovunque*
     - sensor.this_device_*
     - switch.this_device_*
     - sensor.network_in_eth0

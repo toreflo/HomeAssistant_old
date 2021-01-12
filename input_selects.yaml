@@ -1,4 +1,4 @@
-sala_hvane:
+hvac_living_hvane:
     name: 'Horizontal vane control - Sala'
     options:
       - 'auto'
@@ -11,7 +11,7 @@ sala_hvane:
       - 'swing'
     initial: auto
 
-camera_hvane:
+hvac_bedroom_hvane:
     name: 'Horizontal vane control - Camera'
     options:
       - 'auto'
@@ -24,7 +24,7 @@ camera_hvane:
       - 'swing'
     initial: auto
 
-camera_tommaso_hvane:
+hvac_tommy_hvane:
     name: 'Horizontal vane control - Camera Tommaso'
     options:
       - 'auto'
@@ -37,7 +37,7 @@ camera_tommaso_hvane:
       - 'swing'
     initial: auto
 
-studio_hvane:
+hvac_study_hvane:
     name: 'Horizontal vane control - Studio'
     options:
       - 'auto'

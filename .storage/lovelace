@@ -20,16 +20,16 @@
                             "entity": "sun.sun"
                         },
                         {
-                            "entity": "sensor.sala_room_temperature"
+                            "entity": "sensor.hvac_living_room_temperature"
                         },
                         {
-                            "entity": "sensor.camera_room_temperature"
+                            "entity": "sensor.hvac_bedroom_room_temperature"
                         },
                         {
-                            "entity": "sensor.studio_room_temperature"
+                            "entity": "sensor.hvac_study_room_temperature"
                         },
                         {
-                            "entity": "sensor.camera_tommaso_room_temperature"
+                            "entity": "sensor.hvac_tommy_room_temperature"
                         },
                         {
                             "entity": "cover.tutte"
@@ -291,7 +291,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.sala_room_temperature",
+                                    "entity": "sensor.hvac_living_room_temperature",
                                     "style": {
                                         "top": "62%",
                                         "left": "44%",
@@ -388,7 +388,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.camera_room_temperature",
+                                    "entity": "sensor.hvac_bedroom_room_temperature",
                                     "style": {
                                         "top": "52%",
                                         "left": "48%",
@@ -411,7 +411,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.studio_room_temperature",
+                                    "entity": "sensor.hvac_study_room_temperature",
                                     "style": {
                                         "top": "19%",
                                         "left": "46%",
@@ -445,7 +445,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.camera_tommaso_room_temperature",
+                                    "entity": "sensor.hvac_tommy_room_temperature",
                                     "style": {
                                         "top": "18%",
                                         "left": "42%",
@@ -490,11 +490,11 @@
                                     "cards": [
                                         {
                                             "type": "thermostat",
-                                            "entity": "climate.sala"
+                                            "entity": "climate.hvac_living"
                                         },
                                         {
                                             "type": "thermostat",
-                                            "entity": "climate.camera"
+                                            "entity": "climate.hvac_bedroom"
                                         }
                                     ]
                                 },
@@ -505,7 +505,7 @@
                                             "type": "entities",
                                             "entities": [
                                                 {
-                                                    "entity": "input_select.sala_hvane"
+                                                    "entity": "input_select.hvac_living_hvane"
                                                 }
                                             ]
                                         },
@@ -513,7 +513,7 @@
                                             "type": "entities",
                                             "entities": [
                                                 {
-                                                    "entity": "input_select.camera_hvane"
+                                                    "entity": "input_select.hvac_bedroom_hvane"
                                                 }
                                             ]
                                         }
@@ -540,11 +540,11 @@
                                     "cards": [
                                         {
                                             "type": "thermostat",
-                                            "entity": "climate.studio"
+                                            "entity": "climate.hvac_study"
                                         },
                                         {
                                             "type": "thermostat",
-                                            "entity": "climate.camera_tommaso"
+                                            "entity": "climate.hvac_tommy"
                                         }
                                     ]
                                 },
@@ -555,7 +555,7 @@
                                             "type": "entities",
                                             "entities": [
                                                 {
-                                                    "entity": "input_select.studio_hvane"
+                                                    "entity": "input_select.hvac_study_hvane"
                                                 }
                                             ]
                                         },
@@ -563,7 +563,7 @@
                                             "type": "entities",
                                             "entities": [
                                                 {
-                                                    "entity": "input_select.camera_tommaso_hvane"
+                                                    "entity": "input_select.hvac_tommy_hvane"
                                                 }
                                             ]
                                         }
@@ -649,7 +649,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.sala_room_temperature",
+                                    "entity": "sensor.hvac_living_room_temperature",
                                     "tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace/sala"
@@ -681,7 +681,7 @@
                         },
                         {
                             "type": "sensor",
-                            "entity": "sensor.sala_room_temperature",
+                            "entity": "sensor.hvac_living_room_temperature",
                             "graph": "line",
                             "name": "Temperatura"
                         },
@@ -690,12 +690,12 @@
                             "cards": [
                                 {
                                     "type": "thermostat",
-                                    "entity": "climate.sala",
+                                    "entity": "climate.hvac_living",
                                     "name": "Climatizzatore"
                                 },
                                 {
                                     "type": "entity",
-                                    "entity": "input_select.sala_hvane",
+                                    "entity": "input_select.hvac_living_hvane",
                                     "name": "Deflettori orizzontali"
                                 }
                             ]
@@ -979,7 +979,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.camera_room_temperature",
+                                    "entity": "sensor.hvac_bedroom_room_temperature",
                                     "tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace/camera"
@@ -1003,7 +1003,7 @@
                         },
                         {
                             "type": "sensor",
-                            "entity": "sensor.camera_room_temperature",
+                            "entity": "sensor.hvac_bedroom_room_temperature",
                             "graph": "line",
                             "name": "Temperatura"
                         },
@@ -1012,12 +1012,12 @@
                             "cards": [
                                 {
                                     "type": "thermostat",
-                                    "entity": "climate.camera",
+                                    "entity": "climate.hvac_bedroom",
                                     "name": "Climatizzatore"
                                 },
                                 {
                                     "type": "entity",
-                                    "entity": "input_select.camera_hvane",
+                                    "entity": "input_select.hvac_bedroom_hvane",
                                     "name": "Deflettori orizzontali"
                                 }
                             ]
@@ -1035,7 +1035,7 @@
                             "elements": [
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.studio_room_temperature",
+                                    "entity": "sensor.hvac_study_room_temperature",
                                     "tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace/studio"
@@ -1051,7 +1051,7 @@
                         },
                         {
                             "type": "sensor",
-                            "entity": "sensor.studio_room_temperature",
+                            "entity": "sensor.hvac_study_room_temperature",
                             "graph": "line",
                             "name": "Temperatura"
                         },
@@ -1060,12 +1060,12 @@
                             "cards": [
                                 {
                                     "type": "thermostat",
-                                    "entity": "climate.studio",
+                                    "entity": "climate.hvac_study",
                                     "name": "Climatizzatore"
                                 },
                                 {
                                     "type": "entity",
-                                    "entity": "input_select.studio_hvane",
+                                    "entity": "input_select.hvac_study_hvane",
                                     "name": "Deflettori orizzontali"
                                 }
                             ]
@@ -1094,7 +1094,7 @@
                                 },
                                 {
                                     "type": "state-badge",
-                                    "entity": "sensor.camera_tommaso_room_temperature",
+                                    "entity": "sensor.hvac_tommy_room_temperature",
                                     "tap_action": {
                                         "action": "navigate",
                                         "navigation_path": "/lovelace/camera_tommaso"
@@ -1110,7 +1110,7 @@
                         },
                         {
                             "type": "sensor",
-                            "entity": "sensor.camera_tommaso_room_temperature",
+                            "entity": "sensor.hvac_tommy_room_temperature",
                             "graph": "line",
                             "name": "Temperatura"
                         },
@@ -1119,12 +1119,12 @@
                             "cards": [
                                 {
                                     "type": "thermostat",
-                                    "entity": "climate.camera_tommaso",
+                                    "entity": "climate.hvac_tommy",
                                     "name": "Climatizzatore"
                                 },
                                 {
                                     "type": "entity",
-                                    "entity": "input_select.camera_tommaso_hvane",
+                                    "entity": "input_select.hvac_tommy_hvane",
                                     "name": "Deflettori orizzontali"
                                 }
                             ]
