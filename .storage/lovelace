@@ -1139,6 +1139,9 @@
                         },
                         {
                             "entity": "binary_sensor.rpi_power_status"
+                        },
+                        {
+                            "entity": "binary_sensor.snapshots_stale"
                         }
                     ],
                     "cards": [
@@ -1218,7 +1221,7 @@
                                         {
                                             "type": "sensor",
                                             "graph": "line",
-                                            "entity": "sensor.db_size"
+                                            "entity": "sensor.hass_db_size"
                                         }
                                     ]
                                 }
