@@ -4,6 +4,14 @@
   unit_of_measurement: "M"
   value_template: '{{ ((value | int) / 1024 / 1024) | int }}'
 
+- platform: sql
+  db_url: !secret db_url
+  queries:
+    - name: HASS DB size
+      query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1048576, 2) "value" FROM information_schema.tables WHERE table_schema="homeassistant" GROUP BY table_schema;'
+      column: 'value'
+      unit_of_measurement: MB
+
 - platform: command_line
   name: Git alarm
   command: "[ $(git status -s | wc -l) -gt 0 ] && echo on || echo off"
