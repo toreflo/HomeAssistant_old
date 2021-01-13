@@ -157,10 +157,10 @@
                             "type": "entities",
                             "entities": [
                                 {
-                                    "entity": "input_text.goodmorning_music"
+                                    "entity": "input_text.music_string"
                                 },
                                 {
-                                    "entity": "input_number.goodmorning_volume"
+                                    "entity": "input_number.media_volume"
                                 }
                             ]
                         },

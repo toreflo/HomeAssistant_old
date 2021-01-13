@@ -89,7 +89,7 @@ play_music:
   - service: media_player.volume_set
     data:
       entity_id: "{{ media_player_id }}"
-      volume_level: "{{ states('input_number.goodmorning_volume')|float / 100}}"
+      volume_level: "{{ states('input_number.media_volume')|float / 100}}"
   - choose:
       - conditions:
           - condition: template
@@ -99,13 +99,13 @@ play_music:
             data:
               entity_id: media_player.echo_dot_cucina
               media_content_type: SPOTIFY #AMAZON_MUSIC
-              media_content_id: "{{ states('input_text.goodmorning_music') }} su {{ multi_room_option }}"
+              media_content_id: "{{ states('input_text.music_string') }} su {{ multi_room_option }}"
     default:
       - service: media_player.play_media
         data:
           entity_id: "{{ media_player_id }}"
           media_content_type: SPOTIFY #AMAZON_MUSIC
-          media_content_id: "{{ states('input_text.goodmorning_music') }}"
+          media_content_id: "{{ states('input_text.music_string') }}"
   mode: single
 
 
