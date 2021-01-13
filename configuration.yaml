@@ -20,6 +20,7 @@ switch: !include switches.yaml
 recorder: !include recorder.yaml
 utility_meter: !include utility_meters.yaml
 input_number: !include input_numbers.yaml
+zone: !include zones.yaml
 
 logger:
   default: info
