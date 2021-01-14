@@ -73,17 +73,17 @@ kitchen:
       entity_id: light.led_cucina_virtual
   mode: single
 
-kitchen_all:
+kitchen_table:
   sequence:
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci_sala
-  - condition: state
-    entity_id: group.luci_cucina
-    state: 'off'
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_zona_notte
   - service: light.turn_on
     data:
-      entity_id: light.led_cucina_virtual
+      entity_id: light.luce_penisola
   mode: single
 
 exit:
