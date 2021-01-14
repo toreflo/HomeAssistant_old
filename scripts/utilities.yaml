@@ -1,0 +1,23 @@
+light_up_zone:
+  alias: Illumina
+  mode: parallel
+  sequence:
+  - service: logbook.log
+    data:
+      name: script ligh_up_zone
+      message: "Sun is {{ states('sun.sun') }}, nice_weather is {{ states('binary_sensor.nice_weather') }} (weather.home = {{ states('weather.home') }})"
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ states('sun.sun') == 'above_horizon' and states('binary_sensor.nice_weather') == 'on' }}"
+        sequence:
+          - service: cover.set_cover_position
+            data:
+              entity_id: "{{ cover_entity }}"
+              position: "{{ cover_position }}"
+    default:
+      - condition: template
+        value_template: "{{ light_entity != '' }}"
+      - service: light.turn_on
+        data:
+          entity_id: "{{ light_entity }}"

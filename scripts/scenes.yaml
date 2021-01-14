@@ -1,0 +1,117 @@
+goodmorning:
+  alias: Buongiorno
+  sequence:
+  - condition: state
+    entity_id: 'device_tracker.iphone_di_salvatore'
+    state: 'home'
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music
+      variables:
+        forced: 0
+        media_player_id: media_player.multi_room
+        multi_room_option: "multi room"
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.zona_giorno
+        cover_position: 100
+        light_entity: light.led_pensili
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.bedroom
+        cover_position: 55
+        light_entity: ''
+  mode: single
+
+living:
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_cucina
+  - condition: state
+    entity_id: group.luci_sala
+    state: 'off'
+  - service: light.turn_on
+    data:
+      entity_id: light.led_divano
+  mode: single
+
+tv:
+  sequence:
+  - service: light.turn_on
+    data:
+      entity_id: light.flos_ic_t2
+  - delay: "00:00:02"
+  - service: light.turn_off
+    data:
+      entity_id: light.flos_aim
+  - service: light.turn_off
+    data:
+      entity_id: light.led_divano
+  - service: light.turn_off
+    data:
+      entity_id: light.ingresso
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_cucina
+  mode: single
+
+kitchen:
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_sala
+  - condition: state
+    entity_id: group.luci_cucina
+    state: 'off'
+  - service: light.turn_on
+    data:
+      entity_id: light.led_cucina_virtual
+  mode: single
+
+kitchen_all:
+  sequence:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_sala
+  - condition: state
+    entity_id: group.luci_cucina
+    state: 'off'
+  - service: light.turn_on
+    data:
+      entity_id: light.led_cucina_virtual
+  mode: single
+
+exit:
+  sequence:
+  - service: cover.close_cover
+    data:
+      entity_id: cover.all
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.media_players
+  - service: light.turn_on
+    data:
+      entity_id: light.ingresso
+  - delay: "00:02:00"
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  mode: single
+
+welcome:
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.zona_giorno
+        cover_position: 100
+        light_entity: light.ingresso

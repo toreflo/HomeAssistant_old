@@ -1,0 +1,67 @@
+play_multi_room:
+  alias: Riproduci musica su multi room
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music_forced
+      variables:
+        media_player_id: media_player.multi_room
+        multi_room_option: "multi room"
+
+play_echo_dot:
+  alias: Riproduci musica su echo dot
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music_forced
+      variables:
+        media_player_id: media_player.echo_dot_cucina
+        multi_room_option: ""
+
+play_echo_dot_black:
+  alias: Riproduci musica su echo dot black
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music_forced
+      variables:
+        media_player_id: media_player.2o_echo_dot_di_salvatore
+        multi_room_option: ""
+
+play_music_forced:
+  alias: Riproduci musica
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.play_music
+      variables:
+        forced: 1
+        media_player_id: "{{ media_player_id }}"
+        multi_room_option: "{{ multi_room_option }}"
+
+play_music:
+  alias: Riproduci musica
+  sequence:
+  - condition: template
+    value_template: "{{ forced == 1 or states(media_player_id) != 'playing' }}"
+  - service: media_player.volume_set
+    data:
+      entity_id: "{{ media_player_id }}"
+      volume_level: "{{ states('input_number.media_volume')|float / 100}}"
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ multi_room_option != '' }}"
+        sequence:
+          - service: media_player.play_media
+            data:
+              entity_id: media_player.echo_dot_cucina
+              media_content_type: SPOTIFY #AMAZON_MUSIC
+              media_content_id: "{{ states('input_text.music_string') }} su {{ multi_room_option }}"
+    default:
+      - service: media_player.play_media
+        data:
+          entity_id: "{{ media_player_id }}"
+          media_content_type: SPOTIFY #AMAZON_MUSIC
+          media_content_id: "{{ states('input_text.music_string') }}"
+  mode: single
