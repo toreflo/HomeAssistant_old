@@ -542,10 +542,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.mel_big_daily_energy"
+                                            "entity": "sensor.d_energy_mel_big"
                                         },
                                         {
-                                            "entity": "sensor.mel_big_monthly_energy"
+                                            "entity": "sensor.m_energy_mel_big"
                                         }
                                     ]
                                 }
@@ -592,10 +592,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.mel_small_daily_energy"
+                                            "entity": "sensor.d_energy_mel_small"
                                         },
                                         {
-                                            "entity": "sensor.mel_small_monthly_energy"
+                                            "entity": "sensor.m_energy_mel_small"
                                         }
                                     ]
                                 }
@@ -729,10 +729,10 @@
                                             "entity": "sensor.flos_aim_p"
                                         },
                                         {
-                                            "entity": "sensor.flos_aim_daily_energy"
+                                            "entity": "sensor.d_energy_flos_aim"
                                         },
                                         {
-                                            "entity": "sensor.flos_aim_monthly_energy"
+                                            "entity": "sensor.m_energy_flos_aim"
                                         }
                                     ]
                                 },
@@ -743,10 +743,10 @@
                                             "entity": "sensor.led_divano_p"
                                         },
                                         {
-                                            "entity": "sensor.led_divano_daily_energy"
+                                            "entity": "sensor.d_energy_led_divano"
                                         },
                                         {
-                                            "entity": "sensor.led_divano_monthly_energy"
+                                            "entity": "sensor.m_energy_led_divano"
                                         }
                                     ]
                                 },
@@ -757,10 +757,10 @@
                                             "entity": "sensor.luce_ingresso_p"
                                         },
                                         {
-                                            "entity": "sensor.luce_ingresso_daily_energy"
+                                            "entity": "sensor.d_energy_luce_ingresso"
                                         },
                                         {
-                                            "entity": "sensor.luce_ingresso_monthly_energy"
+                                            "entity": "sensor.m_energy_luce_ingresso"
                                         }
                                     ]
                                 },
@@ -768,10 +768,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_luci_sala_t"
+                                            "entity": "sensor.luci_sala_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_luci_sala_talarm"
+                                            "entity": "sensor.luci_sala_talarm"
                                         }
                                     ]
                                 },
@@ -779,10 +779,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly1pm_ingresso_t"
+                                            "entity": "sensor.ingresso_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly1pm_ingresso_talarm"
+                                            "entity": "sensor.ingresso_talarm"
                                         }
                                     ]
                                 },
@@ -790,13 +790,13 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.tapparella_sala_balcone_p"
+                                            "entity": "sensor.living_big_cover_p"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_sala_balcone_daily_energy"
+                                            "entity": "sensor.cover_d_energy_living_big"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_sala_balcone_monthly_energy"
+                                            "entity": "sensor.cover_m_energy_living_big"
                                         }
                                     ]
                                 },
@@ -804,10 +804,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_tapparella_sala_balcone_t"
+                                            "entity": "sensor.living_big_cover_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_tapparella_sala_balcone_talarm"
+                                            "entity": "sensor.living_big_cover_talarm"
                                         }
                                     ]
                                 },
@@ -815,13 +815,13 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.tapparella_sala_finestra_p"
+                                            "entity": "sensor.living_small_cover_p"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_sala_finestra_daily_energy"
+                                            "entity": "sensor.cover_d_energy_living_small"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_sala_finestra_monthly_energy"
+                                            "entity": "sensor.cover_m_energy_living_small"
                                         }
                                     ]
                                 },
@@ -829,10 +829,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_tapparella_sala_finestra_t"
+                                            "entity": "sensor.living_small_cover_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_tapparella_sala_finestra_talarm"
+                                            "entity": "sensor.living_small_cover_talarm"
                                         }
                                     ]
                                 }
@@ -929,10 +929,10 @@
                                             "entity": "sensor.led_cucina_p"
                                         },
                                         {
-                                            "entity": "sensor.led_cucina_daily_energy"
+                                            "entity": "sensor.d_energy_led_cucina"
                                         },
                                         {
-                                            "entity": "sensor.led_cucina_monthly_energy"
+                                            "entity": "sensor.m_energy_led_cucina"
                                         }
                                     ]
                                 },
@@ -940,13 +940,13 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.tapparella_cucina_p"
+                                            "entity": "sensor.kitchen_cover_p"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_cucina_daily_energy"
+                                            "entity": "sensor.cover_d_energy_kitchen"
                                         },
                                         {
-                                            "entity": "sensor.tapparella_cucina_monthly_energy"
+                                            "entity": "sensor.cover_m_energy_kitchen"
                                         }
                                     ]
                                 },
@@ -954,10 +954,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_led_cucina_t"
+                                            "entity": "sensor.led_cucina_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_led_cucina_talarm"
+                                            "entity": "sensor.led_cucina_talarm"
                                         }
                                     ]
                                 },
@@ -965,10 +965,10 @@
                                     "type": "glance",
                                     "entities": [
                                         {
-                                            "entity": "sensor.shelly25_tapparella_cucina_t"
+                                            "entity": "sensor.kitchen_cover_t"
                                         },
                                         {
-                                            "entity": "sensor.shelly25_tapparella_cucina_talarm"
+                                            "entity": "sensor.kitchen_cover_talarm"
                                         }
                                     ]
                                 }
@@ -1038,6 +1038,44 @@
                                     "type": "entity",
                                     "entity": "input_select.hvac_bedroom_hvane",
                                     "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.bedroom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bedroom_cover_p"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_bedroom"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_m_energy_bedroom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bedroom_cover_t"
+                                        },
+                                        {
+                                            "entity": "sensor.bedroom_cover_talarm"
+                                        }
+                                    ]
                                 }
                             ]
                         }

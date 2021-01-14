@@ -11,12 +11,12 @@
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly1pm ingresso T"
+  name: "ingresso T"
   state_topic: "shellies/shelly1pm-ingresso/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly1pm ingresso Talarm"
+  name: "ingresso Talarm"
   state_topic: "shellies/shelly1pm-ingresso/overtemperature"
   qos: 0
 
@@ -44,12 +44,12 @@
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 luci sala T"
+  name: "luci sala T"
   state_topic: "shellies/shelly25-luci_sala/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 luci sala Talarm"
+  name: "luci sala Talarm"
   state_topic: "shellies/shelly25-luci_sala/overtemperature"
   qos: 0
 
@@ -67,99 +67,99 @@
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 led cucina T"
+  name: "led cucina T"
   state_topic: "shellies/shelly25-luci_cucina/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 led cucina Talarm"
+  name: "led cucina Talarm"
   state_topic: "shellies/shelly25-luci_cucina/overtemperature"
   qos: 0
 
 # Shelly 2.5 tapparella cucina
 - platform: mqtt
-  name: "Tapparella cucina P"
+  name: "kitchen_cover_P"
   state_topic: "shellies/shelly25-tapp_cucina/roller/0/power"
   qos: 0
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "Tapparella cucina E"
+  name: "kitchen_cover_E"
   state_topic: "shellies/shelly25-tapp_cucina/roller/0/energy"
   qos: 0
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 tapparella cucina T"
+  name: "kitchen_cover_T"
   state_topic: "shellies/shelly25-tapp_cucina/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 tapparella cucina Talarm"
+  name: " kitchen_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_cucina/overtemperature"
   qos: 0
 
 # Shelly 2.5 tapparella sala balcone
 - platform: mqtt
-  name: "Tapparella sala balcone P"
+  name: "living_big_cover_P"
   state_topic: "shellies/shelly25-tapp_sala_big/roller/0/power"
   qos: 0
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "Tapparella sala balcone E"
+  name: "living_big_cover_E"
   state_topic: "shellies/shelly25-tapp_sala_big/roller/0/energy"
   qos: 0
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 tapparella sala balcone T"
+  name: "living_big_cover_T"
   state_topic: "shellies/shelly25-tapp_sala_big/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 tapparella sala balcone Talarm"
+  name: "living_big_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_sala_big/overtemperature"
   qos: 0
 
 # Shelly 2.5 tapparella sala finestra
 - platform: mqtt
-  name: "Tapparella sala finestra P"
+  name: "living_small_cover_P"
   state_topic: "shellies/shelly25-tapp_sala_small/roller/0/power"
   qos: 0
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "Tapparella sala finestra E"
+  name: "living_small_cover_E"
   state_topic: "shellies/shelly25-tapp_sala_small/roller/0/energy"
   qos: 0
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 tapparella sala finestra T"
+  name: "living_small_cover_T"
   state_topic: "shellies/shelly25-tapp_sala_small/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 tapparella sala finestra Talarm"
+  name: "living_small_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_sala_small/overtemperature"
   qos: 0
 
 # Shelly 2.5 tapparella camera
 - platform: mqtt
-  name: "Tapparella camera P"
+  name: "bedroom_cover_P"
   state_topic: "shellies/shelly25-tapp_camera/roller/0/power"
   qos: 0
   unit_of_measurement: "W"
 - platform: mqtt
-  name: "Tapparella camera E"
+  name: "bedroom_cover_E"
   state_topic: "shellies/shelly25-tapp_camera/roller/0/energy"
   qos: 0
   unit_of_measurement: "Wh"
   value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
 - platform: mqtt
-  name: "shelly25 tapparella camera T"
+  name: "bedroom_cover_T"
   state_topic: "shellies/shelly25-tapp_camera/temperature"
   qos: 0
   unit_of_measurement: "°C"
 - platform: mqtt
-  name: "shelly25 tapparella camera Talarm"
+  name: "bedroom_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_camera/overtemperature"
   qos: 0

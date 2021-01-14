@@ -19,10 +19,10 @@ exclude:
     - sensor.luce_ingresso_e
     - sensor.led_divano_e
     - sensor.led_cucina_e
-    - sensor.tapparella_cucina_e
-    - sensor.tapparella_sala_balcone_e
-    - sensor.tapparella_sala_finestra_e
-    - sensor.tapparella_camera_e
+    - sensor.kitchen_cover_e
+    - sensor.living_big_cover_e
+    - sensor.living_small_cover_e
+    - sensor.bedroom_cover_e
     - sensor.hvac_living_energy
     - sensor.hvac_bedroom_energy
     - sensor.hvac_study_energy

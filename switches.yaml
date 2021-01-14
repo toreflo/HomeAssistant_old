@@ -1,5 +1,5 @@
 #Shelly 2.5 luci cucina
-# Solo relay 0, il relay 1 è configurato come light
+# Il relay 1 è in realtà sempre chiuso per fornire potenza all'alimentatore
 - platform: mqtt
   name: "Pulsante led cucina"
   state_topic: "shellies/shelly25-luci_cucina/relay/0"
@@ -8,4 +8,12 @@
   payload_on: "on"
   payload_off: "off"
   optimistic: false
+  retain: false
+- platform: mqtt
+  name: "Alimentatore luce cucina"
+  state_topic: "shellies/shelly25-luci_cucina/relay/1"
+  command_topic: "shellies/shelly25-luci_cucina/relay/1/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
   retain: false

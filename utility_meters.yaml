@@ -1,77 +1,77 @@
 # Condizionatori
-mel_big_daily_energy:
+d_energy_mel_big:
   source: sensor.hvac_living_energy
   cycle: daily
-mel_big_monthly_energy:
+m_energy_mel_big:
   source: sensor.hvac_living_energy
   cycle: monthly
-mel_small_daily_energy:
+d_energy_mel_small:
   source: sensor.hvac_tommy_energy
   cycle: daily
-mel_small_monthly_energy:
+m_energy_mel_small:
   source: sensor.hvac_tommy_energy
   cycle: monthly
 
 # Luce ingresso
-luce_ingresso_daily_energy:
+d_energy_luce_ingresso:
   source: sensor.luce_ingresso_e
   cycle: daily
-luce_ingresso_monthly_energy:
+m_energy_luce_ingresso:
   source: sensor.luce_ingresso_e
   cycle: monthly
 
 # Luci sala
-flos_aim_daily_energy:
+d_energy_flos_aim:
   source: sensor.flos_aim_e
   cycle: daily
-flos_aim_monthly_energy:
+m_energy_flos_aim:
   source: sensor.flos_aim_e
   cycle: monthly
-led_divano_daily_energy:
+d_energy_led_divano:
   source: sensor.led_divano_e
   cycle: daily
-led_divano_monthly_energy:
+m_energy_led_divano:
   source: sensor.led_divano_e
   cycle: monthly
 
 # Luci cucina
-led_cucina_daily_energy:
+d_energy_led_cucina:
   source: sensor.led_cucina_e
   cycle: daily
-led_cucina_monthly_energy:
+m_energy_led_cucina:
   source: sensor.led_cucina_e
   cycle: monthly
 
 # Tapparella cucina
-tapparella_cucina_daily_energy:
-  source: sensor.tapparella_cucina_e
+cover_d_energy_kitchen:
+  source: sensor.kitchen_cover_e
   cycle: daily
-tapparella_cucina_monthly_energy:
-  source: sensor.tapparella_cucina_e
+cover_m_energy_kitchen:
+  source: sensor.kitchen_cover_e
   cycle: monthly
 
 # Tapparella sala balcone
-tapparella_sala_balcone_daily_energy:
-  source: sensor.tapparella_sala_balcone_e
+cover_d_energy_living_big:
+  source: sensor.living_big_cover_e
   cycle: daily
-tapparella_sala_balcone_monthly_energy:
-  source: sensor.tapparella_sala_balcone_e
+cover_m_energy_living_big:
+  source: sensor.living_big_cover_e
   cycle: monthly
 
 # Tapparella sala finestra
-tapparella_sala_finestra_daily_energy:
-  source: sensor.tapparella_sala_finestra_e
+cover_d_energy_living_small:
+  source: sensor.living_small_cover_e
   cycle: daily
-tapparella_sala_finestra_monthly_energy:
-  source: sensor.tapparella_sala_finestra_e
+cover_m_energy_living_small:
+  source: sensor.living_small_cover_e
   cycle: monthly
 
 # Tapparella camera
-tapparella_camera_daily_energy:
-  source: sensor.tapparella_camera_e
+cover_d_energy_bedroom:
+  source: sensor.bedroom_cover_e
   cycle: daily
-tapparella_camera_monthly_energy:
-  source: sensor.tapparella_camera_e
+cover_m_energy_bedroom:
+  source: sensor.bedroom_cover_e
   cycle: monthly
 
 # Rete

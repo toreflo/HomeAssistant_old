@@ -36,17 +36,6 @@
   payload_off: "off"
   retain: false
 
-# Shelly 2.5 luci cucina
-# Il relay 0 è trattato come uno switch, non come una luce
-# Il relay 1 è in realtà sempre chiuso per fornire potenza all'alimentatore
-- platform: mqtt
-  name: "Alimentatore luce cucina"
-  state_topic: "shellies/shelly25-luci_cucina/relay/1"
-  command_topic: "shellies/shelly25-luci_cucina/relay/1/command"
-  qos: 0
-  payload_on: "on"
-  payload_off: "off"
-  retain: false
 # Shelly 1 luce penisola
 - platform: mqtt
   name: "Luce penisola"
