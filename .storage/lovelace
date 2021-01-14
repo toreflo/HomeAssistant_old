@@ -32,7 +32,7 @@
                             "entity": "sensor.hvac_tommy_room_temperature"
                         },
                         {
-                            "entity": "cover.tutte"
+                            "entity": "cover.all"
                         }
                     ],
                     "cards": [
@@ -106,6 +106,14 @@
                                     "type": "entities",
                                     "entities": [
                                         {
+                                            "entity": "light.corridoio"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
                                             "entity": "light.flos_ariette"
                                         }
                                     ]
@@ -132,7 +140,7 @@
                             "type": "entities",
                             "entities": [
                                 {
-                                    "entity": "cover.tutte"
+                                    "entity": "cover.all"
                                 },
                                 {
                                     "entity": "cover.zona_giorno"
@@ -351,6 +359,17 @@
                                     "style": {
                                         "top": "51%",
                                         "left": "71.5%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.corridoio",
+                                    "style": {
+                                        "top": "43%",
+                                        "left": "40%"
                                     }
                                 },
                                 {

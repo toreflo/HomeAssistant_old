@@ -214,7 +214,7 @@ exit_scene:
   sequence:
   - service: cover.close_cover
     data:
-      entity_id: cover.tutte
+      entity_id: cover.all
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci

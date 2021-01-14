@@ -119,3 +119,13 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+
+# Shelly 1 corridoio
+- platform: mqtt
+  name: "Corridoio"
+  state_topic: "shellies/shelly1-corridoio/relay/0"
+  command_topic: "shellies/shelly1-corridoio/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

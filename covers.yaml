@@ -85,7 +85,7 @@
     - cover.bedroom
 
 - platform: group
-  name: tutte
+  name: all
   entities:
     - cover.kitchen
     - cover.living_small

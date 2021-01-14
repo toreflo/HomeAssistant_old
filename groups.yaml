@@ -25,6 +25,7 @@ luci_zona_notte:
       - light.flos_ariette
       - light.tommaso
       - light.bagno
+      - light.corridoio
 
 luci:
     name: Tutte le luci
