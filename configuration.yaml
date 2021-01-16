@@ -18,6 +18,7 @@ light: !include lights.yaml
 cover: !include covers.yaml
 switch: !include switches.yaml
 recorder: !include recorder.yaml
+logbook: !include logbook.yaml
 utility_meter: !include utility_meters.yaml
 input_number: !include input_numbers.yaml
 zone: !include zones.yaml
@@ -37,5 +38,6 @@ alexa:
 
 input_boolean:
   dummy_switch:
+  random_music:
 
 homekit:

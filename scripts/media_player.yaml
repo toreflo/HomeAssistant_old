@@ -1,3 +1,58 @@
+add_to_bookmarks:
+  alias: Aggiungi ai preferiti
+  sequence:
+  - condition: template
+    value_template: >
+        {% set ns = namespace(found = 0) %}
+        {% for title in state_attr("input_select.music","options") %}
+          {% if title == states("input_text.music_string") %}
+            {% set ns.found = 1 %}
+          {% endif %}
+        {% endfor %}
+        {{ ns.found == 0 }}
+  - service: input_select.set_options
+    data_template:
+      entity_id: input_select.music
+      options: >
+        {% set data = namespace(entities=[]) %}
+        {% for title in state_attr("input_select.music","options") %}
+          {% set data.entities = data.entities + [title] %}
+        {% endfor %}
+        {% set data.entities = data.entities + [states("input_text.music_string")] %}
+        {{ data.entities }}
+#  - service: input_select.select_option
+#    data_template:
+#      entity_id: input_select.music
+#      option: "{{ states('input_text.music_string') }}"
+
+remove_from_bookmarks:
+  alias: Rimuovi dai preferiti
+  sequence:
+  - service: input_select.set_options
+    data_template:
+      entity_id: input_select.music
+      options: >
+        {% set data = namespace(entities=[]) %}
+        {% for title in state_attr("input_select.music","options") %}
+          {% if title != states("input_select.music") %}
+            {% set data.entities = data.entities + [title] %}
+          {% endif %}
+        {% endfor %}
+        {{ data.entities }}
+
+select_random_music:
+  alias: Scegli musica random
+  sequence:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.music
+      option: >
+        {% set array = state_attr("input_select.music","options") %}
+        {% set idx = (range(0, 1000)| random) %}
+        {% set num = (array|length) %}
+        {% set idx = idx | int - ((idx | int / num ) | int) * num %}
+        {{ array[idx] }}
+
 play_multi_room:
   alias: Riproduci musica su multi room
   sequence:
@@ -32,10 +87,11 @@ play_music_forced:
   alias: Riproduci musica
   sequence:
   - service: script.turn_on
-    data:
+    data_template:
       entity_id: script.play_music
       variables:
         forced: 1
+        random: "{{ states('input_boolean.random_music') }}"
         media_player_id: "{{ media_player_id }}"
         multi_room_option: "{{ multi_room_option }}"
 
@@ -51,17 +107,38 @@ play_music:
   - choose:
       - conditions:
           - condition: template
+            value_template: "{{ random == 'on' }}"
+        sequence:
+          - service: script.turn_on
+            data:
+              entity_id: script.select_random_music
+          - delay: 2
+  - choose:
+      - conditions:
+          - condition: template
             value_template: "{{ multi_room_option != '' }}"
         sequence:
           - service: media_player.play_media
-            data:
+            data_template:
               entity_id: media_player.echo_dot_cucina
               media_content_type: SPOTIFY #AMAZON_MUSIC
-              media_content_id: "{{ states('input_text.music_string') }} su {{ multi_room_option }}"
+              media_content_id: >
+                {% if random == 'on' %}
+                  {% set title = states('input_select.music') %}
+                {% else %}
+                  {% set title = states('input_text.music_string') %}
+                {% endif %}
+                {{ title }} su {{ multi_room_option }}
     default:
       - service: media_player.play_media
-        data:
+        data_template:
           entity_id: "{{ media_player_id }}"
           media_content_type: SPOTIFY #AMAZON_MUSIC
-          media_content_id: "{{ states('input_text.music_string') }}"
+          media_content_id: >
+            {% if random == 'on' %}
+              {% set title = states('input_select.music') %}
+            {% else %}
+              {% set title = states('input_text.music_string') %}
+            {% endif %}
+            {{ title }}
   mode: single

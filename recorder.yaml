@@ -28,6 +28,7 @@ exclude:
     - sensor.hvac_study_energy
     - sensor.hvac_tommy_energy
     - sensor.led_cucina_target_power
+    - sensor.db_size
   entity_globs:
     - sensor.weather_*
     - sensor.iphone*
@@ -43,3 +44,4 @@ exclude:
     - switch.this_device_*
     - sensor.network_in_eth0
     - sensor.network_out_eth0
+    - sensor.*random*

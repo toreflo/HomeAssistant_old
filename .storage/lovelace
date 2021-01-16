@@ -169,6 +169,18 @@
                                 },
                                 {
                                     "entity": "input_number.media_volume"
+                                },
+                                {
+                                    "entity": "input_boolean.random_music"
+                                },
+                                {
+                                    "entity": "script.add_to_bookmarks"
+                                },
+                                {
+                                    "entity": "script.remove_from_bookmarks"
+                                },
+                                {
+                                    "entity": "input_select.music"
                                 }
                             ]
                         },
@@ -542,6 +554,17 @@
                                     "type": "glance",
                                     "entities": [
                                         {
+                                            "entity": "sensor.hvac_living_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.hvac_bedroom_energy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
                                             "entity": "sensor.d_energy_mel_big"
                                         },
                                         {
@@ -590,6 +613,17 @@
                                 },
                                 {
                                     "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.hvac_study_energy"
+                                        },
+                                        {
+                                            "entity": "sensor.hvac_tommy_energy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
                                     "entities": [
                                         {
                                             "entity": "sensor.d_energy_mel_small"
@@ -1013,8 +1047,8 @@
                                     "type": "state-icon",
                                     "entity": "cover.bedroom",
                                     "style": {
-                                        "top": "46%",
-                                        "left": "97%"
+                                        "top": "4%",
+                                        "left": "42%"
                                     }
                                 }
                             ],
@@ -1349,6 +1383,136 @@
                                             "type": "sensor",
                                             "entity": "sensor.network_out_monthly",
                                             "name": "OUT mensile"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Grid test",
+                    "path": "test",
+                    "panel": true,
+                    "visible": [],
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "grid",
+                            "columns": 2,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "grid",
+                                    "columns": 1,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "group.luci",
+                                            "icon": "hass:lightbulb-group",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "grid",
+                                            "columns": 2,
+                                            "square": false,
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "group.luci_zona_giorno",
+                                                    "icon": "hass:lightbulb-group",
+                                                    "icon_height": "30px"
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "group.luci_zona_notte",
+                                                    "icon": "hass:lightbulb-group",
+                                                    "icon_height": "30px"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.ingresso"
+                                                                },
+                                                                {
+                                                                    "entity": "light.flos_aim"
+                                                                },
+                                                                {
+                                                                    "entity": "light.led_divano"
+                                                                },
+                                                                {
+                                                                    "entity": "light.flos_ic_t2"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.led_cucina_virtual"
+                                                                },
+                                                                {
+                                                                    "entity": "light.luce_penisola"
+                                                                },
+                                                                {
+                                                                    "entity": "light.led_pensili"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.corridoio"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.flos_ariette"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.tommaso"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "entities",
+                                                            "entities": [
+                                                                {
+                                                                    "entity": "light.bagno"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 }

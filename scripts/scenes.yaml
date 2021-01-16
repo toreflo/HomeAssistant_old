@@ -9,6 +9,7 @@ goodmorning:
       entity_id: script.play_music
       variables:
         forced: 0
+        random: 'on'
         media_player_id: media_player.multi_room
         multi_room_option: "multi room"
   - service: script.turn_on
@@ -58,6 +59,9 @@ tv:
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci_cucina
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci_zona_notte
   mode: single
 
 kitchen:

@@ -49,3 +49,10 @@ hvac_study_hvane:
       - 'split'
       - 'swing'
     initial: auto
+
+music:
+  options:
+    - 'elton john'
+    - 'bruce springsteen'
+    - 'john mayer'
+    - 'this is alabama shakes'
