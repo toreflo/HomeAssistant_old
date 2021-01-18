@@ -119,3 +119,10 @@ welcome:
         cover_entity: cover.zona_giorno
         cover_position: 100
         light_entity: light.ingresso
+
+privacy:
+  sequence:
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.all
+        position: 35

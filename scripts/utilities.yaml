@@ -9,7 +9,10 @@ light_up_zone:
   - choose:
       - conditions:
           - condition: template
-            value_template: "{{ states('sun.sun') == 'above_horizon' and states('binary_sensor.nice_weather') == 'on' }}"
+#            value_template: "{{ states('sun.sun') == 'above_horizon' and states('binary_sensor.nice_weather') == 'on' }}"
+            value_template: "{{ states('sun.sun') == 'above_horizon' }}"
+          - condition: template
+            value_template: "{{ state_attr(cover_entity, 'current_position') < cover_position  }}"
         sequence:
           - service: cover.set_cover_position
             data:
