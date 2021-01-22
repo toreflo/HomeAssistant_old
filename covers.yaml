@@ -66,6 +66,40 @@
   optimistic: false
   qos: 0
 
+- platform: mqtt
+  name: "tommy"
+  command_topic: "shellies/shelly25-tapp_Tommaso/roller/0/command"
+  position_topic: "shellies/shelly25-tapp_Tommaso/roller/0/pos"
+  set_position_topic: "shellies/shelly25-tapp_Tommaso/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-tapp_Tommaso/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 0
+
+- platform: mqtt
+  name: "study"
+  command_topic: "shellies/shelly25-tapp_studio/roller/0/command"
+  position_topic: "shellies/shelly25-tapp_studio/roller/0/pos"
+  set_position_topic: "shellies/shelly25-tapp_studio/roller/0/command/pos"
+  # availability_topic: "shellies/shelly25-tapp_studio/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 0
+
 - platform: group
   name: living
   entities:
@@ -83,6 +117,8 @@
   name: zona_notte
   entities:
     - cover.bedroom
+    - cover.study
+    - cover.tommy
 
 - platform: group
   name: all
@@ -91,3 +127,5 @@
     - cover.living_small
     - cover.living_big
     - cover.bedroom
+    - cover.study
+    - cover.tommy

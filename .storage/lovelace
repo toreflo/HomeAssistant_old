@@ -130,6 +130,17 @@
                                     "type": "entities",
                                     "entities": [
                                         {
+                                            "entity": "light.luce_studio"
+                                        },
+                                        {
+                                            "entity": "light.faretti_studio"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
                                             "entity": "light.bagno"
                                         }
                                     ]
@@ -657,118 +668,28 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "group.luci_sala",
-                            "icon": "hass:lightbulb",
-                            "icon_height": "36px"
-                        },
-                        {
-                            "type": "picture-elements",
-                            "elements": [
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.flos_aim",
-                                    "style": {
-                                        "top": "65%",
-                                        "left": "36%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.ingresso",
-                                    "style": {
-                                        "top": "18%",
-                                        "left": "22%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.led_divano",
-                                    "style": {
-                                        "top": "90%",
-                                        "left": "74%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.flos_ic_t2",
-                                    "style": {
-                                        "top": "34.75%",
-                                        "left": "82.5%",
-                                        "transform": "scale(0.9,0.9)"
-                                    }
-                                },
-                                {
-                                    "type": "state-badge",
-                                    "entity": "sensor.hvac_living_room_temperature",
-                                    "tap_action": {
-                                        "action": "navigate",
-                                        "navigation_path": "/lovelace/sala"
-                                    },
-                                    "style": {
-                                        "top": "24%",
-                                        "left": "7%",
-                                        "color": "rgba(0,0,0,0)"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "entity": "cover.living_big",
-                                    "style": {
-                                        "top": "52%",
-                                        "left": "95%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "entity": "cover.living_small",
-                                    "style": {
-                                        "top": "67%",
-                                        "left": "95%"
-                                    }
-                                }
-                            ],
-                            "image": "local/living.png"
-                        },
-                        {
-                            "type": "sensor",
-                            "entity": "sensor.hvac_living_room_temperature",
-                            "graph": "line",
-                            "name": "Temperatura"
-                        },
-                        {
                             "type": "vertical-stack",
                             "cards": [
                                 {
-                                    "type": "thermostat",
-                                    "entity": "climate.hvac_living",
-                                    "name": "Climatizzatore"
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_sala",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "36px"
                                 },
                                 {
-                                    "type": "entity",
-                                    "entity": "input_select.hvac_living_hvane",
-                                    "name": "Deflettori orizzontali"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.living_big"
+                                        },
+                                        {
+                                            "entity": "cover.living_small"
+                                        }
+                                    ]
+                                },
                                 {
                                     "type": "glance",
                                     "entities": [
@@ -886,15 +807,105 @@
                             ]
                         },
                         {
-                            "type": "entities",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "cover.living_big"
+                                    "type": "sensor",
+                                    "entity": "sensor.hvac_living_room_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura"
                                 },
                                 {
-                                    "entity": "cover.living_small"
+                                    "type": "thermostat",
+                                    "entity": "climate.hvac_living",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.hvac_living_hvane",
+                                    "name": "Deflettori orizzontali"
                                 }
                             ]
+                        },
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_aim",
+                                    "style": {
+                                        "top": "65%",
+                                        "left": "36%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.ingresso",
+                                    "style": {
+                                        "top": "18%",
+                                        "left": "22%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_divano",
+                                    "style": {
+                                        "top": "90%",
+                                        "left": "74%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.flos_ic_t2",
+                                    "style": {
+                                        "top": "34.75%",
+                                        "left": "82.5%",
+                                        "transform": "scale(0.9,0.9)"
+                                    }
+                                },
+                                {
+                                    "type": "state-badge",
+                                    "entity": "sensor.hvac_living_room_temperature",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "/lovelace/sala"
+                                    },
+                                    "style": {
+                                        "top": "24%",
+                                        "left": "7%",
+                                        "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.living_big",
+                                    "style": {
+                                        "top": "52%",
+                                        "left": "95%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.living_small",
+                                    "style": {
+                                        "top": "67%",
+                                        "left": "95%"
+                                    }
+                                }
+                            ],
+                            "image": "local/living.png"
                         }
                     ]
                 },
@@ -905,70 +916,23 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "button",
-                            "tap_action": {
-                                "action": "toggle"
-                            },
-                            "entity": "group.luci_cucina",
-                            "icon": "hass:lightbulb",
-                            "icon_height": "36px"
-                        },
-                        {
-                            "type": "picture-elements",
-                            "elements": [
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.led_cucina_virtual",
-                                    "style": {
-                                        "top": "62%",
-                                        "left": "50%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "entity": "cover.kitchen",
-                                    "style": {
-                                        "top": "34%",
-                                        "left": "97%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.luce_penisola",
-                                    "style": {
-                                        "top": "30%",
-                                        "left": "74%"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.led_pensili",
-                                    "style": {
-                                        "top": "80%",
-                                        "left": "15%"
-                                    }
-                                }
-                            ],
-                            "image": "local/kitchen.png"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "cover.kitchen"
-                            ]
-                        },
-                        {
                             "type": "vertical-stack",
                             "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_cucina",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "36px"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        "cover.kitchen"
+                                    ]
+                                },
                                 {
                                     "type": "glance",
                                     "entities": [
@@ -1020,6 +984,53 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "picture-elements",
+                            "elements": [
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_cucina_virtual",
+                                    "style": {
+                                        "top": "62%",
+                                        "left": "50%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.kitchen",
+                                    "style": {
+                                        "top": "34%",
+                                        "left": "97%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.luce_penisola",
+                                    "style": {
+                                        "top": "30%",
+                                        "left": "74%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_pensili",
+                                    "style": {
+                                        "top": "80%",
+                                        "left": "15%"
+                                    }
+                                }
+                            ],
+                            "image": "local/kitchen.png"
                         }
                     ]
                 },
@@ -1029,6 +1040,74 @@
                     "panel": false,
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_camera",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "36px"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.bedroom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bedroom_cover_p"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_bedroom"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_m_energy_bedroom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.bedroom_cover_t"
+                                        },
+                                        {
+                                            "entity": "sensor.bedroom_cover_talarm"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.hvac_bedroom_room_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.hvac_bedroom",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.hvac_bedroom_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        },
                         {
                             "type": "picture-elements",
                             "elements": [
@@ -1066,65 +1145,6 @@
                                 }
                             ],
                             "image": "local/bedroom.png"
-                        },
-                        {
-                            "type": "sensor",
-                            "entity": "sensor.hvac_bedroom_room_temperature",
-                            "graph": "line",
-                            "name": "Temperatura"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.hvac_bedroom",
-                                    "name": "Climatizzatore"
-                                },
-                                {
-                                    "type": "entity",
-                                    "entity": "input_select.hvac_bedroom_hvane",
-                                    "name": "Deflettori orizzontali"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "cover.bedroom"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.bedroom_cover_p"
-                                        },
-                                        {
-                                            "entity": "sensor.cover_d_energy_bedroom"
-                                        },
-                                        {
-                                            "entity": "sensor.cover_m_energy_bedroom"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.bedroom_cover_t"
-                                        },
-                                        {
-                                            "entity": "sensor.bedroom_cover_talarm"
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ]
                 },
@@ -1134,6 +1154,113 @@
                     "panel": false,
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_studio",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "36px"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.study"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.study_cover_p"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_study"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_m_energy_study"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.study_cover_t"
+                                        },
+                                        {
+                                            "entity": "sensor.study_cover_talarm"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.luce_studio_p"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_luce_studio"
+                                        },
+                                        {
+                                            "entity": "sensor.m_energy_luce_studio"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.faretti_studio_p"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_faretti_studio"
+                                        },
+                                        {
+                                            "entity": "sensor.m_energy_faretti_studio"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.luci_studio_t"
+                                        },
+                                        {
+                                            "entity": "sensor.luci_studio_talarm"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.hvac_study_room_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.hvac_study",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.hvac_study_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        },
                         {
                             "type": "picture-elements",
                             "elements": [
@@ -1149,30 +1276,31 @@
                                         "left": "47%",
                                         "color": "rgba(0,0,0,0)"
                                     }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.luce_studio",
+                                    "style": {
+                                        "top": "52%",
+                                        "left": "45%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.faretti_studio",
+                                    "style": {
+                                        "top": "70%",
+                                        "left": "58%"
+                                    }
                                 }
                             ],
                             "image": "local/study.png"
-                        },
-                        {
-                            "type": "sensor",
-                            "entity": "sensor.hvac_study_room_temperature",
-                            "graph": "line",
-                            "name": "Temperatura"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.hvac_study",
-                                    "name": "Climatizzatore"
-                                },
-                                {
-                                    "type": "entity",
-                                    "entity": "input_select.hvac_study_hvane",
-                                    "name": "Deflettori orizzontali"
-                                }
-                            ]
                         }
                     ]
                 },
@@ -1182,6 +1310,74 @@
                     "panel": false,
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci_tommaso",
+                                    "icon": "hass:lightbulb",
+                                    "icon_height": "36px"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "cover.tommy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tommy_cover_p"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_tommy"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_m_energy_tommy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.tommy_cover_t"
+                                        },
+                                        {
+                                            "entity": "sensor.tommy_cover_talarm"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.hvac_tommy_room_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.hvac_tommy",
+                                    "name": "Climatizzatore"
+                                },
+                                {
+                                    "type": "entity",
+                                    "entity": "input_select.hvac_tommy_hvane",
+                                    "name": "Deflettori orizzontali"
+                                }
+                            ]
+                        },
                         {
                             "type": "picture-elements",
                             "elements": [
@@ -1211,27 +1407,6 @@
                                 }
                             ],
                             "image": "local/childroom.png"
-                        },
-                        {
-                            "type": "sensor",
-                            "entity": "sensor.hvac_tommy_room_temperature",
-                            "graph": "line",
-                            "name": "Temperatura"
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.hvac_tommy",
-                                    "name": "Climatizzatore"
-                                },
-                                {
-                                    "type": "entity",
-                                    "entity": "input_select.hvac_tommy_hvane",
-                                    "name": "Deflettori orizzontali"
-                                }
-                            ]
                         }
                     ]
                 },

@@ -118,3 +118,22 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+
+# Shelly 2.5 luci studio
+- platform: mqtt
+  name: "luce studio"
+  state_topic: "shellies/shelly25-luci_studio/relay/0"
+  command_topic: "shellies/shelly25-luci_studio/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: false
+- platform: mqtt
+  name: "faretti studio"
+  state_topic: "shellies/shelly25-luci_studio/relay/1"
+  command_topic: "shellies/shelly25-luci_studio/relay/1/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

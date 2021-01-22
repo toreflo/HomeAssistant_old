@@ -28,6 +28,13 @@ goodmorning:
         cover_entity: cover.bedroom
         cover_position: 55
         light_entity: ''
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.study
+        cover_position: 100
+        light_entity: ''
   mode: single
 
 living:

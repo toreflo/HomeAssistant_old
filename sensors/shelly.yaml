@@ -76,6 +76,39 @@
   state_topic: "shellies/shelly25-luci_cucina/overtemperature"
   qos: 0
 
+# Shelly 2.5 luci studio
+- platform: mqtt
+  name: "Luce studio P"
+  state_topic: "shellies/shelly25-luci_studio/relay/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Luce studio E"
+  state_topic: "shellies/shelly25-luci_studio/relay/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "Faretti studio P"
+  state_topic: "shellies/shelly25-luci_studio/relay/1/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "Faretti studio E"
+  state_topic: "shellies/shelly25-luci_studio/relay/1/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "luci studio T"
+  state_topic: "shellies/shelly25-luci_studio/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "luci studio Talarm"
+  state_topic: "shellies/shelly25-luci_studio/overtemperature"
+  qos: 0
+
 # Shelly 2.5 tapparella cucina
 - platform: mqtt
   name: "kitchen_cover_P"
@@ -162,4 +195,48 @@
 - platform: mqtt
   name: "bedroom_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_camera/overtemperature"
+  qos: 0
+
+# Shelly 2.5 tapparella Tommy
+- platform: mqtt
+  name: "tommy_cover_P"
+  state_topic: "shellies/shelly25-tapp_Tommaso/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "tommy_cover_E"
+  state_topic: "shellies/shelly25-tapp_Tommaso/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "tommy_cover_T"
+  state_topic: "shellies/shelly25-tapp_Tommaso/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "tommy_cover_Talarm"
+  state_topic: "shellies/shelly25-tapp_Tommaso/overtemperature"
+  qos: 0
+
+# Shelly 2.5 tapparella studio
+- platform: mqtt
+  name: "study_cover_P"
+  state_topic: "shellies/shelly25-tapp_studio/roller/0/power"
+  qos: 0
+  unit_of_measurement: "W"
+- platform: mqtt
+  name: "study_cover_E"
+  state_topic: "shellies/shelly25-tapp_studio/roller/0/energy"
+  qos: 0
+  unit_of_measurement: "Wh"
+  value_template: "{{ (value|float / 60) | round(2) }}" # Fix for Watt-minutes
+- platform: mqtt
+  name: "study_cover_T"
+  state_topic: "shellies/shelly25-tapp_studio/temperature"
+  qos: 0
+  unit_of_measurement: "°C"
+- platform: mqtt
+  name: "study_cover_Talarm"
+  state_topic: "shellies/shelly25-tapp_studio/overtemperature"
   qos: 0

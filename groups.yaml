@@ -13,6 +13,22 @@ luci_cucina:
       - light.led_cucina_virtual
       - light.led_pensili
 
+luci_studio:
+    name: Luci studio
+    entities:
+      - light.luce_studio
+      - light.faretti_studio
+
+luci_camera:
+    name: Luci camera
+    entities:
+      - light.flos_ariette
+
+luci_tommaso:
+    name: Luci Tommaso
+    entities:
+      - light.tommaso
+
 luci_zona_giorno:
     name: Luci zona giorno
     entities:
@@ -26,6 +42,7 @@ luci_zona_notte:
       - light.tommaso
       - light.bagno
       - light.corridoio
+      - group.luci_studio
 
 luci:
     name: Tutte le luci
