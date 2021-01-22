@@ -40,108 +40,118 @@
                             "type": "vertical-stack",
                             "cards": [
                                 {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "group.luci",
+                                    "icon": "hass:lightbulb-group",
+                                    "icon_height": "40px"
+                                },
+                                {
                                     "type": "horizontal-stack",
                                     "cards": [
                                         {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "group.luci",
-                                            "icon": "hass:lightbulb-group",
-                                            "icon_height": "46px"
+                                            "type": "vertical-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "group.luci_zona_giorno",
+                                                    "icon": "hass:lightbulb-group",
+                                                    "icon_height": "40px"
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.ingresso"
+                                                        },
+                                                        {
+                                                            "entity": "light.flos_aim"
+                                                        },
+                                                        {
+                                                            "entity": "light.led_divano"
+                                                        },
+                                                        {
+                                                            "entity": "light.flos_ic_t2"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.led_cucina_virtual"
+                                                        },
+                                                        {
+                                                            "entity": "light.luce_penisola"
+                                                        },
+                                                        {
+                                                            "entity": "light.led_pensili"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         },
                                         {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "group.luci_zona_giorno",
-                                            "icon": "hass:lightbulb-group",
-                                            "icon_height": "46px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "group.luci_zona_notte",
-                                            "icon": "hass:lightbulb-group",
-                                            "icon_height": "46px"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.ingresso"
-                                        },
-                                        {
-                                            "entity": "light.flos_aim"
-                                        },
-                                        {
-                                            "entity": "light.led_divano"
-                                        },
-                                        {
-                                            "entity": "light.flos_ic_t2"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.led_cucina_virtual"
-                                        },
-                                        {
-                                            "entity": "light.luce_penisola"
-                                        },
-                                        {
-                                            "entity": "light.led_pensili"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.corridoio"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.flos_ariette"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.tommaso"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.luce_studio"
-                                        },
-                                        {
-                                            "entity": "light.faretti_studio"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "light.bagno"
+                                            "type": "vertical-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "group.luci_zona_notte",
+                                                    "icon": "hass:lightbulb-group",
+                                                    "icon_height": "40px"
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.corridoio"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.flos_ariette"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.tommaso"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.luce_studio"
+                                                        },
+                                                        {
+                                                            "entity": "light.faretti_studio"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "entities",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "light.bagno"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -445,7 +455,7 @@
                                     "type": "state-badge",
                                     "entity": "sensor.hvac_bedroom_room_temperature",
                                     "style": {
-                                        "top": "52%",
+                                        "top": "58%",
                                         "left": "48%",
                                         "color": "rgba(0,0,0,0)"
                                     }
@@ -458,10 +468,40 @@
                                         "navigation_path": "/lovelace/studio"
                                     },
                                     "style": {
-                                        "top": "29%",
-                                        "left": "44%",
+                                        "top": "32%",
+                                        "left": "42%",
                                         "transform": "scale(2,2)",
                                         "color": "#ff6600"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.luce_studio",
+                                    "style": {
+                                        "top": "28%",
+                                        "left": "44%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.faretti_studio",
+                                    "style": {
+                                        "top": "33%",
+                                        "left": "48%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.study",
+                                    "style": {
+                                        "top": "20%",
+                                        "left": "51.5%"
                                     }
                                 },
                                 {
@@ -499,11 +539,19 @@
                                     }
                                 },
                                 {
+                                    "type": "state-icon",
+                                    "entity": "cover.tommy",
+                                    "style": {
+                                        "top": "6%",
+                                        "left": "40.75%"
+                                    }
+                                },
+                                {
                                     "type": "state-badge",
                                     "entity": "sensor.hvac_tommy_room_temperature",
                                     "style": {
-                                        "top": "18%",
-                                        "left": "42%",
+                                        "top": "15.5%",
+                                        "left": "41.5%",
                                         "color": "rgba(0,0,0,0)"
                                     }
                                 },
@@ -1298,6 +1346,14 @@
                                         "top": "70%",
                                         "left": "58%"
                                     }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.study",
+                                    "style": {
+                                        "top": "31%",
+                                        "left": "77%"
+                                    }
                                 }
                             ],
                             "image": "local/study.png"
@@ -1403,6 +1459,14 @@
                                         "top": "40%",
                                         "left": "87%",
                                         "color": "rgba(0,0,0,0)"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.tommy",
+                                    "style": {
+                                        "top": "13%",
+                                        "left": "77%"
                                     }
                                 }
                             ],
