@@ -10,8 +10,10 @@ goodmorning:
       variables:
         forced: 0
         random: 'on'
-        media_player_id: media_player.multi_room
-        multi_room_option: "multi room"
+        media_player_id: media_player.echo_dot_cucina
+        multi_room_option: ''
+#        media_player_id: media_player.multi_room
+#        multi_room_option: "multi room"
   - service: script.turn_on
     data:
       entity_id: script.light_up_zone
@@ -125,4 +127,4 @@ privacy:
     - service: cover.set_cover_position
       data:
         entity_id: cover.all
-        position: 35
+        position: 25

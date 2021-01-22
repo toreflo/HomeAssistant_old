@@ -177,6 +177,9 @@
                                 },
                                 {
                                     "entity": "input_select.music"
+                                },
+                                {
+                                    "entity": "script.copy_bookmark"
                                 }
                             ]
                         },
@@ -215,6 +218,20 @@
                                             "entity": "script.play_echo_dot_black"
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_text.tts_string"
+                                },
+                                {
+                                    "entity": "script.text_to_speech_echo_dot"
+                                },
+                                {
+                                    "entity": "script.text_to_speech_echo_dot_black"
                                 }
                             ]
                         }

@@ -53,6 +53,14 @@ select_random_music:
         {% set idx = idx | int - ((idx | int / num ) | int) * num %}
         {{ array[idx] }}
 
+copy_bookmark:
+  alias: Seleziona preferito
+  sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.music_string
+      value: "{{ states('input_select.music') }}"
+
 play_multi_room:
   alias: Riproduci musica su multi room
   sequence:
@@ -112,7 +120,7 @@ play_music:
           - service: script.turn_on
             data:
               entity_id: script.select_random_music
-          - delay: 2
+  - delay: 5
   - choose:
       - conditions:
           - condition: template
@@ -142,3 +150,34 @@ play_music:
             {% endif %}
             {{ title }}
   mode: single
+
+text_to_speech_echo_dot:
+  alias: text to speech su echo_dot
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.text_to_speech
+      variables:
+        media_player_id: media_player.echo_dot_cucina
+
+text_to_speech_echo_dot_black:
+  alias: text to speech su echo_dot_black
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.text_to_speech
+      variables:
+        media_player_id: media_player.2o_echo_dot_di_salvatore
+
+text_to_speech:
+  alias: text to speech
+  sequence:
+  - service: notify.alexa_media
+    data_template:
+      message: "{{ states('input_text.tts_string') }}"
+      title: "Title"
+      data:
+        type: announce
+        method: spoken
+      target: "{{ media_player_id }}"
+
