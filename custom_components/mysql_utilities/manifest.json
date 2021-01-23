@@ -1,0 +1,8 @@
+{
+  "domain": "mysql_list",
+  "name": "MySQL list handler",
+  "documentation": "",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": ["mysql-connector==2.1.7"]
+}

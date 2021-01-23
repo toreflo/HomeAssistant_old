@@ -1,0 +1,9 @@
+update:
+  description: Execute insert/delete on mariadb table
+  fields:
+    delete:
+      description: delete flag
+      example: 0
+    name:
+      description: name to inserte/delete
+      example: prova

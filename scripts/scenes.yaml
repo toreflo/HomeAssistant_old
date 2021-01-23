@@ -128,6 +128,12 @@ welcome:
         cover_entity: cover.zona_giorno
         cover_position: 100
         light_entity: light.ingresso
+  - service: script.turn_on
+    data:
+      entity_id: script.text_to_speech
+      variables:
+        media_player_id: media_player.multi_room
+        message: "Ben tornato!"
 
 privacy:
   sequence:

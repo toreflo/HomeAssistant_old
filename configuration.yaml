@@ -27,7 +27,6 @@ logger:
   default: info
 
 http:
-  base_url: !secret domain
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
@@ -41,3 +40,11 @@ input_boolean:
   random_music:
 
 homekit:
+
+mysql_list:
+  host: !secret db_host
+  database: dphouse
+  user: !secret db_user
+  password: !secret db_password
+  table: music_bookmarks
+  entity_id: input_select.music

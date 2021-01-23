@@ -19,7 +19,10 @@ configurator.py
 .google.token
 tts
 www
-custom_components
+custom_components/*
+!custom_components/mysql_utilities
+custom_components/mysql_utilities/__pycache__
+
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml

@@ -455,7 +455,7 @@
                                     "type": "state-badge",
                                     "entity": "sensor.hvac_bedroom_room_temperature",
                                     "style": {
-                                        "top": "58%",
+                                        "top": "50%",
                                         "left": "48%",
                                         "color": "rgba(0,0,0,0)"
                                     }

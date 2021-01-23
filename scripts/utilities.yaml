@@ -24,3 +24,17 @@ light_up_zone:
       - service: light.turn_on
         data:
           entity_id: "{{ light_entity }}"
+
+list_delete:
+  sequence:
+  - service: mysql_list.update
+    data_template:
+      delete: 1
+      name: "{{ title }}"
+
+list_insert:
+  sequence:
+  - service: mysql_list.update
+    data_template:
+      delete: 0
+      name: "{{ title }}"

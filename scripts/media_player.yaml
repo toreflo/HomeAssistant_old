@@ -20,14 +20,16 @@ add_to_bookmarks:
         {% endfor %}
         {% set data.entities = data.entities + [states("input_text.music_string")] %}
         {{ data.entities }}
-#  - service: input_select.select_option
-#    data_template:
-#      entity_id: input_select.music
-#      option: "{{ states('input_text.music_string') }}"
+  - service: script.list_insert
+    data_template:
+      title: "{{ states('input_text.music_string') }}"
 
 remove_from_bookmarks:
   alias: Rimuovi dai preferiti
   sequence:
+  - service: script.list_delete
+    data_template:
+      title: "{{ states('input_select.music') }}"
   - service: input_select.set_options
     data_template:
       entity_id: input_select.music
@@ -159,6 +161,7 @@ text_to_speech_echo_dot:
       entity_id: script.text_to_speech
       variables:
         media_player_id: media_player.echo_dot_cucina
+        message: "{{ states('input_text.tts_string') }}"
 
 text_to_speech_echo_dot_black:
   alias: text to speech su echo_dot_black
@@ -168,13 +171,14 @@ text_to_speech_echo_dot_black:
       entity_id: script.text_to_speech
       variables:
         media_player_id: media_player.2o_echo_dot_di_salvatore
+        message: "{{ states('input_text.tts_string') }}"
 
 text_to_speech:
   alias: text to speech
   sequence:
   - service: notify.alexa_media
     data_template:
-      message: "{{ states('input_text.tts_string') }}"
+      message: "{{ message}}"
       title: "Title"
       data:
         type: announce
