@@ -20,19 +20,20 @@
       data:
         notification_id: git_status
 
-- alias: 'Start HomeKit'
+- alias: 'On Home Assistant start'
   trigger:
     - platform: homeassistant
       event: start
   action:
+    - service: mysql_list.get_data
     - delay: 00:05  # Waits 5 minutes
     - service: homekit.start
 
-- alias: "Let's Encrypt Renewal"
-  trigger:
-    platform: time
-    at: '01:25:00'
-  action:
-    - service: hassio.addon_restart
-      data:
-        addon: core_letsencrypt
+#- alias: "Let's Encrypt Renewal"
+#  trigger:
+#    platform: time
+#    at: '01:25:00'
+#  action:
+#    - service: hassio.addon_restart
+#      data:
+#        addon: core_letsencrypt

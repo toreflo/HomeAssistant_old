@@ -7,3 +7,6 @@ update:
     name:
       description: name to inserte/delete
       example: prova
+
+get_data:
+  description: Load input_select data from mariadb table
