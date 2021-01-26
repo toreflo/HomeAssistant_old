@@ -59,6 +59,7 @@ def setup(hass, config):
 
     def insert(connection, service, value):
         _LOGGER.info("{}.{}: insert {}".format(DOMAIN, service, value))
+        query = "insert into {} values ('{}')".format(table, value)
         cursor = connection.cursor()    
         cursor.execute(query)
         connection.commit()
