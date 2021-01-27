@@ -103,6 +103,7 @@ play_music_forced:
         forced: 1
         shuffle: "{{ states('input_boolean.shuffle') }}"
         random: "{{ states('input_boolean.bookmark_random') }}"
+        volume_level: "{{ states('input_number.media_volume') }}"
         media_content_type: "{{ states('input_select.media_content_type') }}"
         media_player_id: "{{ media_player_id }}"
         multi_room_option: "{{ multi_room_option }}"
@@ -113,9 +114,9 @@ play_music:
   - condition: template
     value_template: "{{ forced == 1 or states(media_player_id) != 'playing' }}"
   - service: media_player.volume_set
-    data:
+    data_template:
       entity_id: "{{ media_player_id }}"
-      volume_level: "{{ states('input_number.media_volume')|float / 100}}"
+      volume_level: "{{ volume_level|float / 100 }}"
   - service: media_player.shuffle_set
     data:
       entity_id: "{{ media_player_id }}"
@@ -156,6 +157,16 @@ play_music:
               {% set title = states('input_text.music_string') %}
             {% endif %}
             {{ title }}
+  - service: logbook.log
+    data_template:
+      name: script play_music
+      message: >
+        {% if random == 'on' %}
+          {% set title = states('input_select.music') %}
+        {% else %}
+          {% set title = states('input_text.music_string') %}
+        {% endif %}
+        playing {{ title }}, volume: {{ volume_level }}, random: {{ random }}, shuffle: {{shuffle}}, media_content_type: {{media_content_type}}
   mode: single
 
 text_to_speech_echo_dot:

@@ -11,6 +11,7 @@ goodmorning:
         forced: 0
         shuffle: true
         random: 'on'
+        volume_level: 5
         media_content_type: "SPOTIFY"
         media_player_id: media_player.multi_room
         multi_room_option: "multi room"
