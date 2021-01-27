@@ -101,7 +101,9 @@ play_music_forced:
       entity_id: script.play_music
       variables:
         forced: 1
-        random: "{{ states('input_boolean.random_music') }}"
+        shuffle: "{{ states('input_boolean.shuffle') }}"
+        random: "{{ states('input_boolean.bookmark_random') }}"
+        media_content_type: "{{ states('input_select.media_content_type') }}"
         media_player_id: "{{ media_player_id }}"
         multi_room_option: "{{ multi_room_option }}"
 
@@ -114,6 +116,10 @@ play_music:
     data:
       entity_id: "{{ media_player_id }}"
       volume_level: "{{ states('input_number.media_volume')|float / 100}}"
+  - service: media_player.shuffle_set
+    data:
+      entity_id: "{{ media_player_id }}"
+      shuffle: "{{ shuffle }}"
   - choose:
       - conditions:
           - condition: template
@@ -122,7 +128,6 @@ play_music:
           - service: script.turn_on
             data:
               entity_id: script.select_random_music
-  - delay: 5
   - choose:
       - conditions:
           - condition: template
@@ -131,19 +136,19 @@ play_music:
           - service: media_player.play_media
             data_template:
               entity_id: media_player.echo_dot_cucina
-              media_content_type: SPOTIFY #AMAZON_MUSIC
+              media_content_type: "{{ media_content_type }}"
               media_content_id: >
                 {% if random == 'on' %}
                   {% set title = states('input_select.music') %}
                 {% else %}
                   {% set title = states('input_text.music_string') %}
                 {% endif %}
-                {{ title }} su {{ multi_room_option }}
+                {{ title }}, sul gruppo {{ multi_room_option }}
     default:
       - service: media_player.play_media
         data_template:
           entity_id: "{{ media_player_id }}"
-          media_content_type: SPOTIFY #AMAZON_MUSIC
+          media_content_type: "{{ media_content_type }}"
           media_content_id: >
             {% if random == 'on' %}
               {% set title = states('input_select.music') %}
@@ -171,6 +176,16 @@ text_to_speech_echo_dot_black:
       entity_id: script.text_to_speech
       variables:
         media_player_id: media_player.2o_echo_dot_di_salvatore
+        message: "{{ states('input_text.tts_string') }}"
+
+text_to_speech_multi_room:
+  alias: text to speech su multi room
+  sequence:
+  - service: script.turn_on
+    data:
+      entity_id: script.text_to_speech
+      variables:
+        media_player_id: media_player.multi_room
         message: "{{ states('input_text.tts_string') }}"
 
 text_to_speech:

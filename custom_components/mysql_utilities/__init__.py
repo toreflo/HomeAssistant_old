@@ -54,8 +54,11 @@ def setup(hass, config):
         for row in records:
             _LOGGER.debug("value = {}".format(row[0]))
             elems.append(row[0])
-        curr_state = hass.states.get(entity).state
-        hass.states.set(entity, curr_state, { "options": elems })
+#        curr_state = hass.states.get(entity).state
+#        hass.states.set(entity, curr_state, { "options": elems })
+        service_data = { 'entity_id': entity, 'options': elems }
+        hass.services.call('input_select', 'set_options', service_data)
+
 
     def insert(connection, service, value):
         _LOGGER.info("{}.{}: insert {}".format(DOMAIN, service, value))

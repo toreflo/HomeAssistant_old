@@ -53,3 +53,8 @@ hvac_study_hvane:
 music:
   options:
     - ''
+
+media_content_type:
+  options:
+    - 'SPOTIFY'
+    - 'AMAZON_MUSIC'

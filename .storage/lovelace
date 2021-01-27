@@ -188,7 +188,13 @@
                                     "entity": "input_number.media_volume"
                                 },
                                 {
-                                    "entity": "input_boolean.random_music"
+                                    "entity": "input_select.media_content_type"
+                                },
+                                {
+                                    "entity": "input_boolean.bookmark_random"
+                                },
+                                {
+                                    "entity": "input_boolean.shuffle"
                                 },
                                 {
                                     "entity": "script.add_to_bookmarks"
@@ -253,6 +259,9 @@
                                 },
                                 {
                                     "entity": "script.text_to_speech_echo_dot_black"
+                                },
+                                {
+                                    "entity": "script.text_to_speech_multi_room"
                                 }
                             ]
                         }
@@ -706,6 +715,268 @@
                                     ]
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:server",
+                    "badges": [
+                        {
+                            "entity": "sensor.git_alarm"
+                        },
+                        {
+                            "entity": "binary_sensor.rpi_power_status"
+                        },
+                        {
+                            "entity": "binary_sensor.snapshots_stale"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "sensor.last_boot"
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.processor_use"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.processor_temperature"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.load_1m",
+                                            "min": 0,
+                                            "max": 1
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 1,
+                                            "entity": "sensor.load_5m"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 1,
+                                            "entity": "sensor.load_15m"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.memory_use_percent"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.memory_free"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "min": 0,
+                                            "max": 100,
+                                            "entity": "sensor.disk_use_percent"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.hass_db_size"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "glance",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.speedtest_ping"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_download"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_upload"
+                                        }
+                                    ],
+                                    "show_name": true,
+                                    "show_icon": true,
+                                    "show_state": true,
+                                    "state_color": false
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_throughput_in_eth0",
+                                            "graph": "line",
+                                            "name": "Throughput IN"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "graph": "line",
+                                            "entity": "sensor.network_throughput_out_eth0",
+                                            "name": "Throughput OUT"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_in_daily",
+                                            "name": "IN giornaliero"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_out_daily",
+                                            "name": "OUT giornaliero"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_in_monthly",
+                                            "name": "IN mensile"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.network_out_monthly",
+                                            "name": "OUT mensile"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:chart-areaspline",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.hvac_living_room_temperature"
+                                        },
+                                        {
+                                            "entity": "sensor.hvac_tommy_room_temperature"
+                                        },
+                                        {
+                                            "entity": "sensor.hvac_bedroom_room_temperature"
+                                        },
+                                        {
+                                            "entity": "sensor.hvac_study_room_temperature"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.d_energy_mel_small"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_mel_big"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
+                                }
+                            ]
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sensor.d_energy_luce_ingresso"
+                                },
+                                {
+                                    "entity": "sensor.d_energy_flos_aim"
+                                },
+                                {
+                                    "entity": "sensor.d_energy_led_cucina"
+                                },
+                                {
+                                    "entity": "sensor.d_energy_faretti_studio"
+                                },
+                                {
+                                    "entity": "sensor.d_energy_luce_studio"
+                                },
+                                {
+                                    "entity": "sensor.d_energy_led_divano"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sensor.cover_d_energy_living_big"
+                                },
+                                {
+                                    "entity": "sensor.cover_d_energy_living_small"
+                                },
+                                {
+                                    "entity": "sensor.cover_d_energy_kitchen"
+                                },
+                                {
+                                    "entity": "sensor.cover_d_energy_bedroom"
+                                },
+                                {
+                                    "entity": "sensor.cover_d_energy_study"
+                                },
+                                {
+                                    "entity": "sensor.cover_d_energy_tommy"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0
                         }
                     ]
                 },
@@ -1475,183 +1746,19 @@
                     ]
                 },
                 {
-                    "icon": "mdi:server",
-                    "badges": [
-                        {
-                            "entity": "sensor.git_alarm"
-                        },
-                        {
-                            "entity": "binary_sensor.rpi_power_status"
-                        },
-                        {
-                            "entity": "binary_sensor.snapshots_stale"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "sensor.last_boot"
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "gauge",
-                                            "min": 0,
-                                            "max": 100,
-                                            "entity": "sensor.processor_use"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.processor_temperature"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "gauge",
-                                            "entity": "sensor.load_1m",
-                                            "min": 0,
-                                            "max": 1
-                                        },
-                                        {
-                                            "type": "gauge",
-                                            "min": 0,
-                                            "max": 1,
-                                            "entity": "sensor.load_5m"
-                                        },
-                                        {
-                                            "type": "gauge",
-                                            "min": 0,
-                                            "max": 1,
-                                            "entity": "sensor.load_15m"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "gauge",
-                                            "min": 0,
-                                            "max": 100,
-                                            "entity": "sensor.memory_use_percent"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.memory_free"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "gauge",
-                                            "min": 0,
-                                            "max": 100,
-                                            "entity": "sensor.disk_use_percent"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.hass_db_size"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "glance",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.speedtest_ping"
-                                        },
-                                        {
-                                            "entity": "sensor.speedtest_download"
-                                        },
-                                        {
-                                            "entity": "sensor.speedtest_upload"
-                                        }
-                                    ],
-                                    "show_name": true,
-                                    "show_icon": true,
-                                    "show_state": true,
-                                    "state_color": false
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.network_throughput_in_eth0",
-                                            "graph": "line",
-                                            "name": "Throughput IN"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "graph": "line",
-                                            "entity": "sensor.network_throughput_out_eth0",
-                                            "name": "Throughput OUT"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.network_in_daily",
-                                            "name": "IN giornaliero"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.network_out_daily",
-                                            "name": "OUT giornaliero"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.network_in_monthly",
-                                            "name": "IN mensile"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.network_out_monthly",
-                                            "name": "OUT mensile"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
                     "title": "Grid test",
                     "path": "test",
                     "panel": true,
-                    "visible": [],
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
                             "type": "grid",
-                            "columns": 2,
+                            "columns": 3,
                             "square": false,
                             "cards": [
                                 {
@@ -1767,6 +1874,132 @@
                                             ]
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 4,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.welcome"
+                                                }
+                                            },
+                                            "icon": "mdi:home",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "script.welcome"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.exit"
+                                                }
+                                            },
+                                            "entity": "script.exit",
+                                            "icon": "mdi:logout",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.goodnight"
+                                                }
+                                            },
+                                            "entity": "script.goodnight",
+                                            "icon": "mdi:weather-night",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "name": " ",
+                                            "hold_action": {
+                                                "action": "none"
+                                            },
+                                            "show_icon": false,
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.living"
+                                                }
+                                            },
+                                            "entity": "script.living",
+                                            "icon": "mdi:sofa",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.tv"
+                                                }
+                                            },
+                                            "entity": "script.tv",
+                                            "icon": "mdi:television-guide",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.kitchen"
+                                                }
+                                            },
+                                            "entity": "script.kitchen",
+                                            "icon": "mdi:pot-mix",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.kitchen_table"
+                                                }
+                                            },
+                                            "entity": "script.kitchen_table",
+                                            "icon": "mdi:silverware-variant",
+                                            "icon_height": "30px",
+                                            "name": " "
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "map",
+                                    "entities": [
+                                        {
+                                            "entity": "device_tracker.iphone_di_salvatore"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "dark_mode": false
                                 }
                             ]
                         }

@@ -37,7 +37,8 @@ alexa:
 
 input_boolean:
   dummy_switch:
-  random_music:
+  bookmark_random:
+  shuffle:
 
 homekit:
 

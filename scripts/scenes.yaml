@@ -9,11 +9,11 @@ goodmorning:
       entity_id: script.play_music
       variables:
         forced: 0
+        shuffle: true
         random: 'on'
-        media_player_id: media_player.echo_dot_cucina
-        multi_room_option: ''
-#        media_player_id: media_player.multi_room
-#        multi_room_option: "multi room"
+        media_content_type: "SPOTIFY"
+        media_player_id: media_player.multi_room
+        multi_room_option: "multi room"
   - service: script.turn_on
     data:
       entity_id: script.light_up_zone
@@ -113,7 +113,39 @@ exit:
   - service: light.turn_on
     data:
       entity_id: light.ingresso
-  - delay: "00:02:00"
+  - delay: "00:03:00"
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  - service: climate.turn_off
+    data:
+      entity_id: climate.hvac_living
+  - service: climate.turn_off
+    data:
+      entity_id: climate.hvac_bedroom
+  - service: climate.turn_off
+    data:
+      entity_id: climate.hvac_study
+  - service: climate.turn_off
+    data:
+      entity_id: climate.hvac_tommy
+  mode: single
+
+goodnight:
+  sequence:
+  - service: cover.close_cover
+    data:
+      entity_id: cover.all
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.luci
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.media_players
+  - service: light.turn_on
+    data:
+      entity_id: light.faretti_studio
+  - delay: "00:03:00"
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci
