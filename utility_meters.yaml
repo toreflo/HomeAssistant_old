@@ -1,15 +1,15 @@
 # Condizionatori
 d_energy_mel_big:
-  source: sensor.hvac_living_energy
+  source: sensor.mel_big_energy
   cycle: daily
 m_energy_mel_big:
-  source: sensor.hvac_living_energy
+  source: sensor.mel_big_energy
   cycle: monthly
 d_energy_mel_small:
-  source: sensor.hvac_tommy_energy
+  source: sensor.mel_small_energy
   cycle: daily
 m_energy_mel_small:
-  source: sensor.hvac_tommy_energy
+  source: sensor.mel_small_energy
   cycle: monthly
 
 # Luce ingresso

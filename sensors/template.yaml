@@ -4,3 +4,11 @@
       entity_id: input_number.led_cucina_brightness
       value_template: "{{ states('input_number.led_cucina_min_power')|float + states('input_number.led_cucina_brightness')|float * (states('input_number.led_cucina_max_power')|float - states('input_number.led_cucina_min_power')|float) / 100 }}"
 
+- platform: template
+  sensors:
+    mel_big_energy:
+      unit_of_measurement: "kWh"
+      value_template: "{{ ((states('sensor.hvac_living_energy') | float) + (states('sensor.hvac_bedroom_energy') | float)) | round(1) }}"
+    mel_small_energy:
+      unit_of_measurement: "kWh"
+      value_template: "{{ ((states('sensor.hvac_study_energy') | float) + (states('sensor.hvac_tommy_energy') | float)) | round(1) }}"

@@ -32,6 +32,8 @@ exclude:
     - sensor.hvac_study_energy
     - sensor.hvac_tommy_energy
     - sensor.led_cucina_target_power
+    - sensor.mel_big_energy
+    - sensor.mel_small_energy
     - sensor.db_size
   entity_globs:
     - sensor.weather_*
