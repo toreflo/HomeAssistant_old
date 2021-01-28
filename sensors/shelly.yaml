@@ -240,3 +240,23 @@
   name: "study_cover_Talarm"
   state_topic: "shellies/shelly25-tapp_studio/overtemperature"
   qos: 0
+
+# Shelly H&T 1
+- platform: mqtt
+  name: "ht_1_T"
+  state_topic: "shellies/shellyht-9551AE/sensor/temperature"
+  value_template: "{{ value }}"
+  unit_of_measurement: "°C"
+  icon: mdi:thermometer
+- platform: mqtt
+  name: "ht_1_H"
+  state_topic: "shellies/shellyht-9551AE/sensor/humidity"
+  value_template: "{{ value }}"
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+- platform: mqtt
+  name: "ht_1_battery"
+  state_topic: "shellies/shellyht-9551AE/sensor/battery"
+  value_template: "{{ value }}"
+  unit_of_measurement: "%"
+  icon: mdi:battery
