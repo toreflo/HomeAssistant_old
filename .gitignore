@@ -19,6 +19,7 @@ configurator.py
 .google.token
 tts
 www
+image
 custom_components/*
 !custom_components/mysql_utilities
 custom_components/mysql_utilities/__pycache__

@@ -9,6 +9,14 @@
                     "path": "default_view",
                     "title": "Home",
                     "icon": "mdi:home",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [
                         {
                             "entity": "binary_sensor.updater"
@@ -17,7 +25,7 @@
                             "entity": "person.salvatore"
                         },
                         {
-                            "entity": "sun.sun"
+                            "entity": "person.gloria"
                         },
                         {
                             "entity": "sensor.hvac_living_room_temperature"
@@ -30,6 +38,12 @@
                         },
                         {
                             "entity": "sensor.hvac_tommy_room_temperature"
+                        },
+                        {
+                            "entity": "sensor.ht_1_t"
+                        },
+                        {
+                            "entity": "sensor.ht_1_h"
                         },
                         {
                             "entity": "cover.all"
@@ -176,6 +190,14 @@
                 },
                 {
                     "icon": "mdi:music",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -197,13 +219,13 @@
                                     "entity": "input_boolean.shuffle"
                                 },
                                 {
+                                    "entity": "input_select.music"
+                                },
+                                {
                                     "entity": "script.add_to_bookmarks"
                                 },
                                 {
                                     "entity": "script.remove_from_bookmarks"
-                                },
-                                {
-                                    "entity": "input_select.music"
                                 },
                                 {
                                     "entity": "script.copy_bookmark"
@@ -272,6 +294,14 @@
                     "path": "piantina",
                     "panel": true,
                     "icon": "mdi:map",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -720,6 +750,14 @@
                 },
                 {
                     "icon": "mdi:server",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [
                         {
                             "entity": "sensor.git_alarm"
@@ -889,6 +927,14 @@
                 {
                     "icon": "mdi:chart-areaspline",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -908,6 +954,9 @@
                                         },
                                         {
                                             "entity": "sensor.hvac_study_room_temperature"
+                                        },
+                                        {
+                                            "entity": "sensor.ht_1_t"
                                         }
                                     ],
                                     "hours_to_show": 24,
@@ -929,50 +978,65 @@
                             ]
                         },
                         {
-                            "type": "history-graph",
-                            "entities": [
+                            "type": "vertical-stack",
+                            "cards": [
                                 {
-                                    "entity": "sensor.d_energy_luce_ingresso"
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.d_energy_luce_ingresso"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_flos_aim"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_led_cucina"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_faretti_studio"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_luce_studio"
+                                        },
+                                        {
+                                            "entity": "sensor.d_energy_led_divano"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
                                 },
                                 {
-                                    "entity": "sensor.d_energy_flos_aim"
-                                },
-                                {
-                                    "entity": "sensor.d_energy_led_cucina"
-                                },
-                                {
-                                    "entity": "sensor.d_energy_faretti_studio"
-                                },
-                                {
-                                    "entity": "sensor.d_energy_luce_studio"
-                                },
-                                {
-                                    "entity": "sensor.d_energy_led_divano"
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.cover_d_energy_living_big"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_living_small"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_kitchen"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_bedroom"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_study"
+                                        },
+                                        {
+                                            "entity": "sensor.cover_d_energy_tommy"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
                                 }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0
+                            ]
                         },
                         {
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "sensor.cover_d_energy_living_big"
-                                },
-                                {
-                                    "entity": "sensor.cover_d_energy_living_small"
-                                },
-                                {
-                                    "entity": "sensor.cover_d_energy_kitchen"
-                                },
-                                {
-                                    "entity": "sensor.cover_d_energy_bedroom"
-                                },
-                                {
-                                    "entity": "sensor.cover_d_energy_study"
-                                },
-                                {
-                                    "entity": "sensor.cover_d_energy_tommy"
+                                    "entity": "sensor.ht_1_h"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -984,6 +1048,14 @@
                     "title": "Sala",
                     "path": "sala",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -1232,6 +1304,14 @@
                     "title": "Cucina",
                     "path": "cucina",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -1357,6 +1437,14 @@
                     "title": "Camera",
                     "path": "camera",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -1471,6 +1559,14 @@
                     "title": "Studio",
                     "path": "studio",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -1635,6 +1731,14 @@
                     "title": "Tommaso",
                     "path": "tommaso",
                     "panel": false,
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -1746,7 +1850,7 @@
                     ]
                 },
                 {
-                    "title": "Grid test",
+                    "title": "",
                     "path": "test",
                     "panel": true,
                     "visible": [
@@ -1754,6 +1858,7 @@
                             "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
                         }
                     ],
+                    "icon": "mdi:grid",
                     "badges": [],
                     "cards": [
                         {
@@ -1926,6 +2031,8 @@
                                             "tap_action": {
                                                 "action": "none"
                                             },
+                                            "icon": "mdi:window-closed",
+                                            "icon_height": "30px",
                                             "name": " ",
                                             "hold_action": {
                                                 "action": "none"
@@ -1988,6 +2095,114 @@
                                             "icon": "mdi:silverware-variant",
                                             "icon_height": "30px",
                                             "name": " "
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_living_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_bedroom_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_study_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_tommy_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_t",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_h",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "show_name": false,
+                                            "show_icon": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "show_name": false,
+                                            "show_icon": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "entity": "cover.all",
+                                            "icon_height": "30px",
+                                            "show_name": false,
+                                            "icon": "mdi:arrow-up-drop-circle"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.stop_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "entity": "cover.all",
+                                            "icon_height": "30px",
+                                            "show_name": false,
+                                            "icon": "mdi:stop"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "entity": "cover.all",
+                                            "icon_height": "30px",
+                                            "show_name": false,
+                                            "icon": "mdi:arrow-down-drop-circle"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.privacy"
+                                                }
+                                            },
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "script.privacy"
                                         }
                                     ]
                                 },
@@ -1995,11 +2210,43 @@
                                     "type": "map",
                                     "entities": [
                                         {
-                                            "entity": "device_tracker.iphone_di_salvatore"
+                                            "entity": "person.salvatore"
+                                        },
+                                        {
+                                            "entity": "person.gloria"
                                         }
                                     ],
                                     "hours_to_show": 24,
                                     "dark_mode": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:home",
+                    "visible": [
+                        {
+                            "user": "6bb3abda6ae3407cbd7d69118f422322"
+                        }
+                    ],
+                    "badges": [
+                        {
+                            "entity": "person.salvatore"
+                        },
+                        {
+                            "entity": "person.gloria"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "type": "map",
+                            "entities": [
+                                {
+                                    "entity": "person.gloria"
+                                },
+                                {
+                                    "entity": "person.salvatore"
                                 }
                             ]
                         }
