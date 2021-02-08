@@ -926,7 +926,7 @@
                 },
                 {
                     "icon": "mdi:chart-areaspline",
-                    "panel": false,
+                    "panel": true,
                     "visible": [
                         {
                             "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
@@ -966,6 +966,16 @@
                                     "type": "history-graph",
                                     "entities": [
                                         {
+                                            "entity": "sensor.ht_1_h"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
                                             "entity": "sensor.d_energy_mel_small"
                                         },
                                         {
@@ -974,12 +984,7 @@
                                     ],
                                     "hours_to_show": 24,
                                     "refresh_interval": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
+                                },
                                 {
                                     "type": "history-graph",
                                     "entities": [
@@ -1031,21 +1036,11 @@
                                     "refresh_interval": 0
                                 }
                             ]
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "sensor.ht_1_h"
-                                }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0
                         }
                     ]
                 },
                 {
-                    "title": "Sala",
+                    "title": "",
                     "path": "sala",
                     "panel": false,
                     "visible": [
@@ -1056,6 +1051,7 @@
                             "user": "2bfba91451324e8c971f9028ea7f2111"
                         }
                     ],
+                    "icon": "mdi:sofa",
                     "badges": [],
                     "cards": [
                         {
@@ -1078,6 +1074,27 @@
                                         },
                                         {
                                             "entity": "cover.living_small"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_big_cover_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "unit": "%",
+                                            "name": "Balcone"
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "sensor.living_small_cover_position",
+                                            "min": 0,
+                                            "max": 100,
+                                            "unit": "%",
+                                            "name": "Finestra"
                                         }
                                     ]
                                 },
@@ -1301,7 +1318,7 @@
                     ]
                 },
                 {
-                    "title": "Cucina",
+                    "title": "",
                     "path": "cucina",
                     "panel": false,
                     "visible": [
@@ -1312,6 +1329,7 @@
                             "user": "2bfba91451324e8c971f9028ea7f2111"
                         }
                     ],
+                    "icon": "mdi:silverware-variant",
                     "badges": [],
                     "cards": [
                         {
@@ -1331,6 +1349,14 @@
                                     "entities": [
                                         "cover.kitchen"
                                     ]
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.kitchen_cover_position",
+                                    "min": 0,
+                                    "max": 100,
+                                    "unit": "%",
+                                    "name": "Tapparelle"
                                 },
                                 {
                                     "type": "glance",
@@ -1434,7 +1460,7 @@
                     ]
                 },
                 {
-                    "title": "Camera",
+                    "title": "",
                     "path": "camera",
                     "panel": false,
                     "visible": [
@@ -1445,6 +1471,7 @@
                             "user": "2bfba91451324e8c971f9028ea7f2111"
                         }
                     ],
+                    "icon": "mdi:bed",
                     "badges": [],
                     "cards": [
                         {
@@ -1466,6 +1493,14 @@
                                             "entity": "cover.bedroom"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.bedroom_cover_position",
+                                    "min": 0,
+                                    "max": 100,
+                                    "unit": "%",
+                                    "name": "Tapparelle"
                                 },
                                 {
                                     "type": "glance",
@@ -1556,7 +1591,7 @@
                     ]
                 },
                 {
-                    "title": "Studio",
+                    "title": "",
                     "path": "studio",
                     "panel": false,
                     "visible": [
@@ -1567,6 +1602,7 @@
                             "user": "2bfba91451324e8c971f9028ea7f2111"
                         }
                     ],
+                    "icon": "mdi:desk",
                     "badges": [],
                     "cards": [
                         {
@@ -1588,6 +1624,14 @@
                                             "entity": "cover.study"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.study_cover_position",
+                                    "min": 0,
+                                    "max": 100,
+                                    "unit": "%",
+                                    "name": "Tapparelle"
                                 },
                                 {
                                     "type": "glance",
@@ -1728,7 +1772,7 @@
                     ]
                 },
                 {
-                    "title": "Tommaso",
+                    "title": "",
                     "path": "tommaso",
                     "panel": false,
                     "visible": [
@@ -1739,6 +1783,7 @@
                             "user": "2bfba91451324e8c971f9028ea7f2111"
                         }
                     ],
+                    "icon": "mdi:human-child",
                     "badges": [],
                     "cards": [
                         {
@@ -1760,6 +1805,14 @@
                                             "entity": "cover.tommy"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "gauge",
+                                    "entity": "sensor.tommy_cover_position",
+                                    "min": 0,
+                                    "max": 100,
+                                    "unit": "%",
+                                    "name": "Tapparelle"
                                 },
                                 {
                                     "type": "glance",
@@ -1982,7 +2035,7 @@
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 4,
+                                    "columns": 5,
                                     "cards": [
                                         {
                                             "type": "button",
@@ -1996,7 +2049,8 @@
                                             "icon": "mdi:home",
                                             "icon_height": "30px",
                                             "name": " ",
-                                            "entity": "script.welcome"
+                                            "entity": "script.welcome",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
@@ -2010,7 +2064,8 @@
                                             "entity": "script.exit",
                                             "icon": "mdi:logout",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
@@ -2024,20 +2079,37 @@
                                             "entity": "script.goodnight",
                                             "icon": "mdi:weather-night",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.goodmorning"
+                                                }
                                             },
-                                            "icon": "mdi:window-closed",
+                                            "entity": "script.goodmorning",
+                                            "icon": "mdi:weather-sunset",
                                             "icon_height": "30px",
                                             "name": " ",
-                                            "hold_action": {
-                                                "action": "none"
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.goodmorning_all"
+                                                }
                                             },
-                                            "show_icon": false,
+                                            "entity": "script.goodmorning_all",
+                                            "icon": "mdi:weather-sunny",
+                                            "icon_height": "30px",
+                                            "name": " ",
                                             "show_name": false
                                         },
                                         {
@@ -2052,7 +2124,8 @@
                                             "entity": "script.living",
                                             "icon": "mdi:sofa",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
@@ -2066,7 +2139,8 @@
                                             "entity": "script.tv",
                                             "icon": "mdi:television-guide",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
@@ -2080,7 +2154,8 @@
                                             "entity": "script.kitchen",
                                             "icon": "mdi:pot-mix",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
                                         },
                                         {
                                             "type": "button",
@@ -2094,7 +2169,19 @@
                                             "entity": "script.kitchen_table",
                                             "icon": "mdi:silverware-variant",
                                             "icon_height": "30px",
-                                            "name": " "
+                                            "name": " ",
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "show_name": false,
+                                            "show_icon": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            }
                                         },
                                         {
                                             "type": "sensor",
@@ -2125,28 +2212,6 @@
                                             "type": "sensor",
                                             "entity": "sensor.ht_1_h",
                                             "graph": "line"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         },
                                         {
                                             "type": "button",
@@ -2249,6 +2314,50 @@
                                     "entity": "person.salvatore"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "title": "",
+                    "path": "h-and-t",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
+                    "panel": true,
+                    "icon": "mdi:google-maps",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "map",
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.iphone_di_salvatore"
+                                },
+                                {
+                                    "entity": "device_tracker.iphone_di_gloria"
+                                },
+                                {
+                                    "entity": "zone.colle_grosso"
+                                },
+                                {
+                                    "entity": "zone.colle_martino"
+                                },
+                                {
+                                    "entity": "zone.home"
+                                },
+                                {
+                                    "entity": "zone.work"
+                                },
+                                {
+                                    "entity": "zone.school"
+                                }
+                            ],
+                            "hours_to_show": 48
                         }
                     ]
                 }

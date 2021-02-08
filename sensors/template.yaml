@@ -12,3 +12,18 @@
     mel_small_energy:
       unit_of_measurement: "kWh"
       value_template: "{{ ((states('sensor.hvac_study_energy') | float) + (states('sensor.hvac_tommy_energy') | float)) | round(1) }}"
+
+- platform: template
+  sensors:
+    living_small_cover_position:
+      value_template: "{{ state_attr('cover.living_small', 'current_position') }}"
+    living_big_cover_position:
+      value_template: "{{ state_attr('cover.living_big', 'current_position') }}"
+    kitchen_cover_position:
+      value_template: "{{ state_attr('cover.kitchen', 'current_position') }}"
+    bedroom_cover_position:
+      value_template: "{{ state_attr('cover.bedroom', 'current_position') }}"
+    study_cover_position:
+      value_template: "{{ state_attr('cover.study', 'current_position') }}"
+    tommy_cover_position:
+      value_template: "{{ state_attr('cover.tommy', 'current_position') }}"

@@ -52,3 +52,4 @@ exclude:
     - sensor.network_in_eth0
     - sensor.network_out_eth0
     - sensor.*random*
+    - sensor.*cover_position
