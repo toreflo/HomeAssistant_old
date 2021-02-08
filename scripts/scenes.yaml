@@ -1,5 +1,5 @@
-goodmorning:
-  alias: Buongiorno
+goodmorning_raw:
+  alias: Buongiorno base
   sequence:
   - condition: state
     entity_id: 'device_tracker.iphone_di_salvatore'
@@ -22,12 +22,48 @@ goodmorning:
         cover_entity: cover.zona_giorno
         cover_position: 100
         light_entity: light.led_pensili
+  mode: single
+
+goodmorning:
+  alias: Buongiorno
+  sequence:
+  - condition: state
+    entity_id: 'device_tracker.iphone_di_salvatore'
+    state: 'home'
+  - service: script.turn_on
+    data:
+      entity_id: script.goodmorning_raw
   - service: script.turn_on
     data:
       entity_id: script.light_up_zone
       variables:
         cover_entity: cover.bedroom
         cover_position: 55
+        light_entity: 'light.corridoio'
+  mode: single
+
+goodmorning_all:
+  alias: Buongiorno a tutti
+  sequence:
+  - condition: state
+    entity_id: 'device_tracker.iphone_di_salvatore'
+    state: 'home'
+  - service: script.turn_on
+    data:
+      entity_id: script.goodmorning_raw
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.bedroom
+        cover_position: 100
+        light_entity: 'light.corridoio'
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.tommy
+        cover_position: 100
         light_entity: ''
   - service: script.turn_on
     data:
@@ -146,7 +182,7 @@ goodnight:
   - service: light.turn_on
     data:
       entity_id: light.faretti_studio
-  - delay: "00:03:00"
+  - delay: "00:02:00"
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci
