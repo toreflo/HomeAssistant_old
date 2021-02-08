@@ -144,7 +144,7 @@ play_music:
                 {% else %}
                   {% set title = states('input_text.music_string') %}
                 {% endif %}
-                {{ title }}, sul gruppo {{ multi_room_option }}
+                {{ title }} sul gruppo {{ multi_room_option }}
     default:
       - service: media_player.play_media
         data_template:
