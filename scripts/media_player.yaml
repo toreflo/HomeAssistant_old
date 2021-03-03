@@ -178,6 +178,7 @@ text_to_speech_echo_dot:
       variables:
         media_player_id: media_player.echo_dot_cucina
         message: "{{ states('input_text.tts_string') }}"
+        volume_level: "{{ states('input_number.media_volume') }}"
 
 text_to_speech_echo_dot_black:
   alias: text to speech su echo_dot_black
@@ -188,6 +189,7 @@ text_to_speech_echo_dot_black:
       variables:
         media_player_id: media_player.2o_echo_dot_di_salvatore
         message: "{{ states('input_text.tts_string') }}"
+        volume_level: "{{ states('input_number.media_volume') }}"
 
 text_to_speech_multi_room:
   alias: text to speech su multi room
@@ -198,10 +200,15 @@ text_to_speech_multi_room:
       variables:
         media_player_id: media_player.multi_room
         message: "{{ states('input_text.tts_string') }}"
+        volume_level: "{{ states('input_number.media_volume') }}"
 
 text_to_speech:
   alias: text to speech
   sequence:
+  - service: media_player.volume_set
+    data_template:
+      entity_id: "{{ media_player_id }}"
+      volume_level: "{{ volume_level|float / 100 }}"
   - service: notify.alexa_media
     data_template:
       message: "{{ message}}"

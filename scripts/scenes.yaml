@@ -203,6 +203,7 @@ welcome:
       variables:
         media_player_id: media_player.multi_room
         message: "Ben tornato!"
+        volume_level: 15
 
 privacy:
   sequence:
