@@ -210,3 +210,10 @@ privacy:
       data:
         entity_id: cover.all
         position: 25
+
+air_flow:
+  sequence:
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.zona_giorno
+        position: 35
