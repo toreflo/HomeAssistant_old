@@ -1,0 +1,24 @@
+irrigation:
+  alias: Irrigazione
+  mode: single
+  sequence:
+  - service: system_log.write
+    data:
+      message: "Inizio irrigazione"
+      level: info
+  - service: input_datetime.set_datetime
+    data_template:
+      entity_id: input_datetime.last_irrigation
+      datetime: "{{ now() }}"
+  - service: switch.turn_on
+    data:
+      entity_id: switch.presa_balcone
+  - delay: "{{ states('input_number.irrigation_duration') | int }}"
+  - service: switch.turn_off
+    data:
+      entity_id: switch.presa_balcone
+  - service: system_log.write
+    data:
+      message: "Fine irrigazione"
+      level: info
+

@@ -3,11 +3,12 @@ db_url: !secret db_url
 include:
   domains:
     - sensor
-    - switch
   entities:
     - device_tracker.iphone_di_salvatore
     - device_tracker.iphone_di_gloria
     - binary_sensor.rpi_power_status
+    - switch.alimentatore_luce_cucina
+    - binary_sensor.pump
 exclude:
   entities:
     - sensor.date

@@ -39,6 +39,13 @@ input_boolean:
   dummy_switch:
   bookmark_random:
   shuffle:
+  irrigation_active:
+  irrigation_freq_minutes:
+
+input_datetime:
+  last_irrigation:
+    has_date: true
+    has_time: true
 
 homekit:
 

@@ -1397,6 +1397,50 @@
                     ]
                 },
                 {
+                    "title": "",
+                    "path": "h-and-t",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
+                    "panel": true,
+                    "icon": "mdi:google-maps",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "map",
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.iphone_di_salvatore"
+                                },
+                                {
+                                    "entity": "device_tracker.iphone_di_gloria"
+                                },
+                                {
+                                    "entity": "zone.colle_grosso"
+                                },
+                                {
+                                    "entity": "zone.colle_martino"
+                                },
+                                {
+                                    "entity": "zone.home"
+                                },
+                                {
+                                    "entity": "zone.work"
+                                },
+                                {
+                                    "entity": "zone.school"
+                                }
+                            ],
+                            "hours_to_show": 24
+                        }
+                    ]
+                },
+                {
                     "icon": "mdi:chart-areaspline",
                     "panel": true,
                     "visible": [
@@ -1508,50 +1552,6 @@
                                     "refresh_interval": 0
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "title": "",
-                    "path": "h-and-t",
-                    "visible": [
-                        {
-                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
-                        },
-                        {
-                            "user": "2bfba91451324e8c971f9028ea7f2111"
-                        }
-                    ],
-                    "panel": true,
-                    "icon": "mdi:google-maps",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "map",
-                            "entities": [
-                                {
-                                    "entity": "device_tracker.iphone_di_salvatore"
-                                },
-                                {
-                                    "entity": "device_tracker.iphone_di_gloria"
-                                },
-                                {
-                                    "entity": "zone.colle_grosso"
-                                },
-                                {
-                                    "entity": "zone.colle_martino"
-                                },
-                                {
-                                    "entity": "zone.home"
-                                },
-                                {
-                                    "entity": "zone.work"
-                                },
-                                {
-                                    "entity": "zone.school"
-                                }
-                            ],
-                            "hours_to_show": 24
                         }
                     ]
                 },
@@ -1827,6 +1827,18 @@
                                     "entity": "cover.living_small",
                                     "style": {
                                         "top": "80%",
+                                        "left": "66%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "icon": "mdi:watering-can",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.presa_balcone",
+                                    "style": {
+                                        "top": "87%",
                                         "left": "66%"
                                     }
                                 },
@@ -2918,6 +2930,105 @@
                                 }
                             ],
                             "image": "local/childroom.png"
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:sprout",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "grid",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.irrigation_active",
+                                            "icon_height": "40px",
+                                            "name": "Sched. auto",
+                                            "icon": "mdi:history"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.toggle",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.irrigation_freq_minutes"
+                                                }
+                                            },
+                                            "entity": "binary_sensor.irrigation_freq_mode",
+                                            "show_name": true,
+                                            "icon_height": "40px",
+                                            "name": "Freq. mode",
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.irrigation",
+                                            "name": "Avvia script",
+                                            "icon_height": "40px",
+                                            "icon": "mdi:watering-can",
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "switch.toggle",
+                                                "service_data": {
+                                                    "entity_id": "switch.presa_balcone"
+                                                }
+                                            },
+                                            "entity": "binary_sensor.pump",
+                                            "show_name": true,
+                                            "icon_height": "40px",
+                                            "name": "Pompa"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.irrigation_period",
+                                            "type": "custom:numberbox-card",
+                                            "icon": "mdi:timelapse",
+                                            "name": "Frequenza",
+                                            "unit": ""
+                                        },
+                                        {
+                                            "entity": "input_number.irrigation_duration",
+                                            "type": "custom:numberbox-card",
+                                            "icon": "mdi:timelapse",
+                                            "name": "Durata",
+                                            "unit": "time"
+                                        },
+                                        {
+                                            "entity": "input_datetime.last_irrigation",
+                                            "name": "Ultima irrigazione effettuata"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "columns": 1,
+                            "square": false
                         }
                     ]
                 },

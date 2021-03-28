@@ -1,0 +1,11 @@
+- alias: Irrigazione
+  trigger:
+      platform: time_pattern
+      seconds: '/10'
+  condition:
+    condition: template
+    value_template: '{{  (states("input_boolean.irrigation_active") == "on") and (as_timestamp(now()) | int >= as_timestamp(states("input_datetime.last_irrigation")) | int + (states("input_number.irrigation_period") | int * 60 * (1 if is_state("input_boolean.irrigation_freq_minutes","on") else 60))) }}'
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.irrigation
