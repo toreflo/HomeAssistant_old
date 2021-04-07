@@ -26,9 +26,9 @@ zone: !include zones.yaml
 logger:
   default: info
 
-http:
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+#http:
+#  ssl_certificate: /ssl/fullchain.pem
+#  ssl_key: /ssl/privkey.pem
 
 api:
 
