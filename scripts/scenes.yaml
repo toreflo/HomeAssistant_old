@@ -179,13 +179,13 @@ goodnight:
   - service: homeassistant.turn_off
     data:
       entity_id: group.media_players
-  - service: light.turn_on
-    data:
-      entity_id: light.faretti_studio
-  - delay: "00:02:00"
-  - service: homeassistant.turn_off
-    data:
-      entity_id: group.luci
+#  - service: light.turn_on
+#    data:
+#      entity_id: light.faretti_studio
+#  - delay: "00:02:00"
+#  - service: homeassistant.turn_off
+#    data:
+#      entity_id: group.luci
   mode: single
 
 welcome:
@@ -194,7 +194,7 @@ welcome:
     data:
       entity_id: script.light_up_zone
       variables:
-        cover_entity: cover.zona_giorno
+        cover_entity: cover.all
         cover_position: 100
         light_entity: light.ingresso
   - service: script.turn_on

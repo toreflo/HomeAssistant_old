@@ -260,3 +260,23 @@
   value_template: "{{ value }}"
   unit_of_measurement: "%"
   icon: mdi:battery
+
+# Shelly H&T 2
+- platform: mqtt
+  name: "ht_2_T"
+  state_topic: "shellies/shellyht-9554BF/sensor/temperature"
+  value_template: "{{ value }}"
+  unit_of_measurement: "°C"
+  icon: mdi:thermometer
+- platform: mqtt
+  name: "ht_2_H"
+  state_topic: "shellies/shellyht-9554BF/sensor/humidity"
+  value_template: "{{ value }}"
+  unit_of_measurement: "%"
+  icon: mdi:water-percent
+- platform: mqtt
+  name: "ht_2_battery"
+  state_topic: "shellies/shellyht-9554BF/sensor/battery"
+  value_template: "{{ value }}"
+  unit_of_measurement: "%"
+  icon: mdi:battery
