@@ -23,6 +23,8 @@ image
 custom_components/*
 !custom_components/mysql_utilities
 custom_components/mysql_utilities/__pycache__
+!custom_components/flux_led
+custom_components/flux_led/__pycache__
 
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.

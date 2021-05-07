@@ -5,6 +5,7 @@ luci_sala:
       - light.led_divano
       - light.flos_ic_t2
       - light.ingresso
+      - light.led_tv
 
 luci_cucina:
     name: Luci cucina

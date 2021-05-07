@@ -137,3 +137,10 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+
+# RGB strip TV
+- platform: flux_led
+  devices:
+    192.168.1.124:
+      name: led_tv
+      mode: rgb

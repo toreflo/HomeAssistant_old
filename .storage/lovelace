@@ -149,7 +149,7 @@
                                                 "action": "toggle"
                                             },
                                             "entity": "script.kitchen_table",
-                                            "icon": "mdi:food",
+                                            "icon": "mdi:pasta",
                                             "icon_height": "30px",
                                             "name": " ",
                                             "show_name": false
@@ -200,7 +200,7 @@
                                     "hold_action": {
                                         "action": "none"
                                     },
-                                    "name": "Temperature"
+                                    "name": "Temperature/Umidit\u00e0"
                                 },
                                 {
                                     "type": "grid",
@@ -226,6 +226,26 @@
                                             "entity": "sensor.hvac_tommy_room_temperature",
                                             "graph": "line",
                                             "name": "Tommy"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_t",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_h",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_2_t",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_2_h",
+                                            "graph": "line"
                                         }
                                     ]
                                 }
@@ -295,7 +315,7 @@
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -353,12 +373,23 @@
                                             "icon_height": "30px",
                                             "name": " ",
                                             "show_name": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.led_tv",
+                                            "icon": "mdi:television-box",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -405,23 +436,12 @@
                                             "icon_height": "30px",
                                             "name": " ",
                                             "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -447,45 +467,12 @@
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -511,45 +498,12 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:bed"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -587,34 +541,12 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:lightbulb-group"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -640,45 +572,12 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:human-child"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 5,
+                                    "columns": 6,
                                     "square": false,
                                     "cards": [
                                         {
@@ -704,39 +603,6 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:shower"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
                                         }
                                     ]
                                 }
@@ -996,6 +862,498 @@
                                                 "service": "cover.set_cover_position",
                                                 "service_data": {
                                                     "entity_id": "cover.zona_notte",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Finestra sala",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.living_small",
+                                            "icon": "mdi:sofa"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Porta finestra sala",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.living_big",
+                                            "icon": "mdi:door"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Cucina",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.kitchen",
+                                            "icon": "mdi:silverware-variant"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Camera",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.bedroom",
+                                            "icon": "mdi:bed"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Studio",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.study",
+                                            "icon": "mdi:desk"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.study"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.study"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.study",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.study",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Tommaso",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.tommy",
+                                            "icon": "mdi:human-child"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy",
                                                     "position": 25
                                                 }
                                             },
@@ -1473,6 +1831,9 @@
                                         },
                                         {
                                             "entity": "sensor.ht_1_t"
+                                        },
+                                        {
+                                            "entity": "sensor.ht_2_t"
                                         }
                                     ],
                                     "hours_to_show": 24,
@@ -1483,6 +1844,22 @@
                                     "entities": [
                                         {
                                             "entity": "sensor.ht_1_h"
+                                        },
+                                        {
+                                            "entity": "sensor.ht_2_h"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "refresh_interval": 0
+                                },
+                                {
+                                    "type": "history-graph",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.ht_1_battery"
+                                        },
+                                        {
+                                            "entity": "sensor.ht_2_battery"
                                         }
                                     ],
                                     "hours_to_show": 24,
@@ -1734,6 +2111,116 @@
                                     ]
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:sprout",
+                    "visible": [
+                        {
+                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
+                        },
+                        {
+                            "user": "2bfba91451324e8c971f9028ea7f2111"
+                        }
+                    ],
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "grid",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "input_boolean.irrigation_active",
+                                            "icon_height": "40px",
+                                            "name": "Sched. auto",
+                                            "icon": "mdi:history"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.toggle",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.irrigation_freq_minutes"
+                                                }
+                                            },
+                                            "entity": "binary_sensor.irrigation_freq_mode",
+                                            "show_name": true,
+                                            "icon_height": "40px",
+                                            "name": "Freq. mode",
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "script.irrigation",
+                                            "name": "Avvia script",
+                                            "icon_height": "40px",
+                                            "icon": "mdi:watering-can",
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "switch.toggle",
+                                                "service_data": {
+                                                    "entity_id": "switch.presa_balcone"
+                                                }
+                                            },
+                                            "entity": "binary_sensor.pump",
+                                            "show_name": true,
+                                            "icon_height": "40px",
+                                            "name": "Pompa"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.irrigation_period",
+                                            "type": "custom:numberbox-card",
+                                            "icon": "mdi:timelapse",
+                                            "name": "Frequenza",
+                                            "unit": ""
+                                        },
+                                        {
+                                            "entity": "input_number.irrigation_duration",
+                                            "type": "custom:numberbox-card",
+                                            "icon": "mdi:timelapse",
+                                            "name": "Durata",
+                                            "unit": "time"
+                                        },
+                                        {
+                                            "entity": "input_datetime.last_irrigation",
+                                            "name": "Ultima irrigazione effettuata"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "icon_height": "1px",
+                                    "name": "Circa 100ml in 10 minuti per ogni gocciolatoio",
+                                    "hold_action": {
+                                        "action": "none"
+                                    }
+                                }
+                            ],
+                            "columns": 1,
+                            "square": false
                         }
                     ]
                 },
@@ -2345,6 +2832,10 @@
                                 }
                             ],
                             "image": "local/living.png"
+                        },
+                        {
+                            "type": "light",
+                            "entity": "light.led_tv"
                         }
                     ]
                 },
@@ -2487,6 +2978,27 @@
                                 }
                             ],
                             "image": "local/kitchen.png"
+                        },
+                        {
+                            "type": "grid",
+                            "columns": 3,
+                            "cards": [
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.ht_2_t",
+                                    "graph": "line"
+                                },
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.ht_2_h",
+                                    "graph": "line"
+                                },
+                                {
+                                    "type": "sensor",
+                                    "entity": "sensor.ht_2_battery",
+                                    "graph": "line"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -2934,105 +3446,6 @@
                     ]
                 },
                 {
-                    "icon": "mdi:sprout",
-                    "visible": [
-                        {
-                            "user": "0a1a5fef720a4e3e95c9354e5586c5a2"
-                        },
-                        {
-                            "user": "2bfba91451324e8c971f9028ea7f2111"
-                        }
-                    ],
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "grid",
-                            "cards": [
-                                {
-                                    "type": "horizontal-stack",
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "input_boolean.irrigation_active",
-                                            "icon_height": "40px",
-                                            "name": "Sched. auto",
-                                            "icon": "mdi:history"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "input_boolean.toggle",
-                                                "service_data": {
-                                                    "entity_id": "input_boolean.irrigation_freq_minutes"
-                                                }
-                                            },
-                                            "entity": "binary_sensor.irrigation_freq_mode",
-                                            "show_name": true,
-                                            "icon_height": "40px",
-                                            "name": "Freq. mode",
-                                            "show_state": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.irrigation",
-                                            "name": "Avvia script",
-                                            "icon_height": "40px",
-                                            "icon": "mdi:watering-can",
-                                            "show_state": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "switch.toggle",
-                                                "service_data": {
-                                                    "entity_id": "switch.presa_balcone"
-                                                }
-                                            },
-                                            "entity": "binary_sensor.pump",
-                                            "show_name": true,
-                                            "icon_height": "40px",
-                                            "name": "Pompa"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "input_number.irrigation_period",
-                                            "type": "custom:numberbox-card",
-                                            "icon": "mdi:timelapse",
-                                            "name": "Frequenza",
-                                            "unit": ""
-                                        },
-                                        {
-                                            "entity": "input_number.irrigation_duration",
-                                            "type": "custom:numberbox-card",
-                                            "icon": "mdi:timelapse",
-                                            "name": "Durata",
-                                            "unit": "time"
-                                        },
-                                        {
-                                            "entity": "input_datetime.last_irrigation",
-                                            "name": "Ultima irrigazione effettuata"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "columns": 1,
-                            "square": false
-                        }
-                    ]
-                },
-                {
                     "icon": "mdi:home",
                     "visible": [
                         {
@@ -3253,24 +3666,23 @@
                             "square": false,
                             "cards": [
                                 {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Tapparelle",
+                                    "show_state": false
+                                },
+                                {
                                     "type": "grid",
-                                    "columns": 3,
+                                    "columns": 5,
                                     "square": false,
                                     "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.open_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.all"
-                                                }
-                                            },
-                                            "entity": "cover.all",
-                                            "icon_height": "30px",
-                                            "show_name": false,
-                                            "icon": "mdi:arrow-up-bold"
-                                        },
                                         {
                                             "type": "button",
                                             "tap_action": {
@@ -3294,38 +3706,6 @@
                                                     "entity_id": "cover.all"
                                                 }
                                             },
-                                            "entity": "cover.all",
-                                            "icon_height": "30px",
-                                            "show_name": false,
-                                            "icon": "mdi:arrow-down-bold"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": "Tutte",
-                                            "entity": "cover.all",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.close_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.all"
-                                                }
-                                            },
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
@@ -3384,6 +3764,7 @@
                                 {
                                     "type": "grid",
                                     "columns": 5,
+                                    "square": false,
                                     "cards": [
                                         {
                                             "type": "button",
@@ -3393,344 +3774,6 @@
                                             "icon_height": "30px",
                                             "name": "Zona giorno",
                                             "entity": "cover.zona_giorno",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.close_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_giorno"
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:window-shutter",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.open_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_giorno"
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:window-shutter-open",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.set_cover_position",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_giorno",
-                                                    "position": 35
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:weather-windy",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.set_cover_position",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_giorno",
-                                                    "position": 25
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:format-line-weight",
-                                            "icon_height": "30px"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": "Zona notte",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true,
-                                            "entity": "cover.zona_notte"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.close_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_notte"
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:window-shutter",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.open_cover",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_notte"
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:window-shutter-open",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.set_cover_position",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_notte",
-                                                    "position": 35
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:weather-windy",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "cover.set_cover_position",
-                                                "service_data": {
-                                                    "entity_id": "cover.zona_notte",
-                                                    "position": 25
-                                                }
-                                            },
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:format-line-weight",
-                                            "icon_height": "30px"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "none"
-                                    },
-                                    "show_name": false,
-                                    "show_icon": false,
-                                    "hold_action": {
-                                        "action": "none"
-                                    }
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.welcome"
-                                                }
-                                            },
-                                            "icon": "mdi:home",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "entity": "script.welcome",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.exit"
-                                                }
-                                            },
-                                            "entity": "script.exit",
-                                            "icon": "mdi:walk",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.goodnight"
-                                                }
-                                            },
-                                            "entity": "script.goodnight",
-                                            "icon": "mdi:sleep",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.goodmorning"
-                                                }
-                                            },
-                                            "entity": "script.goodmorning",
-                                            "icon": "mdi:coffee",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.goodmorning_all"
-                                                }
-                                            },
-                                            "entity": "script.goodmorning_all",
-                                            "icon": "mdi:weather-sunny",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.living",
-                                            "icon": "mdi:sofa",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.tv",
-                                            "icon": "mdi:youtube-tv",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.kitchen",
-                                            "icon": "mdi:silverware-variant",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.kitchen_table",
-                                            "icon": "mdi:food",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "none"
-                                    },
-                                    "show_name": false,
-                                    "show_icon": false,
-                                    "hold_action": {
-                                        "action": "none"
-                                    }
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 3,
-                                    "square": false,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "group.luci",
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false,
-                                            "icon": "mdi:lightbulb-group",
-                                            "icon_height": "30px"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " Zona giorno",
-                                            "entity": "group.luci_zona_giorno",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
@@ -3739,269 +3782,474 @@
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno"
+                                                }
                                             },
-                                            "icon_height": "30px",
-                                            "name": " Zona notte",
-                                            "entity": "group.luci_zona_notte",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Zona notte",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.zona_notte",
                                             "icon": "mdi:weather-night"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "square": false,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " Sala",
-                                            "entity": "group.luci_sala",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte"
+                                                }
                                             },
-                                            "entity": "light.ingresso",
-                                            "icon": "mdi:login",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.flos_aim",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false,
-                                            "icon": "mdi:table-furniture"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.led_divano",
-                                            "icon": "mdi:sofa",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.flos_ic_t2",
-                                            "icon": "mdi:lamp",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "square": false,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " Cucina",
-                                            "entity": "group.luci_cucina",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.led_cucina_virtual",
-                                            "icon": "mdi:silverware-variant",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.led_pensili",
-                                            "icon": "mdi:pot-steam",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.luce_penisola",
-                                            "icon": "mdi:food",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "square": false,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " Corridoio",
-                                            "entity": "light.corridoio",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "entity": "light.corridoio",
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "show_state": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "square": false,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " Camera",
-                                            "entity": "light.flos_ariette",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "entity": "light.flos_ariette",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Finestra sala",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.living_small",
+                                            "icon": "mdi:sofa"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_small",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Porta finestra sala",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.living_big",
+                                            "icon": "mdi:door"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.living_big",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Cucina",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.kitchen",
+                                            "icon": "mdi:silverware-variant"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.kitchen",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Camera",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.bedroom",
                                             "icon": "mdi:bed"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom",
+                                                    "position": 35
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bedroom",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
                                         }
                                     ]
                                 },
@@ -4016,57 +4264,74 @@
                                                 "action": "toggle"
                                             },
                                             "icon_height": "30px",
-                                            "name": " Studio",
-                                            "entity": "group.luci_studio",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "entity": "light.luce_studio",
+                                            "name": "Studio",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
-                                            "icon": "mdi:dome-light"
+                                            "entity": "cover.study",
+                                            "icon": "mdi:desk"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "toggle"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.study"
+                                                }
                                             },
-                                            "icon_height": "30px",
-                                            "entity": "light.faretti_studio",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
-                                            "icon": "mdi:lightbulb-group"
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.study"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.study",
+                                                    "position": 35
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.study",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
                                         }
                                     ]
                                 },
@@ -4081,56 +4346,202 @@
                                                 "action": "toggle"
                                             },
                                             "icon_height": "30px",
-                                            "name": " Tommaso",
-                                            "entity": "light.tommaso",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "icon_height": "30px",
-                                            "entity": "light.tommaso",
+                                            "name": "Tommaso",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
+                                            "entity": "cover.tommy",
                                             "icon": "mdi:human-child"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy",
+                                                    "position": 35
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.tommy",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Posizioni"
+                                },
+                                {
+                                    "type": "map",
+                                    "entities": [
+                                        {
+                                            "entity": "person.salvatore"
+                                        },
+                                        {
+                                            "entity": "person.gloria"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "dark_mode": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "grid",
+                            "columns": 1,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Tapparelle",
+                                    "show_state": false
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.stop_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "entity": "cover.all",
+                                            "icon_height": "30px",
+                                            "show_name": false,
+                                            "icon": "mdi:stop"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.all"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.all",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.all",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
                                         }
                                     ]
                                 },
@@ -4145,58 +4556,183 @@
                                                 "action": "toggle"
                                             },
                                             "icon_height": "30px",
-                                            "name": " Bagno",
-                                            "entity": "light.bagno",
-                                            "show_name": true,
-                                            "show_icon": false,
-                                            "show_state": true
+                                            "name": "Zona giorno",
+                                            "entity": "cover.zona_giorno",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-sunny"
                                         },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_giorno",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
                                         {
                                             "type": "button",
                                             "tap_action": {
                                                 "action": "toggle"
                                             },
                                             "icon_height": "30px",
-                                            "entity": "light.bagno",
+                                            "name": "Zona notte",
                                             "show_name": false,
                                             "show_icon": true,
                                             "show_state": false,
-                                            "icon": "mdi:shower"
+                                            "entity": "cover.zona_notte",
+                                            "icon": "mdi:weather-night"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte"
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
-                                                "action": "none"
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte",
+                                                    "position": 35
+                                                }
                                             },
                                             "show_name": false,
-                                            "show_icon": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.zona_notte",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Posizioni"
+                                },
+                                {
+                                    "type": "map",
+                                    "entities": [
+                                        {
+                                            "entity": "person.salvatore"
+                                        },
+                                        {
+                                            "entity": "person.gloria"
+                                        }
+                                    ],
+                                    "hours_to_show": 24,
+                                    "dark_mode": false
                                 }
                             ]
                         }
