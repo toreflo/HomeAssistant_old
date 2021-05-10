@@ -104,6 +104,14 @@ cover_m_energy_study:
   source: sensor.study_cover_e
   cycle: monthly
 
+# Tapparella bagnetto
+cover_d_energy_bathroom:
+  source: sensor.bathroom_cover_e
+  cycle: daily
+cover_m_energy_bathroom:
+  source: sensor.bathroom_cover_e
+  cycle: monthly
+
 # Rete
 network_in_daily:
   source: sensor.network_in_eth0

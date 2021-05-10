@@ -512,6 +512,37 @@
                                                 "action": "toggle"
                                             },
                                             "icon_height": "30px",
+                                            "name": " Bagnetto",
+                                            "entity": "light.bagnetto",
+                                            "show_name": true,
+                                            "show_icon": false,
+                                            "show_state": true
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "entity": "light.bagnetto",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:shower-head"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 6,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
                                             "name": " Studio",
                                             "entity": "group.luci_studio",
                                             "show_name": true,
@@ -1190,6 +1221,88 @@
                                                 "service": "cover.set_cover_position",
                                                 "service_data": {
                                                     "entity_id": "cover.bedroom",
+                                                    "position": 25
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:format-line-weight",
+                                            "icon_height": "30px"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "icon_height": "30px",
+                                            "name": "Bagnetto",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "entity": "cover.bathroom",
+                                            "icon": "mdi:shower-head"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.close_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bathroom"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.open_cover",
+                                                "service_data": {
+                                                    "entity_id": "cover.bathroom"
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:window-shutter-open",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bathroom",
+                                                    "position": 35
+                                                }
+                                            },
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "show_state": false,
+                                            "icon": "mdi:weather-windy",
+                                            "icon_height": "30px"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "cover.set_cover_position",
+                                                "service_data": {
+                                                    "entity_id": "cover.bathroom",
                                                     "position": 25
                                                 }
                                             },
@@ -2802,6 +2915,19 @@
                                     }
                                 },
                                 {
+                                    "type": "state-icon",
+                                    "icon": "mdi:led-strip-variant",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_tv",
+                                    "style": {
+                                        "top": "40.75%",
+                                        "left": "60.5%",
+                                        "transform": "scale(0.9,0.9)"
+                                    }
+                                },
+                                {
                                     "type": "state-badge",
                                     "entity": "sensor.hvac_living_room_temperature",
                                     "tap_action": {
@@ -2835,7 +2961,8 @@
                         },
                         {
                             "type": "light",
-                            "entity": "light.led_tv"
+                            "entity": "light.led_tv",
+                            "icon": "mdi:led-strip-variant"
                         }
                     ]
                 },

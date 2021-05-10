@@ -144,3 +144,13 @@
     192.168.1.124:
       name: led_tv
       mode: rgb
+
+# Shelly 1 bagnetto
+- platform: mqtt
+  name: "Bagnetto"
+  state_topic: "shellies/shelly1-bagnetto/relay/0"
+  command_topic: "shellies/shelly1-bagnetto/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

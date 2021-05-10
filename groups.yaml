@@ -43,6 +43,7 @@ luci_zona_notte:
       - light.tommaso
       - light.bagno
       - light.corridoio
+      - light.bagnetto
       - group.luci_studio
 
 luci:

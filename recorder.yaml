@@ -29,6 +29,7 @@ exclude:
     - sensor.bedroom_cover_e
     - sensor.tommy_cover_e
     - sensor.study_cover_e
+    - sensor.bathroom_cover_e
     - sensor.hvac_living_energy
     - sensor.hvac_bedroom_energy
     - sensor.hvac_study_energy
