@@ -20,10 +20,19 @@
                     "icon": "mdi:home",
                     "badges": [
                         {
+                            "entity": "input_boolean.home_occupied"
+                        },
+                        {
                             "entity": "person.salvatore"
                         },
                         {
                             "entity": "person.gloria"
+                        },
+                        {
+                            "entity": "device_tracker.8a_a6_21_e0_1e_22"
+                        },
+                        {
+                            "entity": "device_tracker.96_c0_b6_31_aa_1d"
                         },
                         {
                             "entity": "binary_sensor.updater"
@@ -634,6 +643,109 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:shower"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Led TV"
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 4,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "light.turn_on",
+                                                "service_data": {
+                                                    "color_name": "darkgoldenrod"
+                                                },
+                                                "target": {
+                                                    "entity_id": "light.led_tv"
+                                                }
+                                            },
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            },
+                                            "entity": "light.led_tv",
+                                            "icon": "mdi:television-box"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "light.turn_on",
+                                                "service_data": {
+                                                    "color_name": "darkgoldenrod",
+                                                    "brightness_pct": 30
+                                                },
+                                                "target": {
+                                                    "entity_id": "light.led_tv"
+                                                }
+                                            },
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            },
+                                            "icon": "mdi:brightness-4"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "light.turn_on",
+                                                "service_data": {
+                                                    "color_name": "darkgoldenrod",
+                                                    "brightness_pct": 60
+                                                },
+                                                "target": {
+                                                    "entity_id": "light.led_tv"
+                                                }
+                                            },
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            },
+                                            "icon": "mdi:brightness-6"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "light.turn_on",
+                                                "service_data": {
+                                                    "color_name": "darkgoldenrod",
+                                                    "brightness_pct": 100
+                                                },
+                                                "target": {
+                                                    "entity_id": "light.led_tv"
+                                                }
+                                            },
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false,
+                                            "hold_action": {
+                                                "action": "none"
+                                            },
+                                            "icon": "mdi:brightness-5"
                                         }
                                     ]
                                 }
@@ -2409,9 +2521,22 @@
                                     },
                                     "entity": "light.flos_ic_t2",
                                     "style": {
-                                        "top": "65.25%",
+                                        "top": "65.75%",
                                         "left": "62.5%",
                                         "transform": "scale(0.85,0.85)"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "icon": "mdi:led-strip-variant",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_tv",
+                                    "style": {
+                                        "top": "68.25%",
+                                        "left": "56%",
+                                        "transform": "scale(0.9,0.9)"
                                     }
                                 },
                                 {
@@ -2663,6 +2788,25 @@
                                     "style": {
                                         "top": "36%",
                                         "left": "31%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.bagnetto",
+                                    "style": {
+                                        "top": "38%",
+                                        "left": "62%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "entity": "cover.bathroom",
+                                    "style": {
+                                        "top": "30%",
+                                        "left": "63%"
                                     }
                                 }
                             ],

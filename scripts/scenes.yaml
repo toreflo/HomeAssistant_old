@@ -40,6 +40,13 @@ goodmorning:
         cover_entity: cover.bedroom
         cover_position: 55
         light_entity: 'light.corridoio'
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
+        cover_entity: cover.bathroom
+        cover_position: 100
+        light_entity: ''
   mode: single
 
 goodmorning_all:
@@ -197,13 +204,13 @@ welcome:
         cover_entity: cover.all
         cover_position: 100
         light_entity: light.ingresso
-  - service: script.turn_on
-    data:
-      entity_id: script.text_to_speech
-      variables:
-        media_player_id: media_player.multi_room
-        message: "Ben tornato!"
-        volume_level: 15
+#  - service: script.turn_on
+#    data:
+#      entity_id: script.text_to_speech
+#      variables:
+#        media_player_id: media_player.multi_room
+#        message: "Ben tornato!"
+#        volume_level: 15
 
 privacy:
   sequence:
@@ -218,3 +225,22 @@ air_flow:
       data:
         entity_id: cover.zona_giorno
         position: 35
+
+kitchen_air_only:
+  sequence:
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.kitchen
+        position: 50
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.living_big
+        position: 0
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.living_small
+        position: 0
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.zona_notte
+        position: 0

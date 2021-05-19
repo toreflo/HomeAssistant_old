@@ -141,9 +141,9 @@
 # RGB strip TV
 - platform: flux_led
   devices:
-    192.168.1.124:
+    192.168.1.35:
       name: led_tv
-      mode: rgb
+      mode: rgbw
 
 # Shelly 1 bagnetto
 - platform: mqtt
