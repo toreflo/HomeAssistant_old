@@ -42,6 +42,8 @@ input_boolean:
   irrigation_active:
   irrigation_freq_minutes:
   home_occupied:
+  salvatore_connected:
+  gloria_connected:
 
 input_datetime:
   last_irrigation:
@@ -58,15 +60,15 @@ mysql_list:
   table: music_bookmarks
   entity_id: input_select.music
 
-device_tracker:
-  - platform: nmap_tracker
-    interval_seconds: 10 # seconds between each scan for new devices
-    consider_home: 70 # seconds to wait till marking someone as not home after not being seen
-    home_interval: 1 # minutes Nmap will not scan a device, assuming it is home
-    hosts:
-      - 192.168.1.201
-      - 192.168.1.202
-## interval_seconds = 10 implica che la presenza viene rivelata con al massimo 10 secondi di ritardo. 
-## Dopo che la presenza è stata rivelata, le successive scansioni di quel device avvengono ogni 
-## minuto (home_interval = 1). Se viene rivelata l'assenza, tramite l'attesa del consider_home (70 secondi)
+#device_tracker:
+#  - platform: nmap_tracker
+#    hosts:
+#      - 192.168.1.201
+#      - 192.168.1.202
+    #interval_seconds: 12 # seconds between each scan for new devices
+    #consider_home: 330 # seconds to wait till marking someone as not home after not being seen
+    #home_interval: 5 # minutes Nmap will not scan a device, assuming it is home
+## interval_seconds = 12 implica che la presenza viene rivelata con al massimo 12 secondi di ritardo. 
+## Dopo che la presenza è stata rivelata, le successive scansioni di quel device avvengono ogni 5
+## minuti (home_interval = 5). Se viene rivelata l'assenza, tramite l'attesa del consider_home (5 min e 30 sec)
 ## si aspetta la successiva scansione (con periodo home_interval) prima di dichiarare il device away 

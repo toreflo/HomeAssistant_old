@@ -29,10 +29,10 @@
                             "entity": "person.gloria"
                         },
                         {
-                            "entity": "device_tracker.8a_a6_21_e0_1e_22"
+                            "entity": "input_boolean.salvatore_connected"
                         },
                         {
-                            "entity": "device_tracker.96_c0_b6_31_aa_1d"
+                            "entity": "input_boolean.gloria_connected"
                         },
                         {
                             "entity": "binary_sensor.updater"
@@ -2061,7 +2061,7 @@
                                             "entity": "sensor.ht_2_t"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 },
                                 {
@@ -2074,7 +2074,7 @@
                                             "entity": "sensor.ht_2_h"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 },
                                 {
@@ -2087,7 +2087,7 @@
                                             "entity": "sensor.ht_2_battery"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 },
                                 {
@@ -2100,7 +2100,7 @@
                                             "entity": "sensor.d_energy_mel_big"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 },
                                 {
@@ -2125,7 +2125,7 @@
                                             "entity": "sensor.d_energy_led_divano"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 },
                                 {
@@ -2150,7 +2150,7 @@
                                             "entity": "sensor.cover_d_energy_tommy"
                                         }
                                     ],
-                                    "hours_to_show": 24,
+                                    "hours_to_show": 72,
                                     "refresh_interval": 0
                                 }
                             ]

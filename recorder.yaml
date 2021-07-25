@@ -5,13 +5,13 @@ include:
     - sensor
   entities:
     - device_tracker.iphone_di_salvatore
-    - device_tracker.8a_a6_21_e0_1e_22
     - device_tracker.iphone_di_gloria
-    - device_tracker.96_c0_b6_31_aa_1d
     - binary_sensor.rpi_power_status
     - switch.alimentatore_luce_cucina
     - binary_sensor.pump
     - input_boolean.home_occupied
+    - input_boolean.salvatore_connected
+    - input_boolean.gloria_connected
 exclude:
   entities:
     - sensor.date

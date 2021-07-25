@@ -9,7 +9,11 @@ irrigation:
   - service: input_datetime.set_datetime
     data_template:
       entity_id: input_datetime.last_irrigation
-      datetime: "{{ now() }}"
+#      timestamp: "{{ as_timestamp(now()) | int }}"
+      timestamp: "{{ now().timestamp() }}"
+#      time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
+#      date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
+
   - service: switch.turn_on
     data:
       entity_id: switch.presa_balcone

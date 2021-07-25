@@ -69,6 +69,13 @@ goodmorning_all:
     data:
       entity_id: script.light_up_zone
       variables:
+        cover_entity: cover.bathroom
+        cover_position: 100
+        light_entity: ''
+  - service: script.turn_on
+    data:
+      entity_id: script.light_up_zone
+      variables:
         cover_entity: cover.tommy
         cover_position: 100
         light_entity: ''
