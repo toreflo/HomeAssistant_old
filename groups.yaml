@@ -5,7 +5,6 @@ luci_sala:
       - light.led_divano
       - light.flos_ic_t2
       - light.ingresso
-      - light.led_tv
 
 luci_cucina:
     name: Luci cucina
@@ -19,6 +18,7 @@ luci_studio:
     entities:
       - light.luce_studio
       - light.faretti_studio
+      - light.led_desk
 
 luci_camera:
     name: Luci camera

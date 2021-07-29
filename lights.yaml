@@ -138,11 +138,11 @@
   payload_off: "off"
   retain: false
 
-# RGB strip TV
+# RGB strip scrivania
 - platform: flux_led
   devices:
     192.168.1.35:
-      name: led_tv
+      name: led_desk
       mode: rgbw
 
 # Shelly 1 bagnetto

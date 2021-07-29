@@ -138,68 +138,6 @@
                                     ]
                                 },
                                 {
-                                    "type": "grid",
-                                    "columns": 5,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.kitchen",
-                                            "icon": "mdi:silverware-variant",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.kitchen_table",
-                                            "icon": "mdi:pasta",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "none"
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            }
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.living",
-                                            "icon": "mdi:sofa",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "script.tv",
-                                            "icon": "mdi:youtube-tv",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        }
-                                    ]
-                                },
-                                {
                                     "type": "button",
                                     "tap_action": {
                                         "action": "none"
@@ -379,17 +317,6 @@
                                             },
                                             "entity": "light.flos_ic_t2",
                                             "icon": "mdi:lamp",
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.led_tv",
-                                            "icon": "mdi:television-box",
                                             "icon_height": "30px",
                                             "name": " ",
                                             "show_name": false
@@ -581,6 +508,17 @@
                                             "show_icon": true,
                                             "show_state": false,
                                             "icon": "mdi:lightbulb-group"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.led_desk",
+                                            "icon": "mdi:desk",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "show_name": false
                                         }
                                     ]
                                 },
@@ -656,23 +594,20 @@
                                     "hold_action": {
                                         "action": "none"
                                     },
-                                    "name": "Led TV"
+                                    "name": "Led scrivania"
                                 },
                                 {
                                     "type": "grid",
-                                    "columns": 4,
+                                    "columns": 3,
                                     "square": false,
                                     "cards": [
                                         {
                                             "type": "button",
                                             "tap_action": {
                                                 "action": "call-service",
-                                                "service": "light.turn_on",
+                                                "service": "script.turn_on",
                                                 "service_data": {
-                                                    "color_name": "darkgoldenrod"
-                                                },
-                                                "target": {
-                                                    "entity_id": "light.led_tv"
+                                                    "entity_id": "script.desk"
                                                 }
                                             },
                                             "icon_height": "30px",
@@ -681,41 +616,15 @@
                                             "hold_action": {
                                                 "action": "none"
                                             },
-                                            "entity": "light.led_tv",
-                                            "icon": "mdi:television-box"
+                                            "icon": "mdi:brightness-5"
                                         },
                                         {
                                             "type": "button",
                                             "tap_action": {
                                                 "action": "call-service",
-                                                "service": "light.turn_on",
+                                                "service": "script.turn_on",
                                                 "service_data": {
-                                                    "color_name": "darkgoldenrod",
-                                                    "brightness_pct": 30
-                                                },
-                                                "target": {
-                                                    "entity_id": "light.led_tv"
-                                                }
-                                            },
-                                            "icon_height": "30px",
-                                            "name": " ",
-                                            "show_name": false,
-                                            "hold_action": {
-                                                "action": "none"
-                                            },
-                                            "icon": "mdi:brightness-4"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "light.turn_on",
-                                                "service_data": {
-                                                    "color_name": "darkgoldenrod",
-                                                    "brightness_pct": 60
-                                                },
-                                                "target": {
-                                                    "entity_id": "light.led_tv"
+                                                    "entity_id": "script.desk_night"
                                                 }
                                             },
                                             "icon_height": "30px",
@@ -730,13 +639,9 @@
                                             "type": "button",
                                             "tap_action": {
                                                 "action": "call-service",
-                                                "service": "light.turn_on",
+                                                "service": "script.turn_on",
                                                 "service_data": {
-                                                    "color_name": "darkgoldenrod",
-                                                    "brightness_pct": 100
-                                                },
-                                                "target": {
-                                                    "entity_id": "light.led_tv"
+                                                    "entity_id": "script.desk_night_alone"
                                                 }
                                             },
                                             "icon_height": "30px",
@@ -745,7 +650,7 @@
                                             "hold_action": {
                                                 "action": "none"
                                             },
-                                            "icon": "mdi:brightness-5"
+                                            "icon": "mdi:brightness-4"
                                         }
                                     ]
                                 }
@@ -3102,11 +3007,6 @@
                                 }
                             ],
                             "image": "local/living.png"
-                        },
-                        {
-                            "type": "light",
-                            "entity": "light.led_tv",
-                            "icon": "mdi:led-strip-variant"
                         }
                     ]
                 },
@@ -3582,6 +3482,11 @@
                                 }
                             ],
                             "image": "local/study.png"
+                        },
+                        {
+                            "type": "light",
+                            "entity": "light.led_desk",
+                            "icon": "mdi:led-strip-variant"
                         }
                     ]
                 },

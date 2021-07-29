@@ -251,3 +251,36 @@ kitchen_air_only:
       data:
         entity_id: cover.zona_notte
         position: 0
+
+desk:
+  sequence:
+    - service: light.turn_on
+      data:
+        color_name: white #darkgoldenrod
+        brightness_pct: 100
+      target:
+        entity_id: light.led_desk
+
+desk_night:
+  sequence:
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.luci_studio
+    - service: light.turn_on
+      data:
+        color_name: white #darkgoldenrod
+        brightness_pct: 30
+      target:
+        entity_id: light.led_desk
+
+desk_night_alone:
+  sequence:
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.luci
+    - service: light.turn_on
+      data:
+        color_name: white #darkgoldenrod
+        brightness_pct: 30
+      target:
+        entity_id: light.led_desk
