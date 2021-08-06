@@ -183,18 +183,388 @@
                                             "type": "sensor",
                                             "entity": "sensor.ht_1_h",
                                             "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.ht_2_t",
-                                            "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.ht_2_h",
-                                            "graph": "line"
                                         }
                                     ]
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Condizionatori"
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 5,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "icon_height": "30px",
+                                            "entity": "script.climate_off",
+                                            "show_name": true,
+                                            "show_state": false,
+                                            "show_icon": false,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "name": "Spegni"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "climate.hvac_living",
+                                            "show_name": false,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "show_state": true,
+                                            "show_icon": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "climate.hvac_bedroom",
+                                            "show_name": false,
+                                            "show_state": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "show_icon": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "climate.hvac_study",
+                                            "show_name": false,
+                                            "show_state": true,
+                                            "show_icon": false,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "climate.hvac_tommy",
+                                            "show_name": false,
+                                            "show_state": true,
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "show_icon": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:home",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "binary_sensor.hvac_on",
+                                            "show_name": false,
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:sofa",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "binary_sensor.hvac_living_on",
+                                            "show_name": false,
+                                            "tap_action": {
+                                                "action": "none"
+                                            },
+                                            "show_state": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:bed",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "binary_sensor.hvac_bedroom_on",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "none"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:desk",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "binary_sensor.hvac_study_on",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "show_icon": true,
+                                            "tap_action": {
+                                                "action": "none"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:human-child",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "binary_sensor.hvac_tommy_on",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "none"
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:water-percent",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_all_dry_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_all_dry_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:water-percent",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_living_dry_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_living_dry_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:water-percent",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_bedroom_dry_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_bedroom_dry_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:water-percent",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_study_dry_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_study_dry_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:water-percent",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_tommy_dry_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_tommy_dry_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:snowflake",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_all_cool_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_all_cool_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:snowflake",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_living_cool_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_living_cool_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:snowflake",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_bedroom_cool_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_bedroom_cool_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:snowflake",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_study_cool_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_study_cool_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:snowflake",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_tommy_cool_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_tommy_cool_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:fire",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_all_heat_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_all_heat_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:fire",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_living_heat_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_living_heat_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:fire",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_bedroom_heat_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_bedroom_heat_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:fire",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_study_heat_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_study_heat_def"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "type": "button",
+                                            "icon": "mdi:fire",
+                                            "icon_height": "30px",
+                                            "name": " ",
+                                            "entity": "input_boolean.hvac_tommy_heat_def",
+                                            "show_name": false,
+                                            "show_state": false,
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "input_boolean.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "input_boolean.hvac_tommy_heat_def"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "square": false
                                 }
                             ]
                         },
@@ -1747,7 +2117,7 @@
                     ]
                 },
                 {
-                    "title": "Condizionamento3",
+                    "title": "Condizionamento",
                     "path": "condizionamento3",
                     "visible": [
                         {
@@ -1877,6 +2247,62 @@
                                         },
                                         {
                                             "entity": "sensor.m_energy_mel_small"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_boolean.hvac_living_dry_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_bedroom_dry_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_study_dry_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_tommy_dry_def"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_boolean.hvac_living_cool_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_bedroom_cool_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_study_cool_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_tommy_cool_def"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "input_boolean.hvac_living_heat_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_bedroom_heat_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_study_heat_def"
+                                        },
+                                        {
+                                            "entity": "input_boolean.hvac_tommy_heat_def"
                                         }
                                     ]
                                 }
@@ -2433,19 +2859,6 @@
                                 },
                                 {
                                     "type": "state-icon",
-                                    "icon": "mdi:led-strip-variant",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.led_tv",
-                                    "style": {
-                                        "top": "68.25%",
-                                        "left": "56%",
-                                        "transform": "scale(0.9,0.9)"
-                                    }
-                                },
-                                {
-                                    "type": "state-icon",
                                     "entity": "cover.living_big",
                                     "style": {
                                         "top": "73%",
@@ -2622,7 +3035,20 @@
                                     "entity": "light.faretti_studio",
                                     "style": {
                                         "top": "33%",
-                                        "left": "48%"
+                                        "left": "48.5%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "icon": "mdi:led-strip-variant",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_desk",
+                                    "style": {
+                                        "top": "14%",
+                                        "left": "47%",
+                                        "transform": "scale(0.9,0.9)"
                                     }
                                 },
                                 {
@@ -2964,19 +3390,6 @@
                                     }
                                 },
                                 {
-                                    "type": "state-icon",
-                                    "icon": "mdi:led-strip-variant",
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "entity": "light.led_tv",
-                                    "style": {
-                                        "top": "40.75%",
-                                        "left": "60.5%",
-                                        "transform": "scale(0.9,0.9)"
-                                    }
-                                },
-                                {
                                     "type": "state-badge",
                                     "entity": "sensor.hvac_living_room_temperature",
                                     "tap_action": {
@@ -2991,17 +3404,17 @@
                                 },
                                 {
                                     "type": "state-icon",
-                                    "entity": "cover.living_big",
+                                    "entity": "cover.living_small",
                                     "style": {
-                                        "top": "52%",
+                                        "top": "67%",
                                         "left": "95%"
                                     }
                                 },
                                 {
                                     "type": "state-icon",
-                                    "entity": "cover.living_small",
+                                    "entity": "cover.living_big",
                                     "style": {
-                                        "top": "67%",
+                                        "top": "52%",
                                         "left": "95%"
                                     }
                                 }
@@ -3470,6 +3883,19 @@
                                     "style": {
                                         "top": "70%",
                                         "left": "58%"
+                                    }
+                                },
+                                {
+                                    "type": "state-icon",
+                                    "icon": "mdi:led-strip-variant",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.led_desk",
+                                    "style": {
+                                        "top": "13.5%",
+                                        "left": "55%",
+                                        "transform": "scale(0.9,0.9)"
                                     }
                                 },
                                 {

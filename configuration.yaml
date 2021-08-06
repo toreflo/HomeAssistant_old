@@ -21,6 +21,7 @@ recorder: !include recorder.yaml
 logbook: !include logbook.yaml
 utility_meter: !include utility_meters.yaml
 input_number: !include input_numbers.yaml
+input_boolean: !include input_booleans.yaml
 zone: !include zones.yaml
 
 logger:
@@ -34,16 +35,6 @@ api:
 
 alexa:
   smart_home:
-
-input_boolean:
-  dummy_switch:
-  bookmark_random:
-  shuffle:
-  irrigation_active:
-  irrigation_freq_minutes:
-  home_occupied:
-  salvatore_connected:
-  gloria_connected:
 
 input_datetime:
   last_irrigation:

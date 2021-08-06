@@ -18,3 +18,16 @@
     irrigation_freq_mode:
       value_template: "{{ is_state('input_boolean.irrigation_freq_minutes','on') }}"
       icon_template: "mdi:{{ 'alpha-m-circle-outline' if is_state('input_boolean.irrigation_freq_minutes','on') else 'alpha-h-circle-outline' }}"
+
+- platform: template
+  sensors:
+    hvac_living_on:
+      value_template: "{{ states('climate.hvac_living') != 'off' }}"
+    hvac_bedroom_on:
+      value_template: "{{ states('climate.hvac_bedroom') != 'off' }}"
+    hvac_study_on:
+      value_template: "{{ states('climate.hvac_study') != 'off' }}"
+    hvac_tommy_on:
+      value_template: "{{ states('climate.hvac_tommy') != 'off' }}"
+    hvac_on:
+      value_template: "{{ states('climate.hvac_living') != 'off' or states('climate.hvac_bedroom') != 'off' or states('climate.hvac_study') != 'off' or states('climate.hvac_tommy') != 'off' }}"

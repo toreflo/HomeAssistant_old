@@ -11,7 +11,7 @@ goodmorning_raw:
         forced: 0
         shuffle: true
         random: 'on'
-        volume_level: 5
+        volume_level: 10
         media_content_type: "SPOTIFY"
         media_player_id: media_player.multi_room
         multi_room_option: "multi room"
@@ -164,22 +164,13 @@ exit:
   - service: light.turn_on
     data:
       entity_id: light.ingresso
+  - service: script.turn_on
+    data:
+      entity_id: script.climate_off
   - delay: "00:03:00"
   - service: homeassistant.turn_off
     data:
       entity_id: group.luci
-  - service: climate.turn_off
-    data:
-      entity_id: climate.hvac_living
-  - service: climate.turn_off
-    data:
-      entity_id: climate.hvac_bedroom
-  - service: climate.turn_off
-    data:
-      entity_id: climate.hvac_study
-  - service: climate.turn_off
-    data:
-      entity_id: climate.hvac_tommy
   mode: single
 
 goodnight:
@@ -193,13 +184,6 @@ goodnight:
   - service: homeassistant.turn_off
     data:
       entity_id: group.media_players
-#  - service: light.turn_on
-#    data:
-#      entity_id: light.faretti_studio
-#  - delay: "00:02:00"
-#  - service: homeassistant.turn_off
-#    data:
-#      entity_id: group.luci
   mode: single
 
 welcome:
@@ -284,3 +268,19 @@ desk_night_alone:
         brightness_pct: 30
       target:
         entity_id: light.led_desk
+
+climate_off:
+  sequence:
+    - service: climate.turn_off
+      data:
+        entity_id: climate.hvac_living
+    - service: climate.turn_off
+      data:
+        entity_id: climate.hvac_bedroom
+    - service: climate.turn_off
+      data:
+        entity_id: climate.hvac_study
+    - service: climate.turn_off
+      data:
+        entity_id: climate.hvac_tommy
+    
