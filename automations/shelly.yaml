@@ -11,8 +11,14 @@
       name: automation Sheylly i3 cucina
       message: "Payload is {{ trigger.payload_json.event }}, count = {{ trigger.payload_json.event_cnt }}"
   - service_template: >
-      {% if trigger.payload_json.event == "L" %}
+      {% if trigger.payload_json.event == "SL" %}
         script.turn_on
+      {% elif trigger.payload_json.event == "L" %}
+        {% if states('group.luci_cucina') == 'on' %}
+          homeassistant.turn_off
+        {% else %}
+          homeassistant.turn_on
+        {% endif %}
       {% else %}
         light.toggle
       {% endif %}
@@ -22,6 +28,8 @@
           light.led_pensili
         {% elif trigger.payload_json.event == "SS" %}
           light.ingresso
+        {% elif trigger.payload_json.event == "L" %}
+          group.luci_cucina
         {% else %}
           {% if states('group.luci_cucina') == 'on' %}
             script.living

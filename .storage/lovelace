@@ -147,55 +147,6 @@
                                     "hold_action": {
                                         "action": "none"
                                     },
-                                    "name": "Temperature/Umidit\u00e0"
-                                },
-                                {
-                                    "type": "grid",
-                                    "columns": 4,
-                                    "cards": [
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.hvac_living_room_temperature",
-                                            "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.hvac_bedroom_room_temperature",
-                                            "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.hvac_study_room_temperature",
-                                            "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.hvac_tommy_room_temperature",
-                                            "graph": "line",
-                                            "name": "Tommy"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.ht_1_t",
-                                            "graph": "line"
-                                        },
-                                        {
-                                            "type": "sensor",
-                                            "entity": "sensor.ht_1_h",
-                                            "graph": "line"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "button",
-                                    "tap_action": {
-                                        "action": "none"
-                                    },
-                                    "show_name": true,
-                                    "show_icon": false,
-                                    "hold_action": {
-                                        "action": "none"
-                                    },
                                     "name": "Condizionatori"
                                 },
                                 {
@@ -562,9 +513,72 @@
                                                     "entity_id": "input_boolean.hvac_tommy_heat_def"
                                                 }
                                             }
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_living_counter",
+                                            "min": 0,
+                                            "max": 600,
+                                            "name": " "
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_bedroom_counter",
+                                            "min": 0,
+                                            "max": 600,
+                                            "name": " "
                                         }
                                     ],
                                     "square": false
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "none"
+                                    },
+                                    "show_name": true,
+                                    "show_icon": false,
+                                    "hold_action": {
+                                        "action": "none"
+                                    },
+                                    "name": "Temperature/Umidit\u00e0"
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 4,
+                                    "cards": [
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_living_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_bedroom_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_study_room_temperature",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.hvac_tommy_room_temperature",
+                                            "graph": "line",
+                                            "name": "Tommy"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_t",
+                                            "graph": "line"
+                                        },
+                                        {
+                                            "type": "sensor",
+                                            "entity": "sensor.ht_1_h",
+                                            "graph": "line"
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -2168,6 +2182,50 @@
                                     ]
                                 },
                                 {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_number.hvac_living_timer",
+                                                    "type": "custom:numberbox-card",
+                                                    "icon": "mdi:timelapse",
+                                                    "unit": "MIN"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_number.hvac_bedroom_timer",
+                                                    "type": "custom:numberbox-card",
+                                                    "icon": "mdi:timelapse",
+                                                    "unit": "MIN"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_living_counter",
+                                            "min": 0,
+                                            "max": 600
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_bedroom_counter",
+                                            "min": 0,
+                                            "max": 600
+                                        }
+                                    ]
+                                },
+                                {
                                     "type": "glance",
                                     "entities": [
                                         {
@@ -2225,6 +2283,50 @@
                                                     "entity": "input_select.hvac_tommy_hvane"
                                                 }
                                             ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_number.hvac_study_timer",
+                                                    "type": "custom:numberbox-card",
+                                                    "icon": "mdi:timelapse",
+                                                    "unit": "MIN"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "entities": [
+                                                {
+                                                    "entity": "input_number.hvac_tommy_timer",
+                                                    "type": "custom:numberbox-card",
+                                                    "icon": "mdi:timelapse",
+                                                    "unit": "MIN"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_study_counter",
+                                            "min": 0,
+                                            "max": 600
+                                        },
+                                        {
+                                            "type": "gauge",
+                                            "entity": "input_number.hvac_tommy_counter",
+                                            "min": 0,
+                                            "max": 600
                                         }
                                     ]
                                 },

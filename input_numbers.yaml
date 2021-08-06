@@ -30,3 +30,35 @@ irrigation_duration:
 irrigation_period:
   min: 1
   max: 100
+
+hvac_living_timer:
+  min: 0
+  max: 600
+
+hvac_living_counter:
+  min: 0
+  max: 600
+
+hvac_bedroom_timer:
+  min: 0
+  max: 600
+
+hvac_bedroom_counter:
+  min: 0
+  max: 600
+
+hvac_study_timer:
+  min: 0
+  max: 600
+
+hvac_study_counter:
+  min: 0
+  max: 600
+
+hvac_tommy_timer:
+  min: 0
+  max: 600
+
+hvac_tommy_counter:
+  min: 0
+  max: 600
