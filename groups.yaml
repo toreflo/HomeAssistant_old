@@ -57,3 +57,5 @@ media_players:
     entities:
       - media_player.echo_dot_cucina
       - media_player.2o_echo_dot_di_salvatore
+      - media_player.samsung_q95t
+      

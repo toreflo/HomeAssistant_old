@@ -15,6 +15,9 @@
                         },
                         {
                             "user": "2bfba91451324e8c971f9028ea7f2111"
+                        },
+                        {
+                            "user": "6bb3abda6ae3407cbd7d69118f422322"
                         }
                     ],
                     "icon": "mdi:home",
@@ -513,20 +516,6 @@
                                                     "entity_id": "input_boolean.hvac_tommy_heat_def"
                                                 }
                                             }
-                                        },
-                                        {
-                                            "type": "gauge",
-                                            "entity": "input_number.hvac_living_counter",
-                                            "min": 0,
-                                            "max": 600,
-                                            "name": " "
-                                        },
-                                        {
-                                            "type": "gauge",
-                                            "entity": "input_number.hvac_bedroom_counter",
-                                            "min": 0,
-                                            "max": 600,
-                                            "name": " "
                                         }
                                     ],
                                     "square": false
@@ -3522,6 +3511,10 @@
                                 }
                             ],
                             "image": "local/living.png"
+                        },
+                        {
+                            "type": "media-control",
+                            "entity": "media_player.samsung_q95t"
                         }
                     ]
                 },
@@ -4146,35 +4139,6 @@
                                 }
                             ],
                             "image": "local/childroom.png"
-                        }
-                    ]
-                },
-                {
-                    "icon": "mdi:home",
-                    "visible": [
-                        {
-                            "user": "6bb3abda6ae3407cbd7d69118f422322"
-                        }
-                    ],
-                    "badges": [
-                        {
-                            "entity": "person.salvatore"
-                        },
-                        {
-                            "entity": "person.gloria"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "type": "map",
-                            "entities": [
-                                {
-                                    "entity": "person.gloria"
-                                },
-                                {
-                                    "entity": "person.salvatore"
-                                }
-                            ]
                         }
                     ]
                 },
