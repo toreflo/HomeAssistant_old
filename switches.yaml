@@ -27,3 +27,13 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
+
+#Shelly 1 caffe
+- platform: mqtt
+  name: "Macchina caffè"
+  state_topic: "shellies/shelly1-caffe/relay/0"
+  command_topic: "shellies/shelly1-caffe/relay/0/command"
+  qos: 0
+  payload_on: "on"
+  payload_off: "off"
+  retain: false

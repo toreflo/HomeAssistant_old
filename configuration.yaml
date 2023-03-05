@@ -16,7 +16,7 @@ sensor: !include_dir_merge_list sensors/
 binary_sensor: !include binary_sensors.yaml
 light: !include lights.yaml
 cover: !include covers.yaml
-switch: !include switches.yaml
+#switch: !include switches.yaml
 recorder: !include recorder.yaml
 logbook: !include logbook.yaml
 utility_meter: !include utility_meters.yaml
@@ -48,13 +48,13 @@ input_datetime:
 
 homekit:
 
-mysql_list:
-  host: !secret db_host
-  database: dphouse
-  user: !secret db_user
-  password: !secret db_password
-  table: music_bookmarks
-  entity_id: input_select.music
+#mysql_list:
+#  host: !secret db_host
+#  database: dphouse
+#  user: !secret db_user
+#  password: !secret db_password
+#  table: music_bookmarks
+#  entity_id: input_select.music
 
 #device_tracker:
 #  - platform: nmap_tracker
@@ -68,3 +68,9 @@ mysql_list:
 ## Dopo che la presenza è stata rivelata, le successive scansioni di quel device avvengono ogni 5
 ## minuti (home_interval = 5). Se viene rivelata l'assenza, tramite l'attesa del consider_home (5 min e 30 sec)
 ## si aspetta la successiva scansione (con periodo home_interval) prima di dichiarare il device away 
+
+mqtt:
+  light: !include_dir_merge_list mqtt/light/
+  cover: !include_dir_merge_list mqtt/cover/
+  switch: !include_dir_merge_list mqtt/switch/
+  sensor: !include_dir_merge_list mqtt/sensor/
